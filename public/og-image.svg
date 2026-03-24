@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09090b"/>
+      <stop offset="50%" style="stop-color:#111113"/>
+      <stop offset="100%" style="stop-color:#09090b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#10b981" stroke-width="1"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+  </g>
+  
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="100" r="200" fill="#10b981" opacity="0.03"/>
+  <circle cx="100" cy="530" r="150" fill="#10b981" opacity="0.03"/>
+  
+  <!-- Photo placeholder with border -->
+  <circle cx="200" cy="315" r="140" fill="#1a1a1d" stroke="#10b981" stroke-width="3"/>
+  
+  <!-- Photo icon placeholder -->
+  <circle cx="200" cy="290" r="50" fill="#27272a"/>
+  <rect x="140" y="360" width="120" height="70" rx="8" fill="#27272a"/>
+  
+  <!-- Name -->
+  <text x="400" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="700" fill="#ffffff">
+    Sebastião de Sousa Moniz
+  </text>
+  
+  <!-- Title -->
+  <text x="400" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#10b981">
+    Senior Software Engineer
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a1a1aa">
+    System Analyst • AI • Frontend Specialist
+  </text>
+  
+  <!-- Location -->
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="-6" r="4" fill="#10b981"/>
+    <text x="15" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#a1a1aa">
+      Luanda, Angola
+    </text>
+  </g>
+  
+  <!-- CTA -->
+  <rect x="400" y="480" width="400" height="56" rx="28" fill="url(#accent)" opacity="0.15"/>
+  <text x="600" y="518" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#10b981" text-anchor="middle">
+    sebasti.ao
+  </text>
+  
+  <!-- Tech badges -->
+  <g transform="translate(850, 520)">
+    <rect x="0" y="0" width="80" height="32" rx="6" fill="#1a1a1d" stroke="#27272a"/>
+    <text x="40" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a1a1aa" text-anchor="middle">React</text>
+    
+    <rect x="90" y="0" width="80" height="32" rx="6" fill="#1a1a1d" stroke="#27272a"/>
+    <text x="130" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a1a1aa" text-anchor="middle">Next.js</text>
+    
+    <rect x="180" y="0" width="80" height="32" rx="6" fill="#1a1a1d" stroke="#27272a"/>
+    <text x="220" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a1a1aa" text-anchor="middle">.NET</text>
+    
+    <rect x="270" y="0" width="80" height="32" rx="6" fill="#1a1a1d" stroke="#27272a"/>
+    <text x="310" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a1a1aa" text-anchor="middle">AI</text>
+  </g>
+</svg>
