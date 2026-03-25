@@ -36,7 +36,11 @@
     "bachelor": "Bachelor's in Computer Science",
     "bachelorSchool": "Instituto Superior Politécnico Metropolitano de Angola (2023 - 2028)",
     "systems": "Systems Analysis & Development",
-    "systemsSchool": "AIEC Brazil - Online (Expected: Feb 2026)"
+    "systemsSchool": "AIEC Brazil - Online (Expected: Feb 2026)",
+    "ipil": "High School - Computer Systems Management",
+    "ipilSchool": "IPIL Makarenco (2018 - 2022)",
+    "ipilGrade": "17 Values",
+    "ipilProject": "Event Publication and Scheduling System"
   },
   "expertise": {
     "label": "02 — EXPERTISE",

@@ -78,6 +78,12 @@ export function About() {
                 </div>
                 <div className="space-y-3">
                   <div>
+                    <p className="text-zinc-300 text-sm font-medium">{t("ipil")}</p>
+                    <p className="text-zinc-500 text-xs">{t("ipilSchool")}</p>
+                    <p className="text-zinc-600 text-xs">Nota: {t("ipilGrade")}</p>
+                    <p className="text-emerald-400/70 text-xs mt-1">Projecto: {t("ipilProject")}</p>
+                  </div>
+                  <div>
                     <p className="text-zinc-300 text-sm font-medium">{t("bachelor")}</p>
                     <p className="text-zinc-500 text-xs">{t("bachelorSchool")}</p>
                   </div>

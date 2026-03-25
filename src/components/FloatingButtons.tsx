@@ -2,7 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronUp, MessageCircle } from "lucide-react";
+import { ChevronUp, MessageCircle, FileText } from "lucide-react";
+import { CVDownload } from "./cv";
 
 export default function FloatingButtons() {
   const [showScroll, setShowScroll] = useState(false);
@@ -24,10 +25,8 @@ export default function FloatingButtons() {
     <>
       <AnimatePresence>
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-          <motion.a
-            href="https://wa.me/244972745066"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={() => window.open('https://wa.me/244972745066', '_blank')}
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
@@ -36,7 +35,9 @@ export default function FloatingButtons() {
             aria-label="Contact on WhatsApp"
           >
             <MessageCircle size={24} className="text-white" />
-          </motion.a>
+          </motion.button>
+
+          <CVDownload currentLocale="en" />
 
           <motion.button
             onClick={scrollToTop}

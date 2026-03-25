@@ -36,7 +36,11 @@
     "bachelor": "Licenciatura em Ciências da Computação",
     "bachelorSchool": "Instituto Superior Politécnico Metropolitano de Angola (2023 - 2028)",
     "systems": "Análise e Desenvolvimento de Sistemas",
-    "systemsSchool": "AIEC Brasil - EAD (Previsto: Fev 2026)"
+    "systemsSchool": "AIEC Brasil - EAD (Previsto: Fev 2026)",
+    "ipil": "Ensino Médio - Gestão de Sistemas Informáticos",
+    "ipilSchool": "IPIL Makarenco (2018 - 2022)",
+    "ipilGrade": "17 Valores",
+    "ipilProject": "Sistema de Publicação e Agendamento de Eventos"
   },
   "expertise": {
     "label": "02 — EXPERTISE",
