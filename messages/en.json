@@ -74,7 +74,30 @@
     "clear": "Clear",
     "featured": "Featured",
     "live": "Live",
-    "github": "GitHub"
+    "github": "GitHub",
+    "rokiz": { "tagline": "Personal Development Forum", "description": "The Personal and Professional Development Forum, in its 4th edition, stands out as one of the main platforms for sharing experiences, connecting, and inspiring leaders in Angola.", "role": "Senior Software Engineer", "impact": "Inspiring leaders in Angola" },
+    "ngola": { "tagline": "Smart Cities Platform", "description": "Passionate about smart cities. Uniting technology, innovation and commitment to transform urban environments into more efficient, safe and sustainable places.", "role": "Senior Software Engineer", "impact": "Transforming urban environments" },
+    "uaushow": { "tagline": "Entertainment Platform", "description": "Entertainment and events platform showcasing the best shows and cultural events in Angola.", "role": "Senior Software Engineer", "impact": "Entertainment events in Angola" },
+    "terapia": { "tagline": "Special Education Center", "description": "Development center dedicated to serving children with special educational needs, speech disorders, and neurodevelopmental disorders.", "role": "Senior Software Engineer", "impact": "Supporting children with special needs" },
+    "penttinali": { "tagline": "Cybersecurity Services", "description": "Wide range of services designed to protect your company against cyber threats, ensure regulatory compliance and strengthen your operational security.", "role": "Senior Software Engineer", "impact": "Cybersecurity solutions" },
+    "ayonas": { "tagline": "Urban Transport Company", "description": "Urban transport company based in Luanda, Angola, operating as a car fleet in urban areas.", "role": "Senior Software Engineer", "impact": "Urban transport in Luanda" },
+    "ozuna": { "tagline": "Engineering & Infrastructure", "description": "Angolan company operating for almost 10 years in the areas of Engineering and Infrastructure with high technical rigor.", "role": "Senior Software Engineer", "impact": "Engineering solutions in Angola" },
+    "elizandra": { "tagline": "Human Development Specialist", "description": "Human development specialist focused on self-knowledge, emotional intelligence, and mental health.", "role": "Senior Software Engineer", "impact": "Empowering women leaders" },
+    "cafe": { "tagline": "Agricultural Management", "description": "Digital platform for modern agricultural management designed for small and medium-sized properties.", "role": "Senior Software Engineer", "impact": "Agricultural management" },
+    "sikolasoft": { "tagline": "Educational Management System", "description": "Angola's most complete software for managing administrative, pedagogical, academic, and financial routines.", "role": "Senior Software Developer", "impact": "Managing educational institutions" },
+    "kitandasoft": { "tagline": "Business Management Suite", "description": "Complete suite of business management solutions including ERP, POS, restaurant management, invoicing, and CRM.", "role": "Senior Developer & Tech Lead", "impact": "Empowering 50+ companies" },
+    "dealbusinesshub": { "tagline": "European Marketplace Platform", "description": "Europe's largest online marketplace for buying and selling real estate and businesses.", "role": "Senior Developer & Tech Lead", "impact": "Connecting European markets" },
+    "kiari": { "tagline": "Event Management Platform", "description": "Complete events application with features for organizers and attendees.", "role": "Frontend Developer", "impact": "Event management in Angola" },
+    "eco": { "tagline": "Online Education Platform", "description": "Leading platform in the education and technology sector providing high-quality online educational services.", "role": "Senior Developer & Tech Lead", "impact": "Online education in Angola" },
+    "nzimbupay": { "tagline": "Banking Application", "description": "Banking application for financial transactions with senior report development and database administration.", "role": "Full-Stack Developer", "impact": "Processing banking transactions" },
+    "hotel": { "tagline": "Hotel Management", "description": "Complete hotel management system with reservations, guest management, billing, and operational features.", "role": "Frontend Developer", "impact": "Managing hotel operations" },
+    "sadoc": { "tagline": "Currency Exchange Platform", "description": "Application for international currency transactions and money transfers.", "role": "Frontend Developer", "impact": "International currency transactions" },
+    "xgrow": { "tagline": "Education Platform", "description": "Educational platform development including calendar features and live sessions.", "role": "Frontend Developer", "impact": "Online education in Brazil" },
+    "macovi": { "tagline": "Sports Club Website", "description": "Modern and responsive website for a sports club with event management and team information.", "role": "Frontend Developer", "impact": "Sports club digital presence" },
+    "femb": { "tagline": "Corporate Website", "description": "Corporate website for FEMB consulting company showcasing services and business solutions.", "role": "Frontend Developer", "impact": "Corporate digital presence" },
+    "docampo": { "tagline": "Document Management Platform", "description": "Digital document management platform to organize and share documents securely.", "role": "Frontend Developer", "impact": "Document management" },
+    "stmaze": { "tagline": "Interactive Game", "description": "Interactive maze game with engaging gameplay and modern design.", "role": "Frontend Developer", "impact": "Interactive gaming experience" },
+    "mambo": { "tagline": "Weather Application", "description": "Modern weather application with real-time forecasts and an attractive interface.", "role": "Frontend Developer", "impact": "Weather information platform" }
   },
   "experience": {
     "label": "04 — EXPERIENCE",
@@ -94,8 +117,91 @@
     "yearsShort": "yr",
     "sadoc": {
       "description": "Frontend Developer for international currency transaction platform. Built complete user-facing features for SADOC remittance application.",
-      "highlight1": "SADOC: International currency exchange and remittance platform",
-      "highlight2": "Login flows, exchange calculator, responsive pages, registration forms"
+      "highlights": {
+        "1": "SADOC: International currency exchange and remittance platform",
+        "2": "Login flows, exchange calculator, responsive pages, registration forms",
+        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
+      }
+    },
+    "devtest": {
+      "description": "Team Lead responsible for the entire development department. Building enterprise web, desktop, and mobile applications using cutting-edge technologies. Full-Stack development focused on Frontend Excellence, SEO optimization, and user experience.",
+      "highlights": {
+        "1": "10+ enterprise websites and platforms delivered",
+        "2": "Team Lead: Management and mentoring of the development team",
+        "3": "Frontend & Full-Stack in projects using Next.js, PayloadCMS, Hasura Cloud",
+        "4": "SEO optimized, mobile-first, and user-friendly applications",
+        "5": "Desktop apps with Tauri & Electron (CAFÉ Platform)",
+        "6": "React Native for internal mobile projects",
+        "7": "Analytics integration with Microsoft Clarity for performance insights",
+        "8": "Sectors: smart cities, cybersecurity, education, and transport"
+      }
+    },
+    "tailordeal": {
+      "description": "Tech Lead for Europe's largest online marketplace for real estate and business transactions. Architected scalable solutions using Blazor and .NET 8.",
+      "highlights": {
+        "1": "Tech Lead for DealBusinessHub - Europe's largest marketplace",
+        "2": "Scalable Blazor/.NET 8 platform for the European market",
+        "3": "Stack: C#, Blazor, .NET 8, Blazorise, PostgreSQL"
+      }
+    },
+    "eco": {
+      "description": "Frontend Tech Lead for the innovative Angolan educational technology platform. Delivering high-quality online educational services to students nationwide.",
+      "highlights": {
+        "1": "Frontend Tech Lead for the online education platform",
+        "2": "Building responsive dashboards and learning interfaces",
+        "3": "Stack: React, C#, ASP.NET Core, MariaDB, Bootstrap"
+      }
+    },
+    "gclucan": {
+      "description": "Led the development of enterprise-level software solutions serving over 300 companies in Angola. Architected and delivered complete management systems generating over 50M Kz in annual client revenue.",
+      "highlights": {
+        "1": "300+ active companies using our software solutions",
+        "2": "50M+ Kz in annual client revenue processed by our systems",
+        "3": "Hotel System: Complete hotel management with React, Node.js, Chakra UI",
+        "4": "SIKOLASOFT: Angola's most complete educational management software",
+        "5": "KITANDASOFT Suite: ERP, POS, restaurant, invoicing, CRM",
+        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB"
+      }
+    },
+    "zenitech": {
+      "description": "Full-Stack Developer for a Brazilian software company. Built landing pages and web applications for ed-tech clients.",
+      "highlights": {
+        "1": "Aligner-Flix: Production landing page for Brazilian ed-tech",
+        "2": "Full-stack development: from frontend to backend",
+        "3": "Stack: ReactJS, Angular, PHP, Node.js, WordPress, Chakra UI"
+      }
+    },
+    "xgrow": {
+      "description": "Frontend Developer for a Brazilian software factory. Built and maintained features for the educational platform used by thousands of students.",
+      "highlights": {
+        "1": "Educational Platform: Calendar, Lives Page, and core features",
+        "2": "Bug fixing and feature implementation",
+        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket"
+      }
+    },
+    "teclat": {
+      "description": "Frontend Developer for a Brazilian company. Focused on the SADOC application for international remittances.",
+      "highlights": {
+        "1": "SADOC: International currency exchange and remittance platform",
+        "2": "Login flows, exchange calculator, responsive pages",
+        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
+      }
+    },
+    "kiari": {
+      "description": "Frontend Developer building an event management platform for the Angolan market. Developed a complete web application with a modern React ecosystem.",
+      "highlights": {
+        "1": "Complete development of the company website",
+        "2": "Kiari Events: Event organizer and client app with React, Redux, GraphQL",
+        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI"
+      }
+    },
+    "snir": {
+      "description": "Full-Stack Developer for an Angolan financial services company. Built enterprise insurance and banking systems handling sensitive financial data.",
+      "highlights": {
+        "1": "International Insurance: Complete insurance management system - DBA, Backend, DevOps",
+        "2": "NZIMBUPAY: Banking application with senior report development",
+        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL"
+      }
     }
   },
   "education": {
@@ -188,7 +294,22 @@
     "photos": "photos",
     "videos": "videos",
     "viewAll": "View All Events",
-    "media": "media"
+    "media": "media",
+    "allEvents": "All Events",
+    "events": {
+      "asSpeaker": { "tagline": "Speaker", "description": "Participation as a speaker at a technology and personal development event." },
+      "cafeLubango": { "tagline": "DevTest Event", "description": "Meeting of developers and IT professionals in Lubango for networking and knowledge sharing." },
+      "cafeTi": { "tagline": "DevTest Event", "description": "Meeting of developers and IT professionals for networking and knowledge sharing." },
+      "expoHuila": { "tagline": "Technology Fair", "description": "Participation at Expo Huila showcasing technological solutions for regional development." },
+      "projectSummit": { "tagline": "Tech Conference", "description": "Participation in a technology and innovation conference." },
+      "angoTic": { "tagline": "Angola TIC Conference", "description": "Angola's largest technology and innovation conference. Networking with professionals and companies in the tech sector." },
+      "codeMoments": { "tagline": "Programming & Development", "description": "Coding moments, projects, and software development." },
+      "gcLucan": { "tagline": "Company Events", "description": "Moments and events from the GC-LUCAN team." },
+      "snir": { "tagline": "Company Events", "description": "Moments from the SNIR team." },
+      "passeiosHuila": { "tagline": "Team Building", "description": "Trips and team integration moments from DevTest in Huila." },
+      "office": { "tagline": "Work Environment", "description": "Day-to-day moments at the DevTest office." },
+      "jovensNegocios": { "tagline": "Event", "description": "Participation in a young entrepreneurs and business event." }
+    }
   },
   "articles": {
     "label": "11 — ARTICLES",

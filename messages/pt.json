@@ -74,7 +74,30 @@
     "clear": "Limpar",
     "featured": "Destaque",
     "live": "Online",
-    "github": "GitHub"
+    "github": "GitHub",
+    "rokiz": { "tagline": "Fórum de Desenvolvimento Pessoal", "description": "O Fórum de Desenvolvimento Pessoal e Profissional, na sua 4ª edição, destaca-se como uma das principais plataformas para partilhar experiências, conectar e inspirar líderes em Angola.", "role": "Senior Software Engineer", "impact": "Inspirando líderes em Angola" },
+    "ngola": { "tagline": "Plataforma de Cidades Inteligentes", "description": "Apaixonado por cidades inteligentes. Unindo tecnologia, inovação e compromisso para transformar ambientes urbanos em lugares mais eficientes, seguros e sustentáveis.", "role": "Senior Software Engineer", "impact": "Transformando ambientes urbanos" },
+    "uaushow": { "tagline": "Plataforma de Entretenimento", "description": "Plataforma de entretenimento e eventos a mostrar os melhores espectáculos e eventos culturais em Angola.", "role": "Senior Software Engineer", "impact": "Eventos de entretenimento em Angola" },
+    "terapia": { "tagline": "Centro de Educação Especial", "description": "Centro de desenvolvimento dedicado a servir crianças com necessidades educativas especiais, perturbações da fala e perturbações do neurodesenvolvimento.", "role": "Senior Software Engineer", "impact": "Apoiando crianças com necessidades especiais" },
+    "penttinali": { "tagline": "Serviços de Cibersegurança", "description": "Ampla gama de serviços concebidos para proteger a sua empresa contra ameaças cibernéticas, garantir conformidade regulatória e fortalecer a sua segurança operacional.", "role": "Senior Software Engineer", "impact": "Soluções de cibersegurança" },
+    "ayonas": { "tagline": "Empresa de Transporte Urbano", "description": "Empresa de transporte urbano sediada em Luanda, Angola, operando como frota de automóveis em zonas urbanas.", "role": "Senior Software Engineer", "impact": "Transporte urbano em Luanda" },
+    "ozuna": { "tagline": "Engenharia & Infraestrutura", "description": "Empresa angolana a actuar há quase 10 anos nas áreas de Engenharia e Infraestrutura com elevado rigor técnico.", "role": "Senior Software Engineer", "impact": "Soluções de engenharia em Angola" },
+    "elizandra": { "tagline": "Especialista em Desenvolvimento Humano", "description": "Especialista em desenvolvimento humano focada em autoconhecimento, inteligência emocional e saúde mental.", "role": "Senior Software Engineer", "impact": "Capacitando mulheres líderes" },
+    "cafe": { "tagline": "Gestão Agrícola", "description": "Plataforma digital para gestão agrícola moderna concebida para pequenas e médias propriedades.", "role": "Senior Software Engineer", "impact": "Gestão agrícola" },
+    "sikolasoft": { "tagline": "Sistema de Gestão Educacional", "description": "O software angolano mais completo para gestão de rotinas administrativas, pedagógicas, académicas e financeiras.", "role": "Senior Software Developer", "impact": "Gestão de instituições educacionais" },
+    "kitandasoft": { "tagline": "Suite de Gestão Empresarial", "description": "Suite completa de soluções de gestão empresarial incluindo ERP, POS, gestão de restaurante, faturação e CRM.", "role": "Senior Developer & Tech Lead", "impact": "Potencializando 50+ empresas" },
+    "dealbusinesshub": { "tagline": "Plataforma de Marketplace Europeu", "description": "O maior marketplace online da Europa para compra e venda de imóveis e negócios.", "role": "Senior Developer & Tech Lead", "impact": "Conectando mercados europeus" },
+    "kiari": { "tagline": "Plataforma de Gestão de Eventos", "description": "Aplicação completa de eventos com funcionalidades para organizadores e participantes.", "role": "Frontend Developer", "impact": "Gestão de eventos em Angola" },
+    "eco": { "tagline": "Plataforma de Educação Online", "description": "Plataforma líder no sector de educação e tecnologia a fornecer serviços educacionais online de alta qualidade.", "role": "Senior Developer & Tech Lead", "impact": "Educação online em Angola" },
+    "nzimbupay": { "tagline": "Aplicação Bancária", "description": "Aplicação bancária para transações financeiras com desenvolvimento de relatórios séniores e administração de base de dados.", "role": "Full-Stack Developer", "impact": "Processamento de transações bancárias" },
+    "hotel": { "tagline": "Gestão Hoteleira", "description": "Sistema completo de gestão hoteleira com reservas, gestão de hóspedes, facturação e funcionalidades operacionais.", "role": "Frontend Developer", "impact": "Gestão de operações hoteleiras" },
+    "sadoc": { "tagline": "Plataforma de Câmbios", "description": "Aplicação para transações cambiais internacionais e remessas de valores.", "role": "Frontend Developer", "impact": "Transações cambiais internacionais" },
+    "xgrow": { "tagline": "Plataforma de Educação", "description": "Desenvolvimento de plataforma educacional incluindo funcionalidades de calendário e sessões ao vivo.", "role": "Frontend Developer", "impact": "Educação online no Brasil" },
+    "macovi": { "tagline": "Website de Clube Desportivo", "description": "Website moderno e responsivo para um clube desportivo com gestão de eventos e informação de equipas.", "role": "Frontend Developer", "impact": "Presença digital de clube desportivo" },
+    "femb": { "tagline": "Website Corporativo", "description": "Website corporativo para empresa de consultoria FEMB a mostrar serviços e soluções empresariais.", "role": "Frontend Developer", "impact": "Presença digital corporativa" },
+    "docampo": { "tagline": "Plataforma de Gestão de Documentos", "description": "Plataforma digital de gestão de documentos para organizar e partilhar documentos de forma segura.", "role": "Frontend Developer", "impact": "Gestão de documentos" },
+    "stmaze": { "tagline": "Jogo Interactivo", "description": "Jogo de labirinto interactivo com jogabilidade envolvente e design moderno.", "role": "Frontend Developer", "impact": "Experiência de jogo interactiva" },
+    "mambo": { "tagline": "Aplicação Meteorológica", "description": "Aplicação meteorológica moderna com previsões em tempo real e interface atractiva.", "role": "Frontend Developer", "impact": "Plataforma de informação meteorológica" }
   },
   "experience": {
     "label": "04 — EXPERIÊNCIA",
@@ -94,8 +117,91 @@
     "yearsShort": "ano",
     "sadoc": {
       "description": "Desenvolvedor Frontend para plataforma de transacções cambiais internacionais. Construiu funcionalidades completas para a aplicação SADOC de remessas.",
-      "highlight1": "SADOC: Plataforma de câmbio internacional e remessas de valores",
-      "highlight2": "Fluxos de login, calculadora de câmbio, páginas responsivas, formulários de registo"
+      "highlights": {
+        "1": "SADOC: Plataforma de câmbio internacional e remessas de valores",
+        "2": "Fluxos de login, calculadora de câmbio, páginas responsivas, formulários de registo",
+        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
+      }
+    },
+    "devtest": {
+      "description": "Team Lead responsável por todo o departamento de desenvolvimento. Construindo aplicações web, desktop e mobile empresariais usando tecnologias de ponta. Desenvolvimento Full-Stack com foco em Excelência Frontend, otimização SEO e experiência do utilizador.",
+      "highlights": {
+        "1": "10+ websites e plataformas empresariais entregues",
+        "2": "Team Lead: Gestão e mentoria da equipa de desenvolvimento",
+        "3": "Frontend & Full-Stack em projectos usando Next.js, PayloadCMS, Hasura Cloud",
+        "4": "Aplicações otimizadas para SEO, mobile-first e user-friendly",
+        "5": "Apps desktop com Tauri & Electron (CAFÉ Platform)",
+        "6": "React Native para projectos mobile internos",
+        "7": "Integração de analytics com Microsoft Clarity para insights de performance",
+        "8": "Setores: smart cities, cibersegurança, educação e transporte"
+      }
+    },
+    "tailordeal": {
+      "description": "Tech Lead para o maior marketplace online da Europa para transacções imobiliárias e empresariais. Arquitetou soluções escaláveis usando Blazor e .NET 8.",
+      "highlights": {
+        "1": "Tech Lead do DealBusinessHub - maior marketplace da Europa",
+        "2": "Plataforma Blazor/.NET 8 escalável para o mercado europeu",
+        "3": "Stack: C#, Blazor, .NET 8, Blazorise, PostgreSQL"
+      }
+    },
+    "eco": {
+      "description": "Frontend Tech Lead da plataforma angolana de tecnologia educacional inovadora. Entregando serviços educacionais online de alta qualidade para estudantes em todo o país.",
+      "highlights": {
+        "1": "Frontend Tech Lead da plataforma de educação online",
+        "2": "Construção de dashboards responsivos e interfaces de aprendizagem",
+        "3": "Stack: React, C#, ASP.NET Core, MariaDB, Bootstrap"
+      }
+    },
+    "gclucan": {
+      "description": "Liderou o desenvolvimento de soluções de software de nível empresarial servindo mais de 300 empresas em Angola. Arquitetou e entregou sistemas completos de gestão gerando mais de 50M Kz de receita anual dos clientes.",
+      "highlights": {
+        "1": "300+ empresas activas usando as nossas soluções de software",
+        "2": "50M+ Kz de receita anual dos clientes processada pelos nossos sistemas",
+        "3": "Hotel System: Gestão hoteleira completa com React, Node.js, Chakra UI",
+        "4": "SIKOLASOFT: Software de gestão educacional angolano mais completo",
+        "5": "KITANDASOFT Suite: ERP, POS, restaurante, faturação, CRM",
+        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB"
+      }
+    },
+    "zenitech": {
+      "description": "Desenvolvedor Full-Stack para empresa de software brasileira. Construiu landing pages e aplicações web para clientes ed-tech.",
+      "highlights": {
+        "1": "Aligner-Flix: Landing page de produção para ed-tech brasileira",
+        "2": "Desenvolvimento full-stack: do frontend ao backend",
+        "3": "Stack: ReactJS, Angular, PHP, Node.js, WordPress, Chakra UI"
+      }
+    },
+    "xgrow": {
+      "description": "Desenvolvedor Frontend para fábrica de software brasileira. Construiu e manteve funcionalidades da plataforma educacional para milhares de estudantes.",
+      "highlights": {
+        "1": "Plataforma Educacional: Calendário, Página de Lives e funcionalidades principais",
+        "2": "Resolução de bugs e implementação de funcionalidades",
+        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket"
+      }
+    },
+    "teclat": {
+      "description": "Desenvolvedor Frontend para empresa brasileira. Focado na aplicação SADOC para remessas internacionais.",
+      "highlights": {
+        "1": "SADOC: Plataforma de câmbio internacional e remessas de valores",
+        "2": "Fluxos de login, calculadora de câmbio, páginas responsivas",
+        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
+      }
+    },
+    "kiari": {
+      "description": "Desenvolvedor Frontend a construir plataforma de gestão de eventos para o mercado angolano. Desenvolveu aplicação web completa com ecossistema React moderno.",
+      "highlights": {
+        "1": "Desenvolvimento completo do website da empresa",
+        "2": "Kiari Events: Organizador de eventos e app para clientes com React, Redux, GraphQL",
+        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI"
+      }
+    },
+    "snir": {
+      "description": "Desenvolvedor Full-Stack para empresa angolana de serviços financeiros. Construiu sistemas de seguros e banca empresariais lidando com dados financeiros sensíveis.",
+      "highlights": {
+        "1": "International Insurance: Sistema completo de gestão de seguros - DBA, Backend, DevOps",
+        "2": "NZIMBUPAY: Aplicação bancária com desenvolvimento de relatórios seniores",
+        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL"
+      }
     }
   },
   "education": {
@@ -188,7 +294,22 @@
     "photos": "fotos",
     "videos": "vídeos",
     "viewAll": "Ver Todos os Eventos",
-    "media": "multimédia"
+    "media": "multimédia",
+    "allEvents": "Todos os Eventos",
+    "events": {
+      "asSpeaker": { "tagline": "Palestrante", "description": "Participação como palestrante em evento de tecnologia e desenvolvimento pessoal." },
+      "cafeLubango": { "tagline": "Evento DevTest", "description": "Encontro de desenvolvedores e profissionais de TI no Lubango para networking e partilha de conhecimento." },
+      "cafeTi": { "tagline": "Evento DevTest", "description": "Encontro de desenvolvedores e profissionais de TI para networking e partilha de conhecimento." },
+      "expoHuila": { "tagline": "Feira de Tecnologia", "description": "Participação na Expo Huila com demonstração de soluções tecnológicas para o desenvolvimento regional." },
+      "projectSummit": { "tagline": "Conferência Tech", "description": "Participação em conferência de tecnologia e inovação." },
+      "angoTic": { "tagline": "Angola TIC Conference", "description": "Maior conferência de tecnologia e inovação de Angola. Networking com profissionais e empresas do setor tech." },
+      "codeMoments": { "tagline": "Programação & Desenvolvimento", "description": "Momentos de coding, projectos e desenvolvimento de software." },
+      "gcLucan": { "tagline": "Eventos da Empresa", "description": "Momentos e eventos da equipa GC-LUCAN." },
+      "snir": { "tagline": "Eventos da Empresa", "description": "Momentos da equipa SNIR." },
+      "passeiosHuila": { "tagline": "Team Building", "description": "Passeios e momentos de integração da equipa DevTest na Huila." },
+      "office": { "tagline": "Ambiente de Trabalho", "description": "Momentos do dia-a-dia no escritório da DevTest." },
+      "jovensNegocios": { "tagline": "Evento", "description": "Participação em evento de jovens empreendedores e negócios." }
+    }
   },
   "articles": {
     "label": "11 — ARTIGOS",
