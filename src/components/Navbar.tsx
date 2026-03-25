@@ -200,9 +200,9 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#09090b]/98 backdrop-blur-xl md:hidden pt-24"
+            className="fixed inset-0 z-40 bg-[#09090b]/98 backdrop-blur-xl md:hidden pt-24 overflow-y-auto overscroll-contain"
           >
-            <nav className="flex flex-col items-center gap-8 p-6">
+            <nav className="flex flex-col items-center gap-8 p-6 pb-20">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.href}
