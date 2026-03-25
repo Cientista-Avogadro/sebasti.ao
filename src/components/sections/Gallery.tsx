@@ -3,6 +3,7 @@
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, Camera, MapPin, Calendar, ExternalLink, Play, Maximize2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const events = [
   {
@@ -245,6 +246,7 @@ const events = [
 ];
 
 export function Gallery({ showAll = false }: { showAll?: boolean }) {
+  const t = useTranslations("gallery");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
@@ -327,17 +329,17 @@ export function Gallery({ showAll = false }: { showAll?: boolean }) {
             className="mb-12"
           >
             <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">
-              {showAll ? "07 — ALL EVENTS" : "07 — GALLERY"}
+              {showAll ? "07 — ALL EVENTS" : t("label")}
             </span>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
               <div>
-                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-50">
-                  {showAll ? "Event Gallery" : "Events & Gallery"}
+                  <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-50">
+                  {showAll ? "Event Gallery" : t("title")}
                 </h2>
-                <p className="text-zinc-400 mt-4 max-w-xl">
+                  <p className="text-zinc-400 mt-4 max-w-xl">
                   {showAll 
-                    ? `${eventsWithMedia.length} events • ${totalPhotos} photos${totalVideos > 0 ? ` • ${totalVideos} videos` : ''}`
-                    : "Highlights from conferences, meetups, and speaking engagements."}
+                    ? `${eventsWithMedia.length} events • ${totalPhotos} ${t("photos")}${totalVideos > 0 ? ` • ${totalVideos} ${t("videos")}` : ''}`
+                    : t("subtitle")}
                 </p>
               </div>
               {!showAll && (
@@ -445,7 +447,7 @@ export function Gallery({ showAll = false }: { showAll?: boolean }) {
                     {selectedEventData.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-zinc-400">
-                    {selectedEventData.tagline} • {selectedEventData.media.length} {currentMedia?.type === "video" ? "videos" : "fotos"}
+                    {selectedEventData.tagline} • {selectedEventData.media.length} {currentMedia?.type === "video" ? t("videos") : t("photos")}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

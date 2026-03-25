@@ -1,14 +1,13 @@
-import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Projects as ProjectsSection } from "@/components/sections/Projects";
 import { Footer } from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
 
-export const metadata: Metadata = {
-  title: "Projects | Sebastião de Sousa Moniz",
-  description: "A comprehensive portfolio of production systems and applications built by Sebastião de Sousa Moniz, Software Engineer from Angola.",
-};
-
-export default function ProjectsPage() {
+export default async function ProjectsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   return (
     <>
       <Navbar />
@@ -16,6 +15,7 @@ export default function ProjectsPage() {
         <ProjectsSection showAll={true} />
       </main>
       <Footer />
+      <FloatingButtons />
     </>
   );
 }

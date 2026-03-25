@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, Star, GitFork, Activity, Trophy, Users, MapPin, Building } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const githubStats = {
   username: "Cientista-Avogadro",
@@ -24,9 +25,9 @@ const topLanguages = [
 ];
 
 const achievements = [
-  { icon: Star, label: "Pull Shark", value: "x3" },
-  { icon: Users, label: "Pair Extraordinaire", value: "x3" },
-  { icon: Trophy, label: "Trophies", value: "4" },
+  { icon: Star, labelKey: "pullShark", value: "x3" },
+  { icon: Users, labelKey: "pairExtra", value: "x3" },
+  { icon: Trophy, labelKey: "trophies", value: "4" },
 ];
 
 const contributionBreakdown = [
@@ -36,6 +37,7 @@ const contributionBreakdown = [
 ];
 
 export function GitHubStats() {
+  const t = useTranslations("github");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -51,12 +53,12 @@ export function GitHubStats() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">07 — GITHUB</span>
+          <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">{t("label")}</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-zinc-50">
-            Open Source Activity
+            {t("title")}
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
-            Consistent contributor across multiple organizations with focus on production-ready code.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -145,7 +147,7 @@ export function GitHubStats() {
             </div>
 
             <div>
-              <h4 className="text-sm font-medium text-zinc-400 mb-4">Top Languages</h4>
+              <h4 className="text-sm font-medium text-zinc-400 mb-4">{t("topLanguages")}</h4>
               <div className="space-y-3">
                 {topLanguages.map((lang, index) => (
                   <div key={lang.name}>
@@ -187,10 +189,10 @@ export function GitHubStats() {
               </div>
               <div className="space-y-3">
                 {achievements.map((item) => (
-                  <div key={item.label} className="flex items-center justify-between p-3 rounded-lg bg-zinc-800/50">
+                  <div key={item.labelKey} className="flex items-center justify-between p-3 rounded-lg bg-zinc-800/50">
                     <div className="flex items-center gap-2">
                       <item.icon size={16} className="text-emerald-400" />
-                      <span className="text-sm text-zinc-300">{item.label}</span>
+                      <span className="text-sm text-zinc-300">{t(item.labelKey)}</span>
                     </div>
                     <span className="text-sm font-bold text-emerald-400">{item.value}</span>
                   </div>

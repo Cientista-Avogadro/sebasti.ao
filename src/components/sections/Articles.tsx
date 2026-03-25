@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Filter, FileText, Clock, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const articles = [
   {
@@ -55,6 +56,7 @@ const articles = [
 const allTags = ["Payload CMS", "Headless CMS", "System", "Queue Management", "Banking", "ASP.NET", "Blazor", ".NET 8", "TypeScript", "Python"];
 
 export function Articles({ showAll = false }: { showAll?: boolean }) {
+  const t = useTranslations("articles");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -78,17 +80,15 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
           className="mb-12"
         >
           <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">
-            {showAll ? "08 — ALL ARTICLES" : "08 — ARTICLES"}
+            {t("label")}
           </span>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-50">
-                {showAll ? "LinkedIn Articles" : "Articles & Insights"}
+                {t("title")}
               </h2>
               <p className="text-zinc-400 mt-4 max-w-xl">
-                {showAll 
-                  ? `${filteredArticles.length} articles published on LinkedIn`
-                  : "Thoughts on technology, development, and the tech scene."}
+                {t("subtitle")}
               </p>
             </div>
             {!showAll && (
@@ -96,7 +96,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                 href="/articles"
                 className="group inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors text-sm md:text-base"
               >
-                View All Articles
+                {t("viewAll")}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
             )}
@@ -112,7 +112,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
           >
             <div className="flex items-center gap-3 mb-4">
               <Filter size={18} className="text-emerald-400" />
-              <span className="text-sm text-zinc-400 font-medium">Filter by topic:</span>
+              <span className="text-sm text-zinc-400 font-medium">{t("filter")}</span>
             </div>
             <div className="flex flex-wrap gap-2">
               <button
@@ -123,7 +123,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                     : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600 hover:text-zinc-300"
                 }`}
               >
-                All
+                {t("all")}
               </button>
               {allTags.map((tag) => (
                 <button
@@ -174,7 +174,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                     {article.readTime}
                   </div>
                   <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
-                    Read
+                    {t("readMore")}
                     <ExternalLink size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
@@ -196,12 +196,12 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
 
         {displayedArticles.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-zinc-500">No articles found with the selected topic.</p>
+            <p className="text-zinc-500">{t("noResults")}</p>
             <button
               onClick={() => setSelectedTag(null)}
               className="mt-4 text-emerald-400 hover:text-emerald-300 transition-colors"
             >
-              Clear filter
+              {t("clearFilter")}
             </button>
           </div>
         )}
@@ -219,7 +219,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded-full transition-all duration-300"
             >
-              View All on LinkedIn
+              {t("viewAll")}
               <ExternalLink size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </motion.div>

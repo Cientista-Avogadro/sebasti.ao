@@ -1,14 +1,13 @@
-import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Articles as ArticlesSection } from "@/components/sections/Articles";
 import { Footer } from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
 
-export const metadata: Metadata = {
-  title: "Articles | Sebastião de Sousa Moniz",
-  description: "Articles and insights published on LinkedIn by Sebastião de Sousa Moniz about technology, development, and the tech scene in Angola.",
-};
-
-export default function ArticlesPage() {
+export default async function ArticlesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   return (
     <>
       <Navbar />
@@ -16,6 +15,7 @@ export default function ArticlesPage() {
         <ArticlesSection showAll={true} />
       </main>
       <Footer />
+      <FloatingButtons />
     </>
   );
 }

@@ -13,6 +13,7 @@ import { Gallery } from "@/components/sections/Gallery";
 import { Articles } from "@/components/sections/Articles";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <FloatingButtons />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Code2, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const titles = [
   "Software Engineer",
@@ -13,6 +14,7 @@ const titles = [
 ];
 
 export function Hero() {
+  const t = useTranslations("hero");
   const [currentTitle, setCurrentTitle] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -91,7 +93,7 @@ export function Hero() {
               animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            Available for new opportunities
+            {t("badge")}
           </motion.span>
         </motion.div>
 
@@ -103,7 +105,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium border border-emerald-500/20">
             <Sparkles size={14} />
-            Welcome to my portfolio
+            {t("welcome")}
           </span>
         </motion.div>
 
@@ -174,16 +176,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            6+ years architecting and shipping production systems
-          </motion.span>
-          <br />
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="text-zinc-300"
-          >
-            for enterprises across Angola, Europe, and Brazil.
+            {t("description")}
           </motion.span>
         </motion.p>
 
@@ -199,7 +192,7 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Projects
+            {t("viewProjects")}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </motion.a>
           <motion.a
@@ -208,7 +201,7 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get in Touch
+            {t("getInTouch")}
           </motion.a>
         </motion.div>
 
@@ -225,7 +218,7 @@ export function Hero() {
             transition={{ delay: 1.3 }}
           >
             <span className="w-12 h-px bg-zinc-800" />
-            <span>6+ Years Experience</span>
+            <span>{t("yearsExp")}</span>
           </motion.div>
           <motion.div 
             className="flex items-center gap-2"
@@ -234,7 +227,7 @@ export function Hero() {
             transition={{ delay: 1.4 }}
           >
             <MapPin size={14} className="text-emerald-400" />
-            <span>Luanda, Angola</span>
+            <span>{t("location")}</span>
           </motion.div>
           <motion.div 
             className="flex items-center gap-2"
@@ -242,7 +235,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5 }}
           >
-            <span>30+ Projects Delivered</span>
+            <span>{t("projectsDelivered")}</span>
             <span className="w-12 h-px bg-zinc-800" />
           </motion.div>
         </motion.div>

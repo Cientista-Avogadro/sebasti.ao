@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,7 +21,7 @@ export function Footer() {
               sebasti.ao
             </span>
             <p className="text-zinc-500 text-sm mt-1">
-              Building digital solutions from Angola for the world.
+              {t("tagline")}
             </p>
           </motion.div>
 
@@ -94,7 +96,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-500 text-sm"
           >
-            © {currentYear} Sebastião de Sousa Moniz. All rights reserved.
+            © {currentYear} Sebastião de Sousa Moniz. {t("rights")}
           </motion.div>
         </div>
       </div>
