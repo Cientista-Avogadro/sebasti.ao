@@ -143,7 +143,7 @@ export function Education() {
                   <div className="flex items-center gap-3">
                     <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{cert.grade}</span>
                     {cert.link && (
-                      <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer" aria-label={`Ver certificado de ${cert.name}`} className="text-emerald-400 hover:text-emerald-300 transition-colors p-2">
                         <ExternalLink size={16} />
                       </a>
                     )}
@@ -166,7 +166,7 @@ export function Education() {
             <div className="mt-8 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen size={20} className="text-emerald-400" />
-                <h4 className="font-display text-lg font-semibold text-zinc-100">{t("technical")}</h4>
+                <h3 className="font-display text-lg font-semibold text-zinc-100">{t("technical")}</h3>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">

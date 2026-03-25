@@ -58,13 +58,13 @@ export function Testimonials() {
 
           <div className="flex items-center justify-center gap-6 mt-8">
             <button onClick={prev} className="w-12 h-12 rounded-full border border-zinc-700 hover:border-emerald-500/50 hover:bg-emerald-500/10 flex items-center justify-center transition-all" aria-label="Previous"><ChevronLeft size={20} className="text-zinc-400" /></button>
-            <div className="flex items-center gap-2">{testimonials.map((_, index) => (<button key={index} onClick={() => { setDirection(index > currentIndex ? 1 : -1); setCurrentIndex(index); }} className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-emerald-500 w-6" : "bg-zinc-700 hover:bg-zinc-600"}`} />))}</div>
+            <div className="flex items-center gap-2" role="tablist">{testimonials.map((_, index) => (<button key={index} role="tab" aria-selected={index === currentIndex} aria-label={`Testimonial ${index + 1} of ${testimonials.length}`} onClick={() => { setDirection(index > currentIndex ? 1 : -1); setCurrentIndex(index); }} className={`min-w-[32px] min-h-[32px] h-2 rounded-full transition-all flex items-center justify-center ${index === currentIndex ? "bg-emerald-500 w-6" : "bg-zinc-700 hover:bg-zinc-600"}`} />))}</div>
             <button onClick={next} className="w-12 h-12 rounded-full border border-zinc-700 hover:border-emerald-500/50 hover:bg-emerald-500/10 flex items-center justify-center transition-all" aria-label="Next"><ChevronRight size={20} className="text-zinc-400" /></button>
           </div>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }} className="mt-12 text-center">
-          <a href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/details/recommendations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-700 hover:border-emerald-500/50 text-zinc-300 hover:text-emerald-400 transition-all">
+          <a href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/details/recommendations" target="_blank" rel="noopener noreferrer" aria-label="View all LinkedIn recommendations" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-700 hover:border-emerald-500/50 text-zinc-300 hover:text-emerald-400 transition-all">
             <MessageSquare size={18} />{t("viewAll")}
           </a>
         </motion.div>

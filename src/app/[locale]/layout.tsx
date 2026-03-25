@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 const APP_URL = process.env.APP_URL || "https://sebasti.ao";
 
@@ -45,6 +46,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    verification: {
+      google: 'google9f8dd97617ca067d',
     },
     openGraph: {
       type: 'website',
@@ -164,6 +168,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
