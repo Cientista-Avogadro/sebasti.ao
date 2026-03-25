@@ -224,6 +224,7 @@ export function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="flex items-center gap-6 mt-8"
               >
+                <LanguageSwitcher />
                 <a
                   href="https://github.com/Cientista-Avogadro"
                   target="_blank"
