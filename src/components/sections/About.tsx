@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 import { GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -102,12 +103,15 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-emerald-500/10" />
-              <img
+              <Image
                 src="/myphoto.jpg"
                 alt="Sebastião de Sousa Moniz"
-                className="w-full aspect-[4/5] object-cover object-top"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-zinc-900/90 to-transparent">

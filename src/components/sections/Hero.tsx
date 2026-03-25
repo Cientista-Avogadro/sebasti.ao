@@ -51,29 +51,16 @@ export function Hero() {
       <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-emerald-400/30 rounded-full animate-ping" style={{ animationDelay: "1.5s" }} />
       <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-emerald-400/50 rounded-full animate-ping" style={{ animationDelay: "0.7s" }} />
       
-      <motion.div 
+        <div 
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float"
-        animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.1, 0.15, 0.1],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div 
+      <div 
         className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl animate-float"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.05, 0.1, 0.05],
-        }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        style={{ animationDelay: "2s" }}
       />
-      <motion.div 
-        className="absolute top-1/2 right-1/3 w-48 h-48 bg-emerald-500/8 rounded-full blur-3xl"
-        animate={{ 
-          scale: [1, 1.15, 1],
-          x: [0, 20, 0],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      <div 
+        className="absolute top-1/2 right-1/3 w-48 h-48 bg-emerald-500/8 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: "1s" }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 text-center">

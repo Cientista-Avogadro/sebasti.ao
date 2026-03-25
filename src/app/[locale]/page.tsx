@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -7,13 +8,14 @@ import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
 import { TechStack } from "@/components/sections/TechStack";
 import { LearningAndValue } from "@/components/sections/LearningAndValue";
-import { GitHubStats } from "@/components/sections/GitHubStats";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Gallery } from "@/components/sections/Gallery";
-import { Articles } from "@/components/sections/Articles";
-import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+
+const GitHubStats = dynamic(() => import("@/components/sections/GitHubStats").then(mod => ({ default: mod.GitHubStats })));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then(mod => ({ default: mod.Testimonials })));
+const Gallery = dynamic(() => import("@/components/sections/Gallery").then(mod => ({ default: mod.Gallery })));
+const Articles = dynamic(() => import("@/components/sections/Articles").then(mod => ({ default: mod.Articles })));
+const Contact = dynamic(() => import("@/components/sections/Contact").then(mod => ({ default: mod.Contact })));
+const FloatingButtons = dynamic(() => import("@/components/FloatingButtons"));
 
 export default function Home() {
   return (

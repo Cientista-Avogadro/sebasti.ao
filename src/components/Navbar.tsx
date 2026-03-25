@@ -133,6 +133,7 @@ export function Navbar() {
               href="https://github.com/Cientista-Avogadro"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -147,6 +148,7 @@ export function Navbar() {
               href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -157,6 +159,7 @@ export function Navbar() {
               href="https://www.instagram.com/sebastiao_moniz_scientist/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram Profile"
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -167,6 +170,7 @@ export function Navbar() {
               href="https://web.facebook.com/Cientistass"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook Profile"
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -224,6 +228,7 @@ export function Navbar() {
                   href="https://github.com/Cientista-Avogadro"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -238,6 +243,7 @@ export function Navbar() {
                   href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -248,6 +254,7 @@ export function Navbar() {
                   href="https://www.instagram.com/sebastiao_moniz_scientist/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram Profile"
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -258,6 +265,7 @@ export function Navbar() {
                   href="https://web.facebook.com/Cientistass"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook Profile"
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
