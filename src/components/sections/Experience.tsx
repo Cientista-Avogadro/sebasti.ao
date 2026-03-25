@@ -1,8 +1,29 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useMemo } from "react";
 import { MapPin, Calendar, Building2, ChevronDown, ExternalLink, Briefcase } from "lucide-react";
+
+function calculateDuration(startDate: string, endDate: string | null): string {
+  const start = new Date(startDate + "-01");
+  const end = endDate ? new Date(endDate + "-01") : new Date();
+  
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+  
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  
+  if (years === 0) {
+    return `${months} ${months === 1 ? 'mês' : 'meses'}`;
+  } else if (months === 0) {
+    return `${years} ${years === 1 ? 'ano' : 'anos'}`;
+  } else {
+    return `${years} ${years === 1 ? 'ano' : 'anos'} ${months} ${months === 1 ? 'mês' : 'meses'}`;
+  }
+}
 
 const projects = [
   { name: "ROKIZ Forum", company: "DevTest", link: "https://rokiz-forum.com/" },
@@ -40,113 +61,143 @@ const experiences = [
     company: "DevTest",
     role: "Senior Software Engineer",
     period: "Out 2024 — Presente",
+    startDate: "2024-10",
+    endDate: null,
     location: "Luanda, Angola",
-    description: "Developing web and mobile applications using React, Next.js, and Node.js. Creating functional and innovative solutions that prioritize user experience for various clients.",
+    workType: "Híbrida",
+    description: "Team Lead responsible for the entire development department. Building enterprise web, desktop, and mobile applications using cutting-edge technologies. Full-Stack development with focus on Frontend excellence, SEO optimization, and user experience.",
     highlights: [
-      "10+ corporate websites and platforms delivered",
+      "10+ enterprise websites and platforms delivered",
+      "Team Lead: Managing and mentoring development team",
+      "Frontend & Full-Stack across projects using Next.js, PayloadCMS, Hasura Cloud",
+      "SEO-optimized, mobile-first, user-friendly applications",
+      "Desktop apps with Tauri & Electron (CAFÉ Platform)",
+      "React Native for internal mobile project",
+      "Analytics integration with Microsoft Clarity for performance insights",
       "Smart cities, cybersecurity, education, and transport sectors",
-      "Modern tech stack: React, Next.js, TailwindCSS, Vercel",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Senior Frontend Developer",
-    period: "Jan 2018 — Presente",
-    location: "Remote / Angola",
-    description: "Independent development work delivering websites, web apps, mobile apps, desktop applications, and professional reports/invoices.",
-    highlights: [
-      "HTML5+CSS3+JS Front-End Development (7 years)",
-      "React + Next.js Front-End Development (4 years)",
-      "Mobile Apps, Desktop Apps, Reports & Invoices",
     ],
   },
   {
     company: "TailorDeal",
-    role: "Senior Software Developer | Tech Lead",
+    role: "Senior Developer | Tech Lead",
     period: "Jan 2024 — Jan 2025",
+    startDate: "2024-01",
+    endDate: "2025-01",
     location: "Lisbon, Portugal",
-    description: "Led strategic technology projects using Blazor and .NET. Developed DealBusinessHub, Europe's leading online marketplace.",
+    workType: "Remota",
+    description: "Tech Lead for Europe's leading online marketplace for real estate and business transactions. Architected scalable solutions using Blazor and .NET 8.",
     highlights: [
-      "Tech Lead for DealBusinessHub marketplace platform",
-      "Technologies: C#, Blazor, .NET 8, Blazorise",
+      "Tech Lead for DealBusinessHub - Europe's leading marketplace",
+      "Architected scalable Blazor/.NET 8 platform serving European market",
+      "Stack: C#, Blazor, .NET 8, Blazorise, PostgreSQL",
     ],
   },
   {
     company: "ECO Estuda Comigo",
-    role: "Senior Software Developer | Tech Lead",
+    role: "Senior Developer | Tech Lead",
     period: "Nov 2023 — Jan 2025",
+    startDate: "2023-11",
+    endDate: "2025-01",
     location: "Luanda, Angola",
-    description: "Led frontend development for an innovative education technology platform providing high-quality online educational services.",
+    workType: "Remota",
+    description: "Frontend Tech Lead for Angola's innovative education technology platform. Delivering high-quality online educational services to students across the country.",
     highlights: [
-      "Frontend Lead for online education platform",
-      "Technologies: C#, ASP.NET, MariaDB, Bootstrap",
+      "Frontend Tech Lead for online education platform",
+      "Built responsive dashboards and learning interfaces",
+      "Stack: React, C#, ASP.NET Core, MariaDB, Bootstrap",
     ],
   },
   {
     company: "GC-LUCAN",
     role: "Senior Software Engineer | Tech Lead",
     period: "Jul 2022 — Set 2024",
+    startDate: "2022-07",
+    endDate: "2024-09",
     location: "Belas, Luanda, Angola",
-    description: "Led development of multiple enterprise systems including hotel management, ERP solutions, and restaurant management platforms.",
+    workType: "Híbrido",
+    description: "Led development of enterprise-grade software solutions serving 300+ businesses across Angola. Architected and delivered complete management systems generating 50M+ Kz in annual client revenue.",
     highlights: [
-      "Developed KITANDASOFT suite (ERP, POS, Invoicing)",
-      "Hotel Management System with React and Node.js",
-      "CRM development with Blazor and .NET 6-8",
-    ],
-  },
-  {
-    company: "Kiari Code",
-    role: "Frontend Developer",
-    period: "Set 2021 — Fev 2024",
-    location: "Luanda, Angola",
-    description: "Developed company website and Kiari Events application for event management. Modern stack with React, Next.js, and state management.",
-    highlights: [
-      "Full company website development",
-      "Kiari Events: Event organizer and customer app",
-    ],
-  },
-  {
-    company: "SNIR",
-    role: "Software Developer",
-    period: "Fev 2021 — Fev 2024",
-    location: "Luanda, Angola",
-    description: "Full-stack development for insurance and banking systems. Responsible for backend, reports, and database administration.",
-    highlights: [
-      "International Insurance System: DBA, Backend, DevOps",
-      "NZIMBUPAY Banking Application: Senior Reports, DBA",
+      "300+ active businesses using our software solutions",
+      "50M+ Kz in annual client revenue processed through our systems",
+      "Hotel System: Full hotel management with React, Node.js, Chakra UI",
+      "SIKOLASOFT: Most complete Angolan educational management software",
+      "KITANDASOFT Suite: ERP, POS, restaurant, invoicing, CRM",
+      "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB",
     ],
   },
   {
     company: "Zeni Tech",
     role: "Full-Stack Developer",
     period: "Jun 2022 — Set 2022",
+    startDate: "2022-06",
+    endDate: "2022-09",
     location: "Brasil",
-    description: "Worked on website creation, computer systems, landing pages, and bug fixes for Brazilian software company.",
+    workType: "Remoto",
+    description: "Full-Stack Developer for Brazilian software company. Built landing pages and web applications for ed-tech clients.",
     highlights: [
-      "Aligner-Flix Landing Page development",
-      "Technologies: React, Angular, PHP, Node.js",
+      "Aligner-Flix: Production landing page for Brazilian ed-tech",
+      "Full-stack development: frontend to backend",
+      "Stack: ReactJS, Angular, PHP, Node.js, WordPress, Chakra UI",
     ],
   },
   {
     company: "XGrow",
-    role: "Frontend Developer",
+    role: "Front-End Developer",
     period: "Jan 2022 — Jul 2022",
+    startDate: "2022-01",
+    endDate: "2022-07",
     location: "Brasil",
-    description: "Frontend development for education platform at Brazilian software factory. Worked on calendar, lives page, and bug fixes.",
+    workType: "Remoto",
+    description: "Frontend Developer for Brazilian software factory. Built and maintained education platform features for thousands of students.",
     highlights: [
-      "Education Platform: Calendar and Lives Page",
-      "Technologies: React, Next.js, Chakra UI",
+      "Education Platform: Calendar, Lives Page, and core features",
+      "Bug resolution and feature implementation",
+      "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket",
     ],
   },
   {
     company: "Tecla T",
-    role: "Frontend Developer",
+    role: "Front-End Developer",
     period: "Jan 2022 — Jul 2022",
+    startDate: "2022-01",
+    endDate: "2022-07",
     location: "Brasil",
-    description: "Frontend development for international currency transaction application. Developed login flow, exchange calculator, and responsive pages.",
+    workType: "Remoto",
+    description: "Frontend Developer for international currency transaction platform. Built complete user-facing features for SADOC remittance application.",
     highlights: [
-      "SADOC: Currency exchange and remittance app",
-      "Login Flow, Exchange Calculator, Registration forms",
+      "SADOC: International currency exchange and remittance platform",
+      "Login flows, exchange calculator, responsive pages, registration forms",
+      "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD",
+    ],
+  },
+  {
+    company: "Kiari Code",
+    role: "Frontend Developer",
+    period: "Set 2021 — Fev 2024",
+    startDate: "2021-09",
+    endDate: "2024-02",
+    location: "Luanda, Angola",
+    workType: "Presencial",
+    description: "Frontend Developer building event management platform for Angolan market. Developed complete web application with modern React ecosystem.",
+    highlights: [
+      "Full company website development",
+      "Kiari Events: Event organizer and customer app with React, Redux, GraphQL",
+      "Stack: React, Next.js, Redux, GraphQL, Chakra UI",
+    ],
+  },
+  {
+    company: "SNIR",
+    role: "Software Developer",
+    period: "Fev 2021 — Fev 2024",
+    startDate: "2021-02",
+    endDate: "2024-02",
+    location: "Luanda, Angola",
+    workType: "Presencial",
+    description: "Full-Stack Developer for Angolan financial services company. Built enterprise insurance and banking systems handling sensitive financial data.",
+    highlights: [
+      "International Insurance: Full insurance management system - DBA, Backend, DevOps",
+      "NZIMBUPAY: Banking application with senior report development",
+      "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL",
     ],
   },
 ];
@@ -181,7 +232,7 @@ export function Experience() {
             Professional Journey
           </h2>
           <p className="text-zinc-400 mt-4 max-w-2xl">
-            6+ years of experience building production systems across multiple industries and technologies.
+            Building production systems across multiple industries and technologies.
           </p>
         </motion.div>
 
@@ -229,11 +280,21 @@ export function Experience() {
                           </motion.div>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-zinc-500 ml-16">
+                        <div className="flex flex-wrap items-center gap-3 mb-4 text-xs text-zinc-500 ml-16">
                           <div className="flex items-center gap-1.5">
                             <Calendar size={12} />
                             {exp.period}
                           </div>
+                          <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">
+                            {calculateDuration(exp.startDate, exp.endDate)}
+                          </span>
+                          <span className={`px-2 py-0.5 rounded ${
+                            exp.workType === 'Remota' ? 'bg-blue-500/20 text-blue-400' :
+                            exp.workType === 'Híbrida' ? 'bg-amber-500/20 text-amber-400' :
+                            'bg-green-500/20 text-green-400'
+                          }`}>
+                            {exp.workType}
+                          </span>
                           <div className="flex items-center gap-1.5">
                             <MapPin size={12} />
                             {exp.location}

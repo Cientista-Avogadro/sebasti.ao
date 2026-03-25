@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SplashScreen from "@/components/SplashScreen";
+import FloatingButtons from "@/components/FloatingButtons";
 
 const APP_URL = process.env.APP_URL || "https://sebasti.ao";
 
@@ -78,6 +80,8 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/Cientista-Avogadro",
       "https://www.linkedin.com/in/sebastião-de-sousa-moniz",
+      "https://www.instagram.com/sebastiao_moniz_scientist/",
+      "https://web.facebook.com/Cientistass",
     ],
     jobTitle: "Senior Software Engineer",
     worksFor: [
@@ -115,11 +119,18 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w17vqw398h");`
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen bg-[#09090b] text-zinc-50 antialiased overflow-x-hidden">
+        <SplashScreen />
+        <FloatingButtons />
         <div className="grain-overlay" aria-hidden="true" />
         {children}
       </body>

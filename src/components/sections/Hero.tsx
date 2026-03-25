@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 
 const titles = [
   "Software Engineer",
-  "AI Enthusiast",
-  "Computer Scientist",
+  "System Architect",
+  "AI Developer",
   "Tech Lead",
-  "Full-Stack Developer",
+  "Problem Solver",
 ];
 
 export function Hero() {
@@ -174,7 +174,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Senior Software Engineer crafting web and mobile applications.
+            6+ years architecting and shipping production systems
           </motion.span>
           <br />
           <motion.span
@@ -183,7 +183,7 @@ export function Hero() {
             transition={{ delay: 1 }}
             className="text-zinc-300"
           >
-            Building functional, innovative solutions that prioritize user experience.
+            for enterprises across Angola, Europe, and Brazil.
           </motion.span>
         </motion.p>
 
@@ -242,7 +242,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5 }}
           >
-            <span>15+ Certifications</span>
+            <span>30+ Projects Delivered</span>
             <span className="w-12 h-px bg-zinc-800" />
           </motion.div>
         </motion.div>
@@ -253,7 +253,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.8 }}
           className="mt-12 flex flex-wrap items-center justify-center gap-4"
         >
-          {["React", "Next.js", "TypeScript", "AI/ML", "DevOps", "Hosting"].map((tech, index) => (
+          {["React", "Next.js", "TypeScript", "C#/.NET", "AI Integration", "Cloud Deploy"].map((tech, index) => (
             <motion.span
               key={tech}
               initial={{ opacity: 0, y: 10 }}

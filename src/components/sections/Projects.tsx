@@ -551,14 +551,9 @@ export function Projects({ showAll = false }: ProjectsProps) {
                           </span>
                         )}
                       </div>
-                      <p className="text-emerald-400/80 text-sm font-medium mb-1">
+                      <p className="text-emerald-400/80 text-sm font-medium">
                         {project.tagline}
                       </p>
-                      <div className="flex items-center gap-2">
-                        <span className="px-2 py-0.5 text-xs font-medium rounded-md bg-zinc-800 text-zinc-400 border border-zinc-700">
-                          {project.company}
-                        </span>
-                      </div>
                     </div>
                     <span className="px-3 py-1 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                       {project.status}

@@ -6,9 +6,11 @@ import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
 import { TechStack } from "@/components/sections/TechStack";
+import { LearningAndValue } from "@/components/sections/LearningAndValue";
+import { GitHubStats } from "@/components/sections/GitHubStats";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Gallery } from "@/components/sections/Gallery";
 import { Articles } from "@/components/sections/Articles";
-import { GitHub } from "@/components/sections/GitHub";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -24,9 +26,11 @@ export default function Home() {
         <Experience />
         <Education />
         <TechStack />
+        <LearningAndValue />
+        <GitHubStats />
+        <Testimonials />
         <Gallery />
         <Articles />
-        <GitHub />
         <Contact />
       </main>
       <Footer />

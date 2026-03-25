@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Linkedin, Github, MapPin, Send, CheckCircle, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Send, CheckCircle, Phone, Instagram } from "lucide-react";
 
 const socialLinks = [
   {
@@ -16,6 +16,12 @@ const socialLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/",
     description: "Let's connect professionally",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/sebastiao_moniz_scientist/",
+    description: "@sebastiao_moniz_scientist",
   },
   {
     icon: Github,

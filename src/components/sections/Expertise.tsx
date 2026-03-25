@@ -8,38 +8,38 @@ const expertiseItems = [
   {
     icon: Code2,
     title: "Frontend Engineering",
-    description: "Crafting pixel-perfect, performant user interfaces with React, Next.js, TypeScript, and Blazor. Building responsive, accessible, and maintainable frontend architectures.",
+    description: "Building performant, accessible web applications with modern frameworks. Crafting responsive UIs that deliver exceptional user experiences across all devices.",
     skills: ["React", "Next.js", "TypeScript", "Blazor", "Tailwind CSS", "Chakra UI"],
   },
   {
     icon: Layers,
     title: "Full-Stack Development",
-    description: "End-to-end product development from database design to API architecture. Delivering complete, production-ready applications with modern tech stacks.",
-    skills: [".NET", "C#", "Node.js", "React Native", "Payload CMS"],
+    description: "End-to-end product development from architecture to deployment. Building robust APIs, managing databases, and delivering production-ready applications.",
+    skills: [".NET", "C#", "Node.js", "React Native", "GraphQL", "REST APIs"],
   },
   {
     icon: Brain,
     title: "AI & Automation",
-    description: "AI Enthusiast specializing in Prompt Engineering, VideoCoding, and Process Automation with AI. Building intelligent solutions that streamline workflows.",
-    skills: ["Prompt Engineering", "VideoCoding", "AI Automation", "LLM Integration", "Chatbots"],
+    description: "Integrating AI into production systems. Building intelligent applications with LLM integration, process automation, and AI-powered features.",
+    skills: ["Prompt Engineering", "LLM Integration", "AI Automation", "Chatbots", "VideoCoding"],
   },
   {
     icon: Server,
-    title: "Deployment & Hosting",
-    description: "Expert in domain management, CPanel administration, and server configuration. Ensuring applications run smoothly in production environments.",
-    skills: ["CPanel", "Domain Management", "Vercel", "Hosting", "SSL", "DNS"],
+    title: "System Architecture",
+    description: "Designing scalable systems from database schema to cloud deployment. Ensuring security, performance, and reliability in production environments.",
+    skills: ["System Design", "Cloud Architecture", "CI/CD", "DevOps", "Monitoring"],
   },
   {
     icon: GitBranch,
     title: "System Analysis & Reports",
-    description: "Translating business requirements into technical specifications. Creating dynamic reports with DevExpress and XtraReports for enterprise systems.",
-    skills: ["Requirements Analysis", "DevExpress", "XtraReports", "System Design"],
+    description: "Translating complex business requirements into technical solutions. Creating enterprise reports with DevExpress and XtraReports for data-driven decisions.",
+    skills: ["Requirements Analysis", "DevExpress", "XtraReports", "Data Visualization"],
   },
   {
     icon: Database,
-    title: "Business Systems",
-    description: "Building enterprise-grade management systems for operations, finance, and administration. ERP, POS, invoicing, and CRM solutions.",
-    skills: ["ERP", "CRM", "POS", "Invoicing", "Inventory Management"],
+    title: "Enterprise Solutions",
+    description: "Delivering ERP, CRM, POS, and invoicing systems for businesses. Managing complex databases and building solutions that handle real enterprise workloads.",
+    skills: ["ERP", "CRM", "POS", "Invoicing", "SQL Server", "MariaDB"],
   },
 ];
 
@@ -61,10 +61,10 @@ export function Expertise() {
         >
           <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">02 — EXPERTISE</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-zinc-50">
-            What I Do
+            Core Competencies
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
-            Specialized in building complete digital solutions, from user-facing interfaces to robust backend systems.
+            From concept to deployment — delivering production-ready systems that scale internationally.
           </p>
         </motion.div>
 

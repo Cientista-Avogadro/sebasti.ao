@@ -107,10 +107,10 @@ export function TechStack() {
         >
           <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">05 — STACK</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-50">
-            Skills & Expertise
+            Technical Proficiency
           </h2>
           <p className="text-zinc-400 mt-4 max-w-xl">
-            Comprehensive technical toolkit built over 6+ years of professional experience.
+            Production-proven skills across the full development lifecycle — from frontend to backend, from database to deployment.
           </p>
         </motion.div>
 

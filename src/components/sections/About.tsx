@@ -24,21 +24,21 @@ export function About() {
           <div>
             <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">01 — ABOUT</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-zinc-50">
-              Building digital systems that 
-              <span className="text-zinc-500"> solve real business problems</span>
+              Engineering production systems that 
+              <span className="text-zinc-500"> scale internationally</span>
             </h2>
             <div className="space-y-6 text-zinc-400 leading-relaxed">
               <p>
-                I work on developing web and mobile applications using technologies such as React, Next.js, and Node.js, focusing on creating functional and innovative solutions that prioritize the user experience. I contribute to the creation of reports and dynamic systems that meet client needs.
+                I'm a <span className="text-zinc-200 font-medium">Senior Software Engineer</span> with 6+ years of experience building enterprise-grade systems. I specialize in <span className="text-emerald-400 font-medium">Frontend Engineering</span> and <span className="text-emerald-400 font-medium">Full-Stack Development</span>, delivering production-ready applications for businesses across Angola, Europe, and Brazil.
               </p>
               <p>
-                With 6+ years of experience as a Software Engineer, I specialize in Frontend Development, but I'm also capable as a Full-Stack developer. My experience as a Tech Lead has honed my skills in leading strategic technology projects using Blazor and .NET.
+                As a <span className="text-emerald-400 font-medium">Tech Lead</span>, I've architected and shipped complex systems including ERP, CRM, POS, hotel management, and education platforms. My expertise in <span className="text-emerald-400 font-medium">C#/.NET</span> and <span className="text-emerald-400 font-medium">React/Next.js</span> enables me to build complete solutions end-to-end.
               </p>
               <p>
-                I'm also an <span className="text-emerald-400 font-medium">AI Enthusiast</span> passionate about Prompt Engineering, VideoCoding, and Process Automation with AI. As a <span className="text-emerald-400 font-medium">Computer Scientist</span>, I apply scientific principles to solve complex problems.
+                I'm passionate about <span className="text-emerald-400 font-medium">AI Integration</span>, bringing intelligent features to production systems through LLM integration, prompt engineering, and AI-powered automation.
               </p>
               <p>
-                Additionally, I handle <span className="text-emerald-400 font-medium">Deployment & Hosting</span>, including domain management, CPanel administration, and server configuration. Currently studying Computer Science at ISPM Angola. Based in Luanda, Angola.
+                Currently pursuing my <span className="text-emerald-400 font-medium">Bachelor's in Computer Science</span> at ISPM Angola. Based in Luanda, Angola — available for remote opportunities worldwide.
               </p>
             </div>
 
@@ -48,12 +48,12 @@ export function About() {
                 <div className="text-sm text-zinc-500">Years Experience</div>
               </div>
               <div className="px-6 py-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 transition-colors">
-                <div className="text-3xl font-display font-bold text-emerald-400">75</div>
-                <div className="text-sm text-zinc-500">Repositories</div>
+                <div className="text-3xl font-display font-bold text-emerald-400">30+</div>
+                <div className="text-sm text-zinc-500">Projects Delivered</div>
               </div>
               <div className="px-6 py-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 transition-colors">
-                <div className="text-3xl font-display font-bold text-emerald-400">36</div>
-                <div className="text-sm text-zinc-500">GitHub Stars</div>
+                <div className="text-3xl font-display font-bold text-emerald-400">9</div>
+                <div className="text-sm text-zinc-500">Companies Served</div>
               </div>
             </div>
 
