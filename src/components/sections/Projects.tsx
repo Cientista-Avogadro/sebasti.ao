@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { projects, filterCategories } from "@/data/projects";
 import { ProjectCard } from "./projects/ProjectCard";
+import { CaseStudy } from "./projects/CaseStudy";
 
 interface ProjectsProps { showAll?: boolean; }
 
@@ -81,16 +82,58 @@ export function Projects({ showAll = false }: ProjectsProps) {
           </motion.div>
         )}
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-              index={index}
-              isInView={isInView}
-            />
-          ))}
-        </div>
+        {!showAll && (
+          <div className="space-y-24 mb-24">
+            {projects.filter(p => p.featured).map((project, index) => (
+              <CaseStudy
+                key={project.name}
+                project={project}
+                index={index}
+                isInView={isInView}
+              />
+            ))}
+          </div>
+        )}
+
+        {showAll && (
+          <>
+            {/* Case Studies Section */}
+            {filteredProjects.filter(p => p.featured).length > 0 && (
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="mb-20">
+                <h3 className="text-2xl font-bold text-zinc-100 mb-12">{t("caseStudies")}</h3>
+                <div className="space-y-24">
+                  {filteredProjects.filter(p => p.featured).map((project, index) => (
+                    <CaseStudy
+                      key={project.name}
+                      project={project}
+                      index={index}
+                      isInView={isInView}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Grid Projects Section */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4 }}>
+              {filteredProjects.filter(p => !p.featured).length > 0 && (
+                <>
+                  <h3 className="text-2xl font-bold text-zinc-100 mb-8">{t("otherProjects")}</h3>
+                  <div className="grid lg:grid-cols-2 gap-8">
+                    {filteredProjects.filter(p => !p.featured).map((project, index) => (
+                      <ProjectCard
+                        key={project.name}
+                        project={project}
+                        index={index}
+                        isInView={isInView}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </motion.div>
+          </>
+        )}
       </div>
     </section>
   );

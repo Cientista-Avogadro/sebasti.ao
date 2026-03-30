@@ -55,7 +55,7 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
             </div>
           </div>
 
-          {project.focus && project.focus.length > 0 && (
+          {project.focus && Array.isArray(project.focus) && project.focus.length > 0 && (
             <div className="mb-6">
               <div className="mb-3 text-xs text-zinc-500">{t("engineeringFocus")}</div>
               <div className="flex flex-wrap gap-2">
@@ -68,13 +68,15 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
             </div>
           )}
 
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.tech.map((tech) => (
-              <span key={tech} className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-800 text-zinc-400">
-                {tech}
-              </span>
-            ))}
-          </div>
+          {project.tech && Array.isArray(project.tech) && project.tech.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {project.tech.map((tech) => (
+                <span key={tech} className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-800 text-zinc-400">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
 
           <div className="flex items-center gap-4">
             {project.link !== "#" && (

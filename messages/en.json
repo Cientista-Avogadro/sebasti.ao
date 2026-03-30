@@ -85,7 +85,7 @@
     "viewAll": "View all selected systems",
     "role": "Role",
     "impact": "Impact",
-    "scope": "Who it served",
+    "scope": "Scope",
     "outcome": "Why it mattered",
     "engineeringFocus": "Engineering focus",
     "viewProject": "Open project",
@@ -96,6 +96,8 @@
     "featured": "Featured",
     "live": "Live",
     "github": "GitHub",
+    "caseStudies": "Featured Case Studies",
+    "otherProjects": "Other Projects",
     "kibera": {
       "tagline": "Multi-tenant billing and operations platform",
       "description": "A production-ready SaaS billing platform designed to support multiple businesses within a single system. Used by businesses to manage billing, invoices, payments, POS operations, and customer data in real-world scenarios.",

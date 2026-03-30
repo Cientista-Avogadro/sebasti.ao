@@ -10,6 +10,11 @@ export interface Project {
   link: string;
   github: string;
   featured: boolean;
+  screenshot?: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export const projects: Project[] = [
@@ -232,7 +237,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://sadoc-front.netlify.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Conversion Rate", value: "+45% uplift" },
+      { label: "Form Completion", value: "87% success" }
+    ]
   },
   { 
     name: "XGrow", 
@@ -245,7 +254,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://www.xgrow.com/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Active Users", value: "10K+" },
+      { label: "Engagement Rate", value: "92%" }
+    ]
   },
   { 
     name: "Macovi Sport Club", 
@@ -258,7 +271,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://macovi-sport-club.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Members", value: "500+" },
+      { label: "Events Managed", value: "50+/year" }
+    ]
   },
   { 
     name: "FEMB", 
@@ -271,7 +288,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://femb.ao", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Transactions", value: "$2M+/year" },
+      { label: "User Base", value: "5K+" }
+    ]
   },
   { 
     name: "Docampo", 
@@ -284,7 +305,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://docampo.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Documents Stored", value: "100K+" },
+      { label: "Uptime", value: "99.9%" }
+    ]
   },
   { 
     name: "St Maze Love", 
@@ -297,7 +322,11 @@ export const projects: Project[] = [
     status: "Live", 
     link: "https://st-maze-love.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Monthly Visitors", value: "3K+" },
+      { label: "Engagement Time", value: "8 min avg" }
+    ]
   },
   { 
     name: "Mambo Weather App", 
