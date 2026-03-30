@@ -15,6 +15,7 @@ export interface Project {
     label: string;
     value: string;
   }[];
+  stats?: string;
 }
 
 export const projects: Project[] = [
