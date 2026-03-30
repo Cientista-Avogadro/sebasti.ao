@@ -155,7 +155,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <MicrosoftClarity />
