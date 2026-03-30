@@ -85,9 +85,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       creator: '@CientistaAvogadro',
     },
     alternates: {
-      canonical: `${APP_URL}/${locale}`,
+      canonical: locale === 'en' ? APP_URL : `${APP_URL}/${locale}`,
       languages: {
-        'en-US': `${APP_URL}/en`,
+        'en-US': APP_URL,
         'pt-AO': `${APP_URL}/pt`,
       },
     },
@@ -109,7 +109,7 @@ export default async function LocaleLayout({
     "@type": "Person",
     name: "Sebastião de Sousa Moniz",
     alternateName: ["Cientista-Avogadro", "Sebasti"],
-    url: `${APP_URL}/${locale}`,
+    url: locale === 'en' ? APP_URL : `${APP_URL}/${locale}`,
     image: `${APP_URL}/myphoto.jpg`,
     description: locale === 'pt'
       ? "Engenheiro de Software Sénior com 6+ anos de experiência em desenvolvimento web, desktop e mobile. Baseado em Luanda, Angola."
