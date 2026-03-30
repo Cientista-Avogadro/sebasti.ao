@@ -6,14 +6,18 @@ import { useTranslations } from "next-intl";
 
 export function Hero() {
   const t = useTranslations("hero");
-  const proofPoints = [t("proofA"), t("proofB"), t("proofC")];
+  const proofPoints = [
+    t.raw("proofA") ? t("proofA") : "Multi-tenant SaaS",
+    t.raw("proofB") ? t("proofB") : "Agricultural operations platform",
+    t.raw("proofC") ? t("proofC") : "Production systems"
+  ];
   const capabilityTags = [
-    "Multi-tenant SaaS",
-    "Billing Systems",
-    "System Design",
-    "React / Next.js",
-    "C# / .NET",
-    "Product Delivery",
+    t.raw("capabilityA") ? t("capabilityA") : "SaaS",
+    t.raw("capabilityB") ? t("capabilityB") : "Billing",
+    t.raw("capabilityC") ? t("capabilityC") : "Design",
+    t.raw("capabilityD") ? t("capabilityD") : "Next.js",
+    t.raw("capabilityE") ? t("capabilityE") : "PostgreSQL",
+    t.raw("capabilityF") ? t("capabilityF") : "Product"
   ];
 
   return (
@@ -60,6 +64,9 @@ export function Hero() {
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-relaxed text-zinc-300">
               {t("description")}
+            </p>
+            <p className="mt-4 max-w-3xl text-base font-medium leading-relaxed text-emerald-300">
+              {t.raw("authorityLine") ? t("authorityLine") : "Built production systems including a multi-tenant billing platform and agricultural management system."}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-zinc-400">

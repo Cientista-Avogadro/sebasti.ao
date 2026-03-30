@@ -20,8 +20,9 @@
   "hero": {
     "badge": "Available for senior remote roles",
     "eyebrow": "Senior software engineer building revenue-critical systems",
-    "headline": "I design and ship production systems that help businesses operate, bill, and scale.",
-    "description": "Senior Software Engineer with 6+ years building multi-tenant SaaS, billing platforms, agricultural operations software, and internal business tools used in production environments.",
+    "headline": "I build scalable SaaS platforms and real-world systems used in production.",
+    "description": "Senior Software Engineer with 6+ years building multi-tenant billing platforms, agricultural management systems, and business software that supports real operational workflows.",
+    "authorityLine": "Built production systems including a multi-tenant billing platform and agricultural management system.",
     "proofA": "Multi-tenant billing SaaS",
     "proofB": "Agricultural operations platform",
     "proofC": "Production systems across Angola, Brazil, and Europe",
@@ -32,16 +33,22 @@
     "summaryA": "SaaS, billing, and admin platforms",
     "summaryB": "Built for real operating teams",
     "capabilitiesLabel": "Core strengths",
-    "location": "Luanda, Angola"
+    "location": "Luanda, Angola",
+    "capabilityA": "Multi-tenant SaaS",
+    "capabilityB": "Billing systems",
+    "capabilityC": "System design",
+    "capabilityD": "React / Next.js",
+    "capabilityE": "Node.js / PostgreSQL",
+    "capabilityF": "Product delivery"
   },
   "about": {
     "label": "01 - POSITIONING",
     "title": "Senior engineer focused on",
     "titleHighlight": "systems, ownership, and business value",
-    "p1": "I am a Software Engineer with over 6 years of experience building real systems that run in production and support day-to-day business operations.",
-    "p2": "My strongest work is in software that matters operationally: multi-tenant SaaS, billing and invoicing systems, agricultural management platforms, and internal tools that teams rely on to execute.",
-    "p3": "I do not position myself as a feature-only engineer. I work across system design, implementation, workflow modeling, reliability, and delivery quality.",
-    "p4": "My goal is to contribute at senior level in international remote teams where ownership, product quality, and business impact are expected, not optional.",
+    "p1": "I am a Software Engineer with over 6 years of experience building production-ready systems that solve real operational problems.",
+    "p2": "My work focuses on designing scalable SaaS platforms, including multi-tenant billing systems and agricultural management solutions tailored to real business environments.",
+    "p3": "I have experience working in high-demand scenarios, managing multiple projects simultaneously while maintaining system quality, performance, and reliability.",
+    "p4": "I approach software engineering as a system design problem, prioritizing scalability, maintainability, and real-world usability over quick solutions.",
     "years": "Years in production",
     "projects": "Systems across billing, agriculture, finance, and operations",
     "companies": "Ready for international remote teams",
@@ -91,15 +98,15 @@
     "github": "GitHub",
     "kibera": {
       "tagline": "Multi-tenant billing and operations platform",
-      "description": "A production billing system designed for businesses that need invoicing, POS, payment tracking, customer management, and tenant isolation in a single product. Built to reduce operational friction and replace manual, error-prone workflows.",
-      "role": "Finance teams, operators, and administrators running multiple businesses on one shared platform.",
-      "impact": "Turned billing, receivables, and day-to-day operations into a structured, scalable workflow instead of spreadsheet-driven execution."
+      "description": "A production-ready SaaS billing platform designed to support multiple businesses within a single system. Used by businesses to manage billing, invoices, payments, POS operations, and customer data in real-world scenarios.",
+      "role": "Businesses, finance teams, operators, and administrators managing day-to-day billing and payment workflows.",
+      "impact": "Designed with multi-tenancy to support multiple independent companies within one platform, with strong data isolation, lower operational errors, and more scalable business workflows."
     },
     "cafe": {
       "tagline": "Agricultural management platform",
-      "description": "A platform for managing farms and agricultural operations from property structure to crop planning, irrigation, pests, inventory, and financial tracking. Built for real operational visibility, not a showcase prototype.",
-      "role": "Farm managers and operational teams handling planning, execution, and production control.",
-      "impact": "Improved organization, traceability, and decision-making across agricultural workflows that are typically fragmented or manual."
+      "description": "A comprehensive system designed to manage agricultural operations from planning to execution. Supports property management, crop planning, irrigation tracking, pest control, inventory, and financial monitoring.",
+      "role": "Farm managers and operational teams responsible for planning, execution, productivity, and production control.",
+      "impact": "Built to handle structured agricultural workflows and long-term operational use, improving organization, traceability, and decision-making in real farm environments."
     },
     "kitandasoft": {
       "tagline": "Business management suite",
@@ -300,17 +307,17 @@
   "learning": {
     "label": "05 - ENGINEERING APPROACH",
     "title": "How I work",
-    "subtitle": "The strongest signal I can send is not animation. It is clarity of thinking, execution quality, and reliability under production constraints.",
+    "subtitle": "I design systems with a focus on scalability, reliability, and real-world usage under operational constraints.",
     "currentlyLearning": "Engineering approach",
-    "learningSubtitle": "My default mode is to simplify systems, protect reliability, and design for long-term maintainability.",
-    "principleA": "Design from workflow, not from screens",
-    "principleADesc": "I map users, operational steps, data boundaries, and failure cases before optimizing UI.",
-    "principleB": "Build for maintainability",
-    "principleBDesc": "I prefer systems that remain understandable and adaptable after the first release.",
-    "principleC": "Reduce operational friction",
-    "principleCDesc": "The best systems remove manual work, lower error rates, and make teams faster.",
-    "principleD": "Be reliable under pressure",
-    "principleDDesc": "Shipping in demanding environments taught me to prioritize stability, clarity, and execution discipline.",
+    "learningSubtitle": "I prioritize scalable architecture, proper data boundaries, and maintainability over quick implementation shortcuts.",
+    "principleA": "Design for multi-tenancy and data isolation",
+    "principleADesc": "I design systems with multi-tenancy in mind, ensuring proper data isolation, clear boundaries, and room for scalable growth.",
+    "principleB": "Build for long-term maintainability",
+    "principleBDesc": "I prioritize architectures and codebases that remain understandable, adaptable, and sustainable as products evolve.",
+    "principleC": "Model real workflows, not idealized demos",
+    "principleCDesc": "I focus on structured data, operational scenarios, and business workflows that reflect how people actually use the system.",
+    "principleD": "Prefer reliability over shortcuts",
+    "principleDDesc": "I optimize for production reliability, performance under real conditions, and systems that continue to work as they grow.",
     "valueProposition": "Available for remote teams",
     "valueSubtitle": "I am open to senior remote roles where ownership, product quality, and business impact matter.",
     "endToEnd": "End-to-end ownership",
@@ -370,18 +377,54 @@
     "media": "media",
     "allEvents": "All Events",
     "events": {
-      "asSpeaker": { "tagline": "Speaker", "description": "Participation as a speaker at a technology and personal development event." },
-      "cafeLubango": { "tagline": "DevTest Event", "description": "Meeting of developers and IT professionals in Lubango for networking and knowledge sharing." },
-      "cafeTi": { "tagline": "DevTest Event", "description": "Meeting of developers and IT professionals for networking and knowledge sharing." },
-      "expoHuila": { "tagline": "Technology Fair", "description": "Participation at Expo Huila showcasing technological solutions for regional development." },
-      "projectSummit": { "tagline": "Tech Conference", "description": "Participation in a technology and innovation conference." },
-      "angoTic": { "tagline": "Angola TIC Conference", "description": "Angola's largest technology and innovation conference." },
-      "codeMoments": { "tagline": "Programming & Development", "description": "Coding moments, projects, and software development." },
-      "gcLucan": { "tagline": "Company Events", "description": "Moments and events from the GC-LUCAN team." },
-      "snir": { "tagline": "Company Events", "description": "Moments from the SNIR team." },
-      "passeiosHuila": { "tagline": "Team Building", "description": "Trips and team integration moments from DevTest in Huila." },
-      "office": { "tagline": "Work Environment", "description": "Day-to-day moments at the DevTest office." },
-      "jovensNegocios": { "tagline": "Event", "description": "Participation in a young entrepreneurs and business event." }
+      "asSpeaker": {
+        "tagline": "Speaker",
+        "description": "Participation as a speaker at a technology and personal development event."
+      },
+      "cafeLubango": {
+        "tagline": "DevTest Event",
+        "description": "Meeting of developers and IT professionals in Lubango for networking and knowledge sharing."
+      },
+      "cafeTi": {
+        "tagline": "DevTest Event",
+        "description": "Meeting of developers and IT professionals for networking and knowledge sharing."
+      },
+      "expoHuila": {
+        "tagline": "Technology Fair",
+        "description": "Participation at Expo Huila showcasing technological solutions for regional development."
+      },
+      "projectSummit": {
+        "tagline": "Tech Conference",
+        "description": "Participation in a technology and innovation conference."
+      },
+      "angoTic": {
+        "tagline": "Angola TIC Conference",
+        "description": "Angola's largest technology and innovation conference."
+      },
+      "codeMoments": {
+        "tagline": "Programming & Development",
+        "description": "Coding moments, projects, and software development."
+      },
+      "gcLucan": {
+        "tagline": "Company Events",
+        "description": "Moments and events from the GC-LUCAN team."
+      },
+      "snir": {
+        "tagline": "Company Events",
+        "description": "Moments from the SNIR team."
+      },
+      "passeiosHuila": {
+        "tagline": "Team Building",
+        "description": "Trips and team integration moments from DevTest in Huila."
+      },
+      "office": {
+        "tagline": "Work Environment",
+        "description": "Day-to-day moments at the DevTest office."
+      },
+      "jovensNegocios": {
+        "tagline": "Event",
+        "description": "Participation in a young entrepreneurs and business event."
+      }
     }
   },
   "testimonials": {
@@ -436,7 +479,7 @@
     "phone": "Phone"
   },
   "footer": {
-    "tagline": "Building production software from Angola for global teams.",
+    "tagline": "Based in Angola — working globally.",
     "rights": "All rights reserved.",
     "email": "Email"
   },

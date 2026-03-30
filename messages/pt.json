@@ -20,8 +20,9 @@
   "hero": {
     "badge": "Disponível para vagas remotas sénior",
     "eyebrow": "Engenheiro de software sénior a construir sistemas críticos para operação e receita",
-    "headline": "Desenho e entrego sistemas de produção que ajudam empresas a operar, facturar e escalar.",
-    "description": "Engenheiro de Software Sénior com mais de 6 anos a construir SaaS multi-tenant, plataformas de facturação, software de gestão agrícola e ferramentas internas usadas em ambientes de produção.",
+    "headline": "Construo plataformas SaaS escaláveis e sistemas reais usados em produção.",
+    "description": "Engenheiro de Software Sénior com mais de 6 anos a construir plataformas de facturação multi-tenant, sistemas de gestão agrícola e software de negócio para workflows operacionais reais.",
+    "authorityLine": "Construí sistemas em produção, incluindo uma plataforma multi-tenant de facturação e um sistema de gestão agrícola.",
     "proofA": "SaaS de facturação multi-tenant",
     "proofB": "Plataforma de operações agrícolas",
     "proofC": "Sistemas de produção em Angola, Brasil e Europa",
@@ -32,16 +33,22 @@
     "summaryA": "SaaS, facturação e plataformas administrativas",
     "summaryB": "Construído para equipas e operações reais",
     "capabilitiesLabel": "Forças principais",
-    "location": "Luanda, Angola"
+    "location": "Luanda, Angola",
+    "capabilityA": "SaaS multi-tenant",
+    "capabilityB": "Sistemas de facturação",
+    "capabilityC": "Desenho de sistemas",
+    "capabilityD": "React / Next.js",
+    "capabilityE": "Node.js / PostgreSQL",
+    "capabilityF": "Entrega de produto"
   },
   "about": {
     "label": "01 - POSICIONAMENTO",
     "title": "Engenheiro sénior focado em",
     "titleHighlight": "sistemas, ownership e valor de negócio",
-    "p1": "Sou Engenheiro de Software com mais de 6 anos de experiência a construir sistemas reais que funcionam em produção e suportam operações do dia-a-dia.",
-    "p2": "O meu melhor trabalho está em software com importância operacional: SaaS multi-tenant, sistemas de facturação, plataformas de gestão agrícola e ferramentas internas nas quais equipas dependem para executar.",
-    "p3": "Não me posiciono como um engenheiro apenas de features. Trabalho entre desenho de sistemas, implementação, modelação de workflows, fiabilidade e qualidade de entrega.",
-    "p4": "O meu objectivo é contribuir em equipas remotas internacionais, a nível sénior, onde ownership, qualidade de produto e impacto de negócio são expectativas reais.",
+    "p1": "Sou Engenheiro de Software com mais de 6 anos de experiência a construir sistemas prontos para produção que resolvem problemas operacionais reais.",
+    "p2": "O meu trabalho foca-se no desenho de plataformas SaaS escaláveis, incluindo sistemas de facturação multi-tenant e soluções de gestão agrícola adaptadas a ambientes de negócio reais.",
+    "p3": "Tenho experiência em cenários de alta exigência, a gerir múltiplos projectos em simultâneo sem comprometer qualidade, performance e fiabilidade.",
+    "p4": "Abordo engenharia de software como um problema de desenho de sistemas, priorizando escalabilidade, manutenção e usabilidade real acima de soluções rápidas.",
     "years": "Anos em produção",
     "projects": "Sistemas em facturação, agricultura, finanças e operações",
     "companies": "Pronto para equipas remotas internacionais",
@@ -91,15 +98,15 @@
     "github": "GitHub",
     "kibera": {
       "tagline": "Plataforma multi-tenant de facturação e operações",
-      "description": "Sistema de facturação em produção concebido para empresas que precisam de facturação, POS, controlo de pagamentos, gestão de clientes e isolamento por tenant no mesmo produto. Construído para reduzir fricção operacional e substituir processos manuais propensos a erro.",
-      "role": "Equipas financeiras, operacionais e administradores a gerir múltiplos negócios numa plataforma partilhada.",
-      "impact": "Transformou facturação, cobranças e operações do dia-a-dia num workflow estruturado e escalável."
+      "description": "Plataforma SaaS de facturação pronta para produção, desenhada para suportar múltiplas empresas dentro do mesmo sistema. Usada para gerir facturação, pagamentos, POS e dados de clientes em cenários reais.",
+      "role": "Empresas, equipas financeiras, operadores e administradores responsáveis por workflows de facturação e pagamentos.",
+      "impact": "Desenhada com multi-tenancy para suportar empresas independentes numa única plataforma, com isolamento de dados, menos erros operacionais e workflows mais escaláveis."
     },
     "cafe": {
       "tagline": "Plataforma de gestão agrícola",
-      "description": "Plataforma para gerir fazendas e operações agrícolas desde a estrutura da propriedade até planeamento de culturas, irrigação, pragas, inventário e controlo financeiro. Construída para visibilidade operacional real, não para demonstração.",
-      "role": "Gestores agrícolas e equipas operacionais responsáveis por planeamento, execução e controlo da produção.",
-      "impact": "Melhorou organização, rastreabilidade e tomada de decisão em workflows agrícolas normalmente fragmentados ou manuais."
+      "description": "Sistema completo desenhado para gerir operações agrícolas desde o planeamento até à execução. Suporta gestão de propriedades, planeamento de culturas, irrigação, controlo de pragas, inventário e acompanhamento financeiro.",
+      "role": "Gestores agrícolas e equipas operacionais responsáveis por planeamento, execução, produtividade e controlo da produção.",
+      "impact": "Construído para lidar com workflows agrícolas estruturados e uso operacional de longo prazo, melhorando organização, rastreabilidade e decisão em ambiente real."
     },
     "kitandasoft": {
       "tagline": "Suite de gestão empresarial",
@@ -300,17 +307,17 @@
   "learning": {
     "label": "05 - ABORDAGEM DE ENGENHARIA",
     "title": "Como eu trabalho",
-    "subtitle": "O sinal mais forte que posso enviar não é animação. É clareza de pensamento, qualidade de execução e fiabilidade sob restrições reais de produção.",
+    "subtitle": "Desenho sistemas com foco em escalabilidade, fiabilidade e utilização real sob restrições operacionais.",
     "currentlyLearning": "Abordagem de engenharia",
-    "learningSubtitle": "O meu modo padrão é simplificar sistemas, proteger a fiabilidade e desenhar para manutenção a longo prazo.",
-    "principleA": "Desenhar a partir do workflow, não do ecrã",
-    "principleADesc": "Mapeio utilizadores, passos operacionais, fronteiras de dados e falhas antes de optimizar UI.",
-    "principleB": "Construir para manutenção",
-    "principleBDesc": "Prefiro sistemas que continuam compreensíveis e adaptáveis depois do primeiro release.",
-    "principleC": "Reduzir fricção operacional",
-    "principleCDesc": "Os melhores sistemas removem trabalho manual, reduzem erros e tornam equipas mais rápidas.",
-    "principleD": "Ser fiável sob pressão",
-    "principleDDesc": "Entregar em ambientes exigentes ensinou-me a priorizar estabilidade, clareza e disciplina de execução.",
+    "learningSubtitle": "Prioritizo arquitectura escalável, fronteiras claras de dados e manutenção de longo prazo acima de atalhos de implementação.",
+    "principleA": "Desenhar para multi-tenancy e isolamento de dados",
+    "principleADesc": "Desenho sistemas com multi-tenancy em mente, garantindo isolamento correcto de dados, fronteiras claras e espaço para escalar.",
+    "principleB": "Construir para manutenção a longo prazo",
+    "principleBDesc": "Dou prioridade a arquitecturas e codebases que continuam compreensíveis, adaptáveis e sustentáveis à medida que o produto evolui.",
+    "principleC": "Modelar workflows reais, não demos ideais",
+    "principleCDesc": "Foco-me em dados estruturados, cenários operacionais e workflows de negócio que refletem a forma como o sistema é realmente usado.",
+    "principleD": "Preferir fiabilidade a atalhos",
+    "principleDDesc": "Optimizo para fiabilidade em produção, performance sob condições reais e sistemas que continuam a funcionar à medida que crescem.",
     "valueProposition": "Disponível para equipas remotas",
     "valueSubtitle": "Estou aberto a vagas remotas sénior onde ownership, qualidade de produto e impacto de negócio contam.",
     "endToEnd": "Ownership ponta a ponta",
@@ -370,18 +377,54 @@
     "media": "multimédia",
     "allEvents": "Todos os Eventos",
     "events": {
-      "asSpeaker": { "tagline": "Palestrante", "description": "Participação como palestrante em evento de tecnologia e desenvolvimento pessoal." },
-      "cafeLubango": { "tagline": "Evento DevTest", "description": "Encontro de desenvolvedores e profissionais de TI no Lubango." },
-      "cafeTi": { "tagline": "Evento DevTest", "description": "Encontro de desenvolvedores e profissionais de TI." },
-      "expoHuila": { "tagline": "Feira de Tecnologia", "description": "Participação na Expo Huila." },
-      "projectSummit": { "tagline": "Conferência Tech", "description": "Participação em conferência de tecnologia e inovação." },
-      "angoTic": { "tagline": "Angola TIC Conference", "description": "Maior conferência de tecnologia e inovação de Angola." },
-      "codeMoments": { "tagline": "Programação & Desenvolvimento", "description": "Momentos de coding e desenvolvimento." },
-      "gcLucan": { "tagline": "Eventos da Empresa", "description": "Momentos e eventos da equipa GC-LUCAN." },
-      "snir": { "tagline": "Eventos da Empresa", "description": "Momentos da equipa SNIR." },
-      "passeiosHuila": { "tagline": "Team Building", "description": "Momentos de integração da equipa DevTest na Huíla." },
-      "office": { "tagline": "Ambiente de Trabalho", "description": "Momentos do dia-a-dia no escritório." },
-      "jovensNegocios": { "tagline": "Evento", "description": "Participação em evento de jovens empreendedores." }
+      "asSpeaker": {
+        "tagline": "Palestrante",
+        "description": "Participação como palestrante em evento de tecnologia e desenvolvimento pessoal."
+      },
+      "cafeLubango": {
+        "tagline": "Evento DevTest",
+        "description": "Encontro de desenvolvedores e profissionais de TI no Lubango."
+      },
+      "cafeTi": {
+        "tagline": "Evento DevTest",
+        "description": "Encontro de desenvolvedores e profissionais de TI."
+      },
+      "expoHuila": {
+        "tagline": "Feira de Tecnologia",
+        "description": "Participação na Expo Huila."
+      },
+      "projectSummit": {
+        "tagline": "Conferência Tech",
+        "description": "Participação em conferência de tecnologia e inovação."
+      },
+      "angoTic": {
+        "tagline": "Angola TIC Conference",
+        "description": "Maior conferência de tecnologia e inovação de Angola."
+      },
+      "codeMoments": {
+        "tagline": "Programação & Desenvolvimento",
+        "description": "Momentos de coding e desenvolvimento."
+      },
+      "gcLucan": {
+        "tagline": "Eventos da Empresa",
+        "description": "Momentos e eventos da equipa GC-LUCAN."
+      },
+      "snir": {
+        "tagline": "Eventos da Empresa",
+        "description": "Momentos da equipa SNIR."
+      },
+      "passeiosHuila": {
+        "tagline": "Team Building",
+        "description": "Momentos de integração da equipa DevTest na Huíla."
+      },
+      "office": {
+        "tagline": "Ambiente de Trabalho",
+        "description": "Momentos do dia-a-dia no escritório."
+      },
+      "jovensNegocios": {
+        "tagline": "Evento",
+        "description": "Participação em evento de jovens empreendedores."
+      }
     }
   },
   "testimonials": {
@@ -436,7 +479,7 @@
     "phone": "Telefone"
   },
   "footer": {
-    "tagline": "A construir software de produção a partir de Angola para equipas globais.",
+    "tagline": "Baseado em Angola — a trabalhar globalmente.",
     "rights": "Todos os direitos reservados.",
     "email": "Email"
   },
