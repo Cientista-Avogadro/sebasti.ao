@@ -110,6 +110,7 @@
     "workType": "Tipo",
     "remote": "Remota",
     "hybrid": "Híbrida",
+    "onsite": "Presencial",
     "present": "Presente",
     "months": "meses",
     "years": "anos",
@@ -160,7 +161,8 @@
         "3": "Hotel System: Gestão hoteleira completa com React, Node.js, Chakra UI",
         "4": "SIKOLASOFT: Software de gestão educacional angolano mais completo",
         "5": "KITANDASOFT Suite: ERP, POS, restaurante, faturação, CRM",
-        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB"
+        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB",
+        "7": "Desenvolvimento de relatórios empresariais profissionais com DevExpress e XtraReports"
       }
     },
     "zenitech": {
@@ -176,7 +178,8 @@
       "highlights": {
         "1": "Plataforma Educacional: Calendário, Página de Lives e funcionalidades principais",
         "2": "Resolução de bugs e implementação de funcionalidades",
-        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket"
+        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket",
+        "4": "Gestão de estado e lógica de UI complexa com Redux e Chakra UI"
       }
     },
     "teclat": {
@@ -192,7 +195,8 @@
       "highlights": {
         "1": "Desenvolvimento completo do website da empresa",
         "2": "Kiari Events: Organizador de eventos e app para clientes com React, Redux, GraphQL",
-        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI"
+        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI",
+        "4": "Ecossistema React moderno: Vite, Redux Toolkit e integração GraphQL"
       }
     },
     "snir": {
@@ -200,7 +204,8 @@
       "highlights": {
         "1": "International Insurance: Sistema completo de gestão de seguros - DBA, Backend, DevOps",
         "2": "NZIMBUPAY: Aplicação bancária com desenvolvimento de relatórios seniores",
-        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL"
+        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL",
+        "4": "Administração de base de dados e optimização de performance para SQL Server"
       }
     }
   },
@@ -281,14 +286,27 @@
     "trophies": "Troféus"
   },
   "testimonials": {
-    "label": "09 — TESTEMUNHOS",
-    "title": "O Que Dizem os Colegas",
-    "subtitle": "Recomendações de profissionais com quem trabalhei.",
-    "viewAll": "Ver Todas as Recomendações no LinkedIn",
-    "workedWith": "Trabalhou comigo em"
+    "label": "10 — TESTEMUNHOS",
+    "title": "Feedback de Clientes e Colegas",
+    "subtitle": "O que os profissionais com quem trabalhei dizem sobre as minhas competências técnicas e colaboração.",
+    "viewAll": "Ver todas as recomendações",
+    "items": {
+      "lietson": {
+        "quote": "Tive a oportunidade de trabalhar com o Sebastião durante o meu estágio na SNIR, onde ele actuava como software developer e assumiu parte da minha supervisão técnica. Desde o primeiro dia, demonstrou ser uma pessoa muito amigável e deixou claro o seu domínio sólido das tecnologias, capacidade de resolução de problemas e uma visão técnica muito acima da média. Recomendo o Sebastião para novos desafios e oportunidades de colaboração em qualquer projecto que exija competência, compromisso e elevado rigor técnico.",
+        "relation": "Trabalhou com Sebastião na SNIR"
+      },
+      "adao": {
+        "quote": "É um ótimo profissional em desenvolvimento das aplicações, super recomendo em varias atividades. Trabalhar com o Cientista está a ser uma experiência muito boa.",
+        "relation": "Trabalhou com Sebastião na GC-LUCAN"
+      },
+      "edmilson": {
+        "quote": "Um excelente programador. Super recomendo.",
+        "relation": "Trabalhou com Sebastião na Tecla T"
+      }
+    }
   },
   "gallery": {
-    "label": "10 — GALERIA",
+    "label": "09 — GALERIA",
     "title": "Eventos & Palestras",
     "subtitle": "Momentos de eventos tecnológicos, conferências e intervenções como orador.",
     "photos": "fotos",

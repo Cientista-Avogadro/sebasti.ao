@@ -1,21 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter, Link } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { useMobileMenu } from "@/lib/context/MobileMenuContext";
 
 const sectionIds = ["about", "expertise", "projects", "experience", "education", "gallery", "articles", "contact"];
 
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
+  const router = useRouter();
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useMobileMenu();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   const navItems = [
@@ -55,18 +56,18 @@ export function Navbar() {
     setIsMobileMenuOpen(false);
     
     if (href.startsWith("/projects") || href.startsWith("/gallery") || href.startsWith("/articles")) {
-      window.location.href = href;
+      router.push(href);
       return;
     }
     
     if (href.startsWith("/#")) {
-      window.location.href = href;
+      router.push(href);
       return;
     }
     
     if (href.startsWith("#")) {
       if (pathname !== "/") {
-        window.location.href = "/" + href;
+        router.push("/" + href);
         return;
       }
       const hash = href.slice(1);
@@ -75,7 +76,7 @@ export function Navbar() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      window.location.href = href;
+      router.push(href);
     }
   };
 

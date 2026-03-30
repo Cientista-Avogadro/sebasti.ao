@@ -110,6 +110,7 @@
     "workType": "Type",
     "remote": "Remote",
     "hybrid": "Hybrid",
+    "onsite": "On-site",
     "present": "Present",
     "months": "months",
     "years": "years",
@@ -160,7 +161,8 @@
         "3": "Hotel System: Complete hotel management with React, Node.js, Chakra UI",
         "4": "SIKOLASOFT: Angola's most complete educational management software",
         "5": "KITANDASOFT Suite: ERP, POS, restaurant, invoicing, CRM",
-        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB"
+        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB",
+        "7": "Professional enterprise reports development with DevExpress and XtraReports"
       }
     },
     "zenitech": {
@@ -176,7 +178,8 @@
       "highlights": {
         "1": "Educational Platform: Calendar, Lives Page, and core features",
         "2": "Bug fixing and feature implementation",
-        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket"
+        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket",
+        "4": "State management and complex UI logic with Redux and Chakra UI"
       }
     },
     "teclat": {
@@ -192,7 +195,8 @@
       "highlights": {
         "1": "Complete development of the company website",
         "2": "Kiari Events: Event organizer and client app with React, Redux, GraphQL",
-        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI"
+        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI",
+        "4": "Modern React ecosystem: Vite, Redux Toolkit, and GraphQL integration"
       }
     },
     "snir": {
@@ -200,7 +204,8 @@
       "highlights": {
         "1": "International Insurance: Complete insurance management system - DBA, Backend, DevOps",
         "2": "NZIMBUPAY: Banking application with senior report development",
-        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL"
+        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL",
+        "4": "Database administration and performance optimization for SQL Server"
       }
     }
   },
@@ -280,15 +285,8 @@
     "pairExtra": "Pair Extraordinaire",
     "trophies": "Trophies"
   },
-  "testimonials": {
-    "label": "09 — TESTIMONIALS",
-    "title": "What Colleagues Say",
-    "subtitle": "Recommendations from professionals I've worked with.",
-    "viewAll": "View All Recommendations on LinkedIn",
-    "workedWith": "Worked with me at"
-  },
   "gallery": {
-    "label": "10 — GALLERY",
+    "label": "09 — GALLERY",
     "title": "Events & Speaking",
     "subtitle": "Moments from tech events, conferences, and speaking engagements.",
     "photos": "photos",
@@ -309,6 +307,26 @@
       "passeiosHuila": { "tagline": "Team Building", "description": "Trips and team integration moments from DevTest in Huila." },
       "office": { "tagline": "Work Environment", "description": "Day-to-day moments at the DevTest office." },
       "jovensNegocios": { "tagline": "Event", "description": "Participation in a young entrepreneurs and business event." }
+    }
+  },
+  "testimonials": {
+    "label": "10 — TESTIMONIALS",
+    "title": "Client & Peer Feedback",
+    "subtitle": "What professionals I've worked with say about my technical skills and collaboration.",
+    "viewAll": "View all recommendations",
+    "items": {
+      "lietson": {
+        "quote": "I had the opportunity to work with Sebastião during my internship at SNIR, where he acted as a software developer and took on part of my technical supervision. From day one, he proved to be a very friendly person and made clear his solid mastery of technologies, problem-solving skills, and a technical vision far above average. I recommend Sebastião for new challenges and collaboration opportunities in any project that requires competence, commitment, and high technical rigor.",
+        "relation": "Worked with Sebastião at SNIR"
+      },
+      "adao": {
+        "quote": "He is a great professional in application development, I highly recommend him for various activities. Working with 'Cientista' (The Scientist) has been a very good experience.",
+        "relation": "Worked with Sebastião at GC-LUCAN"
+      },
+      "edmilson": {
+        "quote": "A great programmer. Highly recommended.",
+        "relation": "Worked with Sebastião at Tecla T"
+      }
     }
   },
   "articles": {

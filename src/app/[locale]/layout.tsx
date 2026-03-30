@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
+import { MobileMenuProvider } from '@/lib/context/MobileMenuContext';
 
 const APP_URL = process.env.APP_URL || "https://sebasti.ao";
 
@@ -165,7 +166,9 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen bg-[#09090b] text-zinc-50 antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
+          <MobileMenuProvider>
+            {children}
+          </MobileMenuProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>
