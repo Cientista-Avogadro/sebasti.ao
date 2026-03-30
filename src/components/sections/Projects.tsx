@@ -1,5 +1,5 @@
 "use client";
-// Force rebuild - v0 update
+// Force rebuild - v0 update v2
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
