@@ -1,199 +1,72 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useMemo } from "react";
-import { ExternalLink, Award, Filter, X, GraduationCap, BookOpen, CheckCircle } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { Award, CheckCircle, ExternalLink, Filter, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const courses = [
-  {
-    name: "Sintaxe Básica em JavaScript",
-    institution: "DIO",
-    period: "14/11/2021",
-    grade: "100%",
-    description: "Fundamentos da linguagem JavaScript",
-    link: "https://www.dio.me/certificate/50549954/share",
-    category: "Frontend",
-    tech: ["JavaScript"],
-  },
-  {
-    name: "Programação para internet com JavaScript",
-    institution: "DIO",
-    period: "16/11/2021",
-    grade: "100%",
-    description: "Desenvolvimento web com JavaScript",
-    link: "https://www.dio.me/certificate/424E4986/share",
-    category: "Frontend",
-    tech: ["JavaScript", "HTML", "CSS"],
-  },
-  {
-    name: "JavaScript ES6 essencial",
-    institution: "DIO",
-    period: "20/11/2021",
-    grade: "100%",
-    description: "Conceitos essenciais do ECMAScript 6",
-    link: "https://www.dio.me/certificate/7452BF4C/share",
-    category: "Frontend",
-    tech: ["JavaScript", "ES6"],
-  },
-  {
-    name: "Desenvolvimento avançado com JavaScript ES6",
-    institution: "DIO",
-    period: "20/11/2021",
-    grade: "100%",
-    description: "Técnicas avançadas com JavaScript ES6",
-    link: "https://www.dio.me/certificate/2D7B1EB5/share",
-    category: "Frontend",
-    tech: ["JavaScript", "ES6"],
-  },
-  {
-    name: "Introdução à biblioteca jQuery",
-    institution: "DIO",
-    period: "20/11/2021",
-    grade: "100%",
-    description: "Introdução ao jQuery para manipulação DOM",
-    link: "https://www.dio.me/certificate/6A3E5C03/share",
-    category: "Frontend",
-    tech: ["jQuery", "JavaScript"],
-  },
-  {
-    name: "Introdução ao ReactJS",
-    institution: "DIO",
-    period: "22/11/2021",
-    grade: "100%",
-    description: "Conceitos fundamentais do ReactJS",
-    link: "https://www.dio.me/certificate/4308725E/share",
-    category: "Frontend",
-    tech: ["React", "ReactJS"],
-  },
-  {
-    name: "Trabalhando com Componentes em React",
-    institution: "DIO",
-    period: "22/11/2021",
-    grade: "100%",
-    description: "Estrutura e ciclo de vida dos componentes React",
-    link: "https://www.dio.me/certificate/AD5AE8FE/share",
-    category: "Frontend",
-    tech: ["React", "ReactJS"],
-  },
-  {
-    name: "Práticas avançadas em projetos com ReactJS",
-    institution: "DIO",
-    period: "22/11/2021",
-    grade: "100%",
-    description: "Técnicas avançadas para projetos com ReactJS",
-    link: "https://www.dio.me/certificate/F653B736/share",
-    category: "Frontend",
-    tech: ["React", "ReactJS"],
-  },
-  {
-    name: "Introdução ao TypeScript: Classes, Tipos e Interfaces",
-    institution: "DIO",
-    period: "26/11/2021",
-    grade: "100%",
-    description: "TypeScript: classes, tipos e interfaces",
-    link: "https://www.dio.me/certificate/B48A69DD/share",
-    category: "Frontend",
-    tech: ["TypeScript"],
-  },
-  {
-    name: "Boas-vindas ao Decola Tech 2a edição",
-    institution: "DIO",
-    period: "29/11/2021",
-    grade: "100%",
-    description: "Bootcamp Decola Tech - Imersão profissional",
-    link: "https://www.dio.me/certificate/F208E4AD/share",
-    category: "Bootcamp",
-    tech: ["Geral"],
-  },
-  {
-    name: "Boas-vindas ao Bootcamp Eduzz Fullstack Developer #2",
-    institution: "DIO",
-    period: "29/11/2021",
-    grade: "100%",
-    description: "Bootcamp Eduzz Fullstack Developer",
-    link: "https://www.dio.me/certificate/61DB553D/share",
-    category: "Bootcamp",
-    tech: ["Fullstack"],
-  },
-  {
-    name: "Desenvolvimento de aplicações para internet com ReactJS",
-    institution: "DIO",
-    period: "30/11/2021",
-    grade: "100%",
-    description: "Desenvolvimento de apps web com ReactJS",
-    link: "https://www.dio.me/certificate/2E2A154D/share",
-    category: "Frontend",
-    tech: ["React", "Redux"],
-  },
-  {
-    name: "Boas-vindas ao Bootcamp Cognizant Java Developer",
-    institution: "DIO",
-    period: "30/12/2021",
-    grade: "100%",
-    description: "Bootcamp Cognizant Java Developer",
-    link: "https://www.dio.me/certificate/AF675FEA/share",
-    category: "Bootcamp",
-    tech: ["Java"],
-  },
-  {
-    name: "ReactJS",
-    institution: "Coodesh",
-    period: "Dez 2021",
-    grade: "Verified",
-    description: "Certificação verificada em ReactJS",
-    link: "https://coodesh.com/share/certificate/806fcf10-5911-11ec-9234-3b58449a3098",
-    category: "Frontend",
-    tech: ["React", "ReactJS"],
-  },
-  {
-    name: "Curso Fullstack Blazor .NET",
-    institution: "Udemy",
-    period: "Nov 2021",
-    grade: "90%",
-    description: "Desenvolvimento fullstack com Blazor e .NET",
-    link: "https://www.udemy.com/certificate/UC-bc7bce5c-6980-49f3-bbac-6f0a502a0ce6/",
-    category: "Backend",
-    tech: ["Blazor", ".NET", "C#"],
-  },
+type Course = {
+  nameKey: string;
+  institution: string;
+  period: string;
+  grade: string;
+  descriptionKey: string;
+  link: string;
+  categoryKey: "categoryFrontend" | "categoryBackend" | "categoryBootcamp";
+  tech: string[];
+};
+
+const courses: Course[] = [
+  { nameKey: "name1", institution: "DIO", period: "14/11/2021", grade: "100%", descriptionKey: "desc1", link: "https://www.dio.me/certificate/50549954/share", categoryKey: "categoryFrontend", tech: ["JavaScript"] },
+  { nameKey: "name2", institution: "DIO", period: "16/11/2021", grade: "100%", descriptionKey: "desc2", link: "https://www.dio.me/certificate/424E4986/share", categoryKey: "categoryFrontend", tech: ["JavaScript", "HTML", "CSS"] },
+  { nameKey: "name3", institution: "DIO", period: "20/11/2021", grade: "100%", descriptionKey: "desc3", link: "https://www.dio.me/certificate/7452BF4C/share", categoryKey: "categoryFrontend", tech: ["JavaScript", "ES6"] },
+  { nameKey: "name4", institution: "DIO", period: "20/11/2021", grade: "100%", descriptionKey: "desc4", link: "https://www.dio.me/certificate/2D7B1EB5/share", categoryKey: "categoryFrontend", tech: ["JavaScript", "ES6"] },
+  { nameKey: "name5", institution: "DIO", period: "20/11/2021", grade: "100%", descriptionKey: "desc5", link: "https://www.dio.me/certificate/6A3E5C03/share", categoryKey: "categoryFrontend", tech: ["jQuery", "JavaScript"] },
+  { nameKey: "name6", institution: "DIO", period: "22/11/2021", grade: "100%", descriptionKey: "desc6", link: "https://www.dio.me/certificate/4308725E/share", categoryKey: "categoryFrontend", tech: ["React", "ReactJS"] },
+  { nameKey: "name7", institution: "DIO", period: "22/11/2021", grade: "100%", descriptionKey: "desc7", link: "https://www.dio.me/certificate/AD5AE8FE/share", categoryKey: "categoryFrontend", tech: ["React", "ReactJS"] },
+  { nameKey: "name8", institution: "DIO", period: "22/11/2021", grade: "100%", descriptionKey: "desc8", link: "https://www.dio.me/certificate/F653B736/share", categoryKey: "categoryFrontend", tech: ["React", "ReactJS"] },
+  { nameKey: "name9", institution: "DIO", period: "26/11/2021", grade: "100%", descriptionKey: "desc9", link: "https://www.dio.me/certificate/B48A69DD/share", categoryKey: "categoryFrontend", tech: ["TypeScript"] },
+  { nameKey: "name10", institution: "DIO", period: "29/11/2021", grade: "100%", descriptionKey: "desc10", link: "https://www.dio.me/certificate/F208E4AD/share", categoryKey: "categoryBootcamp", tech: ["General"] },
+  { nameKey: "name11", institution: "DIO", period: "29/11/2021", grade: "100%", descriptionKey: "desc11", link: "https://www.dio.me/certificate/61DB553D/share", categoryKey: "categoryBootcamp", tech: ["Fullstack"] },
+  { nameKey: "name12", institution: "DIO", period: "30/11/2021", grade: "100%", descriptionKey: "desc12", link: "https://www.dio.me/certificate/2E2A154D/share", categoryKey: "categoryFrontend", tech: ["React", "Redux"] },
+  { nameKey: "name13", institution: "DIO", period: "30/12/2021", grade: "100%", descriptionKey: "desc13", link: "https://www.dio.me/certificate/AF675FEA/share", categoryKey: "categoryBootcamp", tech: ["Java"] },
+  { nameKey: "name14", institution: "Coodesh", period: "Dez 2021", grade: "Verified", descriptionKey: "desc14", link: "https://coodesh.com/share/certificate/806fcf10-5911-11ec-9234-3b58449a3098", categoryKey: "categoryFrontend", tech: ["React", "ReactJS"] },
+  { nameKey: "name15", institution: "Udemy", period: "Nov 2021", grade: "90%", descriptionKey: "desc15", link: "https://www.udemy.com/certificate/UC-bc7bce5c-6980-49f3-bbac-6f0a502a0ce6/", categoryKey: "categoryBackend", tech: ["Blazor", ".NET", "C#"] },
 ];
 
-const allCategories = ["Frontend", "Backend", "Bootcamp"];
+const allCategories: Course["categoryKey"][] = ["categoryFrontend", "categoryBackend", "categoryBootcamp"];
 const allPlatforms = ["DIO", "Coodesh", "Udemy"];
-const allTechs = ["React", "ReactJS", "JavaScript", "ES6", "TypeScript", "jQuery", "Redux", "Blazor", ".NET", "C#", "Java", "Fullstack", "HTML", "CSS"];
 
 export function Courses({ showAll = false }) {
+  const t = useTranslations("courses");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<Course["categoryKey"][]>([]);
   const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>([]);
 
   const filteredCourses = useMemo(() => {
     let filtered = showAll ? courses : courses.slice(0, 6);
-    
+
     if (selectedCategories.length > 0) {
-      filtered = filtered.filter(course => selectedCategories.includes(course.category));
+      filtered = filtered.filter((course) => selectedCategories.includes(course.categoryKey));
     }
-    
+
     if (selectedPlatforms.length > 0) {
-      filtered = filtered.filter(course => selectedPlatforms.includes(course.institution));
+      filtered = filtered.filter((course) => selectedPlatforms.includes(course.institution));
     }
-    
+
     return filtered;
   }, [showAll, selectedCategories, selectedPlatforms]);
 
-  const toggleCategory = (category: string) => {
-    setSelectedCategories(prev => 
-      prev.includes(category) 
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
+  const toggleCategory = (category: Course["categoryKey"]) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category) ? prev.filter((item) => item !== category) : [...prev, category]
     );
   };
 
   const togglePlatform = (platform: string) => {
-    setSelectedPlatforms(prev => 
-      prev.includes(platform) 
-        ? prev.filter(p => p !== platform)
-        : [...prev, platform]
+    setSelectedPlatforms((prev) =>
+      prev.includes(platform) ? prev.filter((item) => item !== platform) : [...prev, platform]
     );
   };
 
@@ -206,18 +79,22 @@ export function Courses({ showAll = false }) {
 
   const getInstitutionColor = (institution: string) => {
     switch (institution) {
-      case "DIO": return "bg-green-500/20 text-green-400 border-green-500/30";
-      case "Coodesh": return "bg-purple-500/20 text-purple-400 border-purple-500/30";
-      case "Udemy": return "bg-red-500/20 text-red-400 border-red-500/30";
-      default: return "bg-zinc-500/20 text-zinc-400 border-zinc-500/30";
+      case "DIO":
+        return "bg-green-500/20 text-green-400 border-green-500/30";
+      case "Coodesh":
+        return "bg-purple-500/20 text-purple-400 border-purple-500/30";
+      case "Udemy":
+        return "bg-red-500/20 text-red-400 border-red-500/30";
+      default:
+        return "bg-zinc-500/20 text-zinc-400 border-zinc-500/30";
     }
   };
 
   return (
     <section id="courses" className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/[0.02] to-transparent" />
-      
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -225,24 +102,22 @@ export function Courses({ showAll = false }) {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="mb-12"
         >
-          <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">
-            {showAll ? "06 — ALL CERTIFICATIONS" : "06 — EDUCATION"}
+          <span className="mb-4 block font-mono text-sm tracking-wider text-emerald-400">
+            {showAll ? t("allLabel") : t("label")}
           </span>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-50">
-                {showAll ? "All Certifications" : "Education & Certifications"}
+              <h2 className="font-display text-4xl font-bold text-zinc-50 md:text-5xl">
+                {showAll ? t("allTitle") : t("title")}
               </h2>
-              <p className="text-zinc-400 mt-4 max-w-xl">
-                {showAll 
-                  ? `${filteredCourses.length} of ${courses.length} certifications`
-                  : "Academic background and professional certifications in software development."}
+              <p className="mt-4 max-w-xl text-zinc-400">
+                {showAll ? t("allSubtitle", { count: filteredCourses.length, total: courses.length }) : t("subtitle")}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+              <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2">
                 <Award size={16} className="text-emerald-400" />
-                <span className="text-sm font-medium text-emerald-400">{courses.length} Certifications</span>
+                <span className="text-sm font-medium text-emerald-400">{t("countLabel", { count: courses.length })}</span>
               </div>
             </div>
           </div>
@@ -255,33 +130,33 @@ export function Courses({ showAll = false }) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4 flex items-center gap-3">
               <Filter size={18} className="text-emerald-400" />
-              <span className="text-sm text-zinc-400 font-medium">Filter:</span>
+              <span className="text-sm font-medium text-zinc-400">{t("filter")}</span>
               {hasActiveFilters && (
                 <button
                   onClick={clearFilters}
-                  className="ml-2 text-xs text-zinc-500 hover:text-emerald-400 transition-colors flex items-center gap-1"
+                  className="ml-2 flex items-center gap-1 text-xs text-zinc-500 transition-colors hover:text-emerald-400"
                 >
                   <X size={14} />
-                  Clear filters
+                  {t("clearFilters")}
                 </button>
               )}
             </div>
-            
+
             <div className="space-y-4">
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-zinc-600 self-center mr-2">Platform:</span>
+                <span className="mr-2 self-center text-xs text-zinc-600">{t("platform")}</span>
                 {allPlatforms.map((platform) => {
                   const isSelected = selectedPlatforms.includes(platform);
                   return (
                     <button
                       key={platform}
                       onClick={() => togglePlatform(platform)}
-                      className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200 ${
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                         isSelected
-                          ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                          : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600 hover:text-zinc-300"
+                          ? "border-emerald-500 bg-emerald-500/20 text-emerald-400"
+                          : "border-zinc-700 bg-zinc-800/50 text-zinc-400 hover:border-zinc-600 hover:text-zinc-300"
                       }`}
                     >
                       {platform}
@@ -289,22 +164,22 @@ export function Courses({ showAll = false }) {
                   );
                 })}
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-zinc-600 self-center mr-2">Category:</span>
+                <span className="mr-2 self-center text-xs text-zinc-600">{t("category")}</span>
                 {allCategories.map((category) => {
                   const isSelected = selectedCategories.includes(category);
                   return (
                     <button
                       key={category}
                       onClick={() => toggleCategory(category)}
-                      className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200 ${
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                         isSelected
-                          ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                          : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600 hover:text-zinc-300"
+                          ? "border-emerald-500 bg-emerald-500/20 text-emerald-400"
+                          : "border-zinc-700 bg-zinc-800/50 text-zinc-400 hover:border-zinc-600 hover:text-zinc-300"
                       }`}
                     >
-                      {category}
+                      {t(category)}
                     </button>
                   );
                 })}
@@ -313,90 +188,92 @@ export function Courses({ showAll = false }) {
           </motion.div>
         )}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredCourses.length === 0 ? (
-            <div className="col-span-full text-center py-20">
-              <p className="text-zinc-500">No certifications match the selected filters.</p>
+            <div className="col-span-full py-20 text-center">
+              <p className="text-zinc-500">{t("empty")}</p>
               <button
                 onClick={clearFilters}
-                className="mt-4 text-emerald-400 hover:text-emerald-300 transition-colors"
+                className="mt-4 text-emerald-400 transition-colors hover:text-emerald-300"
               >
-                Clear filters
+                {t("clearFilters")}
               </button>
             </div>
           ) : (
             filteredCourses.map((course, index) => (
-            <motion.div
-              key={course.name}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.05, ease: [0.4, 0, 0.2, 1] }}
-              className="group"
-            >
-              <div className="relative rounded-2xl overflow-hidden bg-zinc-900/80 border border-zinc-800 hover:border-emerald-500/30 transition-all duration-300 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="relative z-10 p-6 h-full flex flex-col">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`px-3 py-1 text-xs font-medium rounded-full border ${getInstitutionColor(course.institution)}`}>
-                      {course.institution}
-                    </div>
-                    <span className="px-3 py-1 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
-                      <CheckCircle size={12} />
-                      {course.grade}
-                    </span>
-                  </div>
+              <motion.div
+                key={course.nameKey}
+                initial={{ opacity: 0, y: 40 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.05, ease: [0.4, 0, 0.2, 1] }}
+                className="group"
+              >
+                <div className="relative h-full overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 transition-all duration-300 group-hover:border-emerald-500/30">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                  <div className="flex-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <Award size={18} className="text-emerald-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-display text-lg font-bold text-zinc-100 leading-tight">
-                          {course.name}
-                        </h3>
-                        <p className="text-xs text-zinc-500 mt-1">
-                          {course.period}
-                        </p>
+                  <div className="relative z-10 flex h-full flex-col p-6">
+                    <div className="mb-4 flex items-start justify-between">
+                      <div className={`rounded-full border px-3 py-1 text-xs font-medium ${getInstitutionColor(course.institution)}`}>
+                        {course.institution}
                       </div>
-                    </div>
-
-                    <p className="text-sm text-zinc-400 leading-relaxed mb-4">
-                      {course.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${course.category === 'Frontend' ? 'bg-blue-500/20 text-blue-400 border-blue-500/30' : course.category === 'Backend' ? 'bg-orange-500/20 text-orange-400 border-orange-500/30' : 'bg-pink-500/20 text-pink-400 border-pink-500/30'}`}>
-                        {course.category}
+                      <span className="flex items-center gap-1 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
+                        <CheckCircle size={12} />
+                        {course.grade}
                       </span>
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {course.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 text-xs font-medium rounded-md bg-zinc-800 text-zinc-400"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                    <div className="flex-1">
+                      <div className="mb-3 flex items-start gap-3">
+                        <Award size={18} className="mt-1 shrink-0 text-emerald-400" />
+                        <div>
+                          <h3 className="font-display text-lg font-bold leading-tight text-zinc-100">
+                            {t(course.nameKey)}
+                          </h3>
+                          <p className="mt-1 text-xs text-zinc-500">{course.period}</p>
+                        </div>
+                      </div>
 
-                  {course.link && (
-                    <a
-                      href={course.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors mt-auto"
-                    >
-                      View Certificate
-                      <ExternalLink size={14} />
-                    </a>
-                  )}
+                      <p className="mb-4 text-sm leading-relaxed text-zinc-400">{t(course.descriptionKey)}</p>
+
+                      <div className="mb-4 flex flex-wrap gap-2">
+                        <span
+                          className={`rounded-full border px-2 py-0.5 text-xs font-medium ${
+                            course.categoryKey === "categoryFrontend"
+                              ? "border-blue-500/30 bg-blue-500/20 text-blue-400"
+                              : course.categoryKey === "categoryBackend"
+                                ? "border-orange-500/30 bg-orange-500/20 text-orange-400"
+                                : "border-pink-500/30 bg-pink-500/20 text-pink-400"
+                          }`}
+                        >
+                          {t(course.categoryKey)}
+                        </span>
+                      </div>
+
+                      <div className="mb-4 flex flex-wrap gap-1.5">
+                        {course.tech.map((tech) => (
+                          <span key={tech} className="rounded-md bg-zinc-800 px-2 py-0.5 text-xs font-medium text-zinc-400">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {course.link && (
+                      <a
+                        href={course.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-emerald-400 transition-colors hover:text-emerald-300"
+                      >
+                        {t("viewCertificate")}
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          )))}
+              </motion.div>
+            ))
+          )}
         </div>
 
         {!showAll && (
@@ -408,10 +285,10 @@ export function Courses({ showAll = false }) {
           >
             <a
               href="/courses"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded-full transition-all duration-300"
+              className="group inline-flex items-center gap-2 rounded-full bg-emerald-500 px-8 py-4 font-semibold text-zinc-900 transition-all duration-300 hover:bg-emerald-400"
             >
-              View All Certifications ({courses.length})
-              <ExternalLink size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              {t("viewAll", { count: courses.length })}
+              <ExternalLink size={18} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
           </motion.div>
         )}

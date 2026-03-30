@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
 import { ArrowUpRight, Filter, X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { projects, filterCategories } from "@/data/projects";
 import { ProjectCard } from "./projects/ProjectCard";
 
@@ -28,7 +29,7 @@ export function Projects({ showAll = false }: ProjectsProps) {
   };
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden">
+    <section id="work" className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-500/[0.02] to-transparent" />
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <motion.div ref={ref} initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="mb-12">
@@ -40,17 +41,12 @@ export function Projects({ showAll = false }: ProjectsProps) {
                 {showAll ? `${filteredProjects.length} of ${projects.length} projects` : t("subtitle")}
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              {!showAll && (
-                <a href="/projects" className="group inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded-full transition-all" aria-label={`${t("viewAll")} (${projects.length})`}>
-                  {t("viewAll")} ({projects.length})
-                  <ArrowUpRight size={18} />
-                </a>
-              )}
-              <a href="https://github.com/Cientista-Avogadro" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium" aria-label="View GitHub profile">
-                GitHub <ArrowUpRight size={16} />
-              </a>
-            </div>
+            {!showAll && (
+              <Link href="/projects" className="group inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded-full transition-all" aria-label={`${t("viewAll")} (${projects.length})`}>
+                {t("viewAll")} ({projects.length})
+                <ArrowUpRight size={18} />
+              </Link>
+            )}
           </div>
         </motion.div>
 

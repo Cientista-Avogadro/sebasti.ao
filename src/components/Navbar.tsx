@@ -9,7 +9,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useTranslations } from "next-intl";
 import { useMobileMenu } from "@/lib/context/MobileMenuContext";
 
-const sectionIds = ["about", "expertise", "projects", "experience", "education", "gallery", "articles", "contact"];
+const sectionIds = ["about", "expertise", "work", "experience", "education", "courses", "articles", "gallery", "contact"];
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -19,14 +19,23 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navItems = [
+  const primaryNavItems = [
     { href: "/#about", label: t("about") },
     { href: "/#expertise", label: t("expertise") },
-    { href: "/projects", label: t("projects") },
+    { href: "/#work", label: t("projects") },
+    { href: "/#experience", label: t("experience") },
+    { href: "/#contact", label: t("contact") },
+  ];
+
+  const mobileNavItems = [
+    { href: "/#about", label: t("about") },
+    { href: "/#expertise", label: t("expertise") },
+    { href: "/#work", label: t("projects") },
     { href: "/#experience", label: t("experience") },
     { href: "/#education", label: t("education") },
-    { href: "/gallery", label: t("gallery") },
-    { href: "/articles", label: t("articles") },
+    { href: "/#courses", label: t("certifications") },
+    { href: "/#articles", label: t("articles") },
+    { href: "/#gallery", label: t("gallery") },
     { href: "/#contact", label: t("contact") },
   ];
 
@@ -54,11 +63,6 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    
-    if (href.startsWith("/projects") || href.startsWith("/gallery") || href.startsWith("/articles")) {
-      router.push(href);
-      return;
-    }
     
     if (href.startsWith("/#")) {
       router.push(href);
@@ -103,11 +107,11 @@ export function Navbar() {
             href="/"
             className="font-display text-xl font-semibold tracking-tight hover:text-emerald-400 transition-colors"
           >
-            sebasti.ao
+            Sebastiao Moniz
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {primaryNavItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
@@ -134,7 +138,7 @@ export function Navbar() {
               href="https://github.com/Cientista-Avogadro"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Profile"
+              aria-label={t("githubProfile")}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -149,7 +153,7 @@ export function Navbar() {
               href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
+              aria-label={t("linkedinProfile")}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -160,7 +164,7 @@ export function Navbar() {
               href="https://www.instagram.com/sebastiao_moniz_scientist/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram Profile"
+              aria-label={t("instagramProfile")}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -171,7 +175,7 @@ export function Navbar() {
               href="https://web.facebook.com/Cientistass"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook Profile"
+              aria-label={t("facebookProfile")}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -187,7 +191,7 @@ export function Navbar() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-zinc-400 hover:text-white transition-colors p-2"
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenu")}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -204,7 +208,7 @@ export function Navbar() {
             className="fixed inset-0 z-40 bg-[#09090b]/98 backdrop-blur-xl md:hidden pt-24 overflow-y-auto overscroll-contain"
           >
             <nav className="flex flex-col items-center gap-8 p-6 pb-20">
-              {navItems.map((item, index) => (
+              {mobileNavItems.map((item, index) => (
                 <motion.button
                   key={item.href}
                   initial={{ opacity: 0, y: 20 }}
@@ -230,7 +234,7 @@ export function Navbar() {
                   href="https://github.com/Cientista-Avogadro"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub Profile"
+                  aria-label={t("githubProfile")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -245,7 +249,7 @@ export function Navbar() {
                   href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
+                  aria-label={t("linkedinProfile")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -256,7 +260,7 @@ export function Navbar() {
                   href="https://www.instagram.com/sebastiao_moniz_scientist/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram Profile"
+                  aria-label={t("instagramProfile")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -267,7 +271,7 @@ export function Navbar() {
                   href="https://web.facebook.com/Cientistass"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook Profile"
+                  aria-label={t("facebookProfile")}
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

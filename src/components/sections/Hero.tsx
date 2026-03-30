@@ -1,270 +1,131 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Code2, Sparkles } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ArrowRight, Dot, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
-
-const titles = [
-  "Software Engineer",
-  "System Architect",
-  "AI Developer",
-  "Tech Lead",
-  "Problem Solver",
-];
 
 export function Hero() {
   const t = useTranslations("hero");
-  const [currentTitle, setCurrentTitle] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = titles[currentTitle];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < current.length) {
-          setDisplayText(current.slice(0, displayText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentTitle((prev) => (prev + 1) % titles.length);
-        }
-      }
-    }, isDeleting ? 50 : 100);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentTitle]);
+  const proofPoints = [t("proofA"), t("proofB"), t("proofC")];
+  const capabilityTags = [
+    "Multi-tenant SaaS",
+    "Billing Systems",
+    "System Design",
+    "React / Next.js",
+    "C# / .NET",
+    "Product Delivery",
+  ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent" />
-      
-      <div className="absolute top-20 left-10 w-2 h-2 bg-emerald-400/40 rounded-full animate-ping" />
-      <div className="absolute top-40 right-20 w-1 h-1 bg-emerald-400/60 rounded-full animate-ping" style={{ animationDelay: "0.5s" }} />
-      <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-emerald-400/50 rounded-full animate-ping" style={{ animationDelay: "1s" }} />
-      <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-emerald-400/30 rounded-full animate-ping" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-emerald-400/50 rounded-full animate-ping" style={{ animationDelay: "0.7s" }} />
-      
-        <div 
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float"
-      />
-      <div 
-        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "2s" }}
-      />
-      <div 
-        className="absolute top-1/2 right-1/3 w-48 h-48 bg-emerald-500/8 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: "1s" }}
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.14),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_24%)]" />
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="mb-8"
+          className="mb-8 flex flex-wrap items-center gap-3"
         >
-          <motion.span 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 text-sm text-zinc-400"
-            animate={{ borderColor: ["rgb(63 63 70)", "rgb(16 185 129 / 0.3)", "rgb(63 63 70)"] }}
-            transition={{ duration: 3, repeat: Infinity }}
-          >
-            <motion.span 
-              className="w-2 h-2 bg-emerald-400 rounded-full"
-              animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
             {t("badge")}
-          </motion.span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
-          className="mb-4"
-        >
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium border border-emerald-500/20">
-            <Sparkles size={14} />
-            {t("welcome")}
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2 text-sm text-zinc-400">
+            <MapPin size={14} className="text-emerald-400" />
+            {t("location")}
           </span>
         </motion.div>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
+          className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:items-end"
         >
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="block text-zinc-50"
-          >
-            Sebastião
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="block text-zinc-50"
-          >
-            de Sousa
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="block gradient-text"
-          >
-            Moniz
-          </motion.span>
-        </motion.h1>
+          <div>
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-zinc-500">
+              {t("eyebrow")}
+            </p>
+            <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-[-0.04em] text-zinc-50 sm:text-6xl md:text-7xl">
+              {t("headline")}
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-relaxed text-zinc-300">
+              {t("description")}
+            </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex items-center justify-center gap-2 mb-6"
-        >
-          <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 1, repeat: Infinity, repeatDelay: 3 }}
-          >
-            <Code2 size={24} className="text-emerald-400" />
-          </motion.div>
-          <span className="text-xl md:text-2xl text-zinc-400 font-light">
-            {displayText}
-            <motion.span
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              className="inline-block ml-1"
-            >
-              |
-            </motion.span>
-          </span>
-        </motion.div>
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-zinc-400">
+              {proofPoints.map((point) => (
+                <span key={point} className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2">
+                  <Dot size={16} className="text-emerald-400" />
+                  {point}
+                </span>
+              ))}
+            </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.4, 0, 0.2, 1] }}
-          className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light"
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            {t("description")}
-          </motion.span>
-        </motion.p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#work"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 py-4 font-semibold text-zinc-950 transition-all duration-300 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/25"
+              >
+                {t("primaryCta")}
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-700 px-8 py-4 font-medium text-zinc-200 transition-all duration-300 hover:border-zinc-500 hover:text-white"
+              >
+                {t("secondaryCta")}
+              </a>
+            </div>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <motion.a
-            href="#projects"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {t("viewProjects")}
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-full transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {t("getInTouch")}
-          </motion.a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-20 flex items-center justify-center gap-8 text-sm text-zinc-500"
-        >
-          <motion.div 
-            className="flex items-center gap-2"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.3 }}
-          >
-            <span className="w-12 h-px bg-zinc-800" />
-            <span>{t("yearsExp")}</span>
-          </motion.div>
-          <motion.div 
-            className="flex items-center gap-2"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.4 }}
-          >
-            <MapPin size={14} className="text-emerald-400" />
-            <span>{t("location")}</span>
-          </motion.div>
-          <motion.div 
-            className="flex items-center gap-2"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.5 }}
-          >
-            <span>{t("projectsDelivered")}</span>
-            <span className="w-12 h-px bg-zinc-800" />
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
-          className="mt-12 flex flex-wrap items-center justify-center gap-4"
-        >
-          {["React", "Next.js", "TypeScript", "C#/.NET", "AI Integration", "Cloud Deploy"].map((tech, index) => (
-            <motion.span
-              key={tech}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.9 + index * 0.1 }}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-800/50 text-zinc-400 border border-zinc-700/50"
-            >
-              {tech}
-            </motion.span>
-          ))}
+          <div className="rounded-[28px] border border-zinc-800 bg-zinc-950/80 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+            <div className="rounded-[24px] border border-zinc-800 bg-zinc-900/80 p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.22em] text-zinc-500">
+                {t("summaryLabel")}
+              </p>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <div className="text-4xl font-display font-bold text-zinc-50">6+</div>
+                  <div className="text-sm text-zinc-400">{t("yearsExp")}</div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4">
+                    <div className="text-2xl font-display font-bold text-zinc-50">Multi-tenant</div>
+                    <div className="mt-1 text-sm text-zinc-400">{t("summaryA")}</div>
+                  </div>
+                  <div className="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4">
+                    <div className="text-2xl font-display font-bold text-zinc-50">Production</div>
+                    <div className="mt-1 text-sm text-zinc-400">{t("summaryB")}</div>
+                  </div>
+                </div>
+                <div>
+                  <div className="mb-3 text-sm font-medium text-zinc-300">{t("capabilitiesLabel")}</div>
+                  <div className="flex flex-wrap gap-2">
+                    {capabilityTags.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-zinc-800 bg-zinc-950/80 px-3 py-1.5 text-xs font-medium text-zinc-400"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-zinc-700 flex items-start justify-center p-2 cursor-pointer hover:border-emerald-500/50 transition-colors"
-        >
-          <motion.div 
-            className="w-1 h-2 bg-zinc-500 rounded-full"
-            animate={{ height: [8, 4, 8], opacity: [1, 0.5, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

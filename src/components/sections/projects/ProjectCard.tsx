@@ -44,16 +44,29 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
 
           <p className="text-zinc-400 leading-relaxed mb-6">{t(project.descriptionKey)}</p>
 
-          <div className="grid grid-cols-2 gap-4 mb-6 p-4 rounded-xl bg-zinc-800/30">
+          <div className="grid gap-4 mb-6 rounded-xl bg-zinc-800/30 p-4 md:grid-cols-2">
             <div>
-              <div className="text-xs text-zinc-500 mb-1">{t("role")}</div>
+              <div className="text-xs text-zinc-500 mb-1">{t("scope")}</div>
               <div className="text-sm text-zinc-300 font-medium">{t(project.roleKey)}</div>
             </div>
             <div>
-              <div className="text-xs text-zinc-500 mb-1">{t("impact")}</div>
+              <div className="text-xs text-zinc-500 mb-1">{t("outcome")}</div>
               <div className="text-sm text-zinc-300 font-medium">{t(project.impactKey)}</div>
             </div>
           </div>
+
+          {project.focus.length > 0 && (
+            <div className="mb-6">
+              <div className="mb-3 text-xs text-zinc-500">{t("engineeringFocus")}</div>
+              <div className="flex flex-wrap gap-2">
+                {project.focus.map((item) => (
+                  <span key={item} className="px-3 py-1 text-xs font-medium rounded-full border border-zinc-700 bg-zinc-950/60 text-zinc-400">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tech.map((tech) => (

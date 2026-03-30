@@ -95,35 +95,35 @@ export function GitHubStats() {
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-lg bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition-colors text-sm font-medium"
               >
-                View Profile
+                {t("viewProfile")}
               </a>
             </div>
 
             <div className="grid grid-cols-5 gap-3 mb-8">
               <div className="p-3 rounded-xl bg-zinc-800/50 text-center">
                 <div className="text-xl font-bold text-zinc-100">{githubStats.contributions}</div>
-                <div className="text-xs text-zinc-500">Contrib.</div>
+                <div className="text-xs text-zinc-500">{t("contribShort")}</div>
               </div>
               <div className="p-3 rounded-xl bg-zinc-800/50 text-center">
                 <div className="text-xl font-bold text-zinc-100">{githubStats.repositories}</div>
-                <div className="text-xs text-zinc-500">Repos</div>
+                <div className="text-xs text-zinc-500">{t("reposShort")}</div>
               </div>
               <div className="p-3 rounded-xl bg-zinc-800/50 text-center">
                 <div className="text-xl font-bold text-zinc-100">{githubStats.stars}</div>
-                <div className="text-xs text-zinc-500">Stars</div>
+                <div className="text-xs text-zinc-500">{t("starsShort")}</div>
               </div>
               <div className="p-3 rounded-xl bg-zinc-800/50 text-center">
                 <div className="text-xl font-bold text-zinc-100">{githubStats.followers}</div>
-                <div className="text-xs text-zinc-500">Followers</div>
+                <div className="text-xs text-zinc-500">{t("followersShort")}</div>
               </div>
               <div className="p-3 rounded-xl bg-zinc-800/50 text-center">
                 <div className="text-xl font-bold text-zinc-100">{githubStats.following}</div>
-                <div className="text-xs text-zinc-500">Following</div>
+                <div className="text-xs text-zinc-500">{t("followingShort")}</div>
               </div>
             </div>
 
             <div className="mb-6">
-              <h4 className="text-sm font-medium text-zinc-400 mb-4">Contribution Breakdown</h4>
+              <h4 className="text-sm font-medium text-zinc-400 mb-4">{t("breakdown")}</h4>
               <div className="flex h-3 rounded-full overflow-hidden bg-zinc-800">
                 {contributionBreakdown.map((item) => (
                   <div
@@ -135,13 +135,13 @@ export function GitHubStats() {
               </div>
               <div className="flex justify-between mt-2 text-xs text-zinc-500">
                 <span className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500" /> Commits 82%
+                  <div className="w-2 h-2 rounded-full bg-emerald-500" /> {t("commits")} 82%
                 </span>
                 <span className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500" /> PRs 12%
+                  <div className="w-2 h-2 rounded-full bg-blue-500" /> {t("prs")} 12%
                 </span>
                 <span className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-purple-500" /> Reviews 6%
+                  <div className="w-2 h-2 rounded-full bg-purple-500" /> {t("reviews")} 6%
                 </span>
               </div>
             </div>
@@ -185,7 +185,7 @@ export function GitHubStats() {
             <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800">
               <div className="flex items-center gap-3 mb-4">
                 <Trophy size={20} className="text-emerald-400" />
-                <h3 className="font-display text-lg font-bold text-zinc-100">Achievements</h3>
+                <h3 className="font-display text-lg font-bold text-zinc-100">{t("achievementTitle")}</h3>
               </div>
               <div className="space-y-3">
                 {achievements.map((item) => (
@@ -203,13 +203,13 @@ export function GitHubStats() {
             <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800">
               <div className="flex items-center gap-3 mb-4">
                 <Activity size={20} className="text-emerald-400" />
-                <h3 className="font-display text-lg font-bold text-zinc-100">Contribution Activity</h3>
+                <h3 className="font-display text-lg font-bold text-zinc-100">{t("activityTitle")}</h3>
               </div>
               <p className="text-sm text-zinc-400 mb-4">
-                719 contributions in the last year across 50+ repositories
+                {t("activityDesc")}
               </p>
               <div className="p-3 rounded-lg bg-zinc-800/50">
-                <div className="text-xs text-zinc-500 mb-2">Working with</div>
+                <div className="text-xs text-zinc-500 mb-2">{t("workingWith")}</div>
                 <div className="flex flex-wrap gap-2">
                   {["DevTest", "TailorDeal", "GC-LUCAN", "ECO", "LEKA"].map((org) => (
                     <span key={org} className="px-2 py-1 text-xs rounded bg-emerald-500/20 text-emerald-400">
@@ -221,9 +221,9 @@ export function GitHubStats() {
             </div>
 
             <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20">
-              <h4 className="font-semibold text-zinc-100 mb-2">Featured Work</h4>
+              <h4 className="font-semibold text-zinc-100 mb-2">{t("featuredWork")}</h4>
               <p className="text-sm text-zinc-400 mb-4">
-                Contributed to 50+ repositories including enterprise dashboards, e-commerce platforms, and management systems.
+                {t("featuredDesc")}
               </p>
               <a
                 href="https://github.com/Cientista-Avogadro"
@@ -232,7 +232,7 @@ export function GitHubStats() {
                 className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
               >
                 <Github size={16} />
-                View All Repositories
+                {t("viewAll")}
               </a>
             </div>
           </motion.div>

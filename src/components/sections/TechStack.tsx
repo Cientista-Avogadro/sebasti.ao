@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 const techCategories = [
   {
-    title: "Frontend",
+    titleKey: "frontend",
     icon: Palette,
     skills: [
       { name: "React.js", level: 95 },
@@ -19,7 +19,7 @@ const techCategories = [
     ],
   },
   {
-    title: "Backend & APIs",
+    titleKey: "backend",
     icon: Code2,
     skills: [
       { name: "C# / .NET", level: 88 },
@@ -32,7 +32,7 @@ const techCategories = [
     ],
   },
   {
-    title: "AI & Automation",
+    titleKey: "ai",
     icon: Brain,
     skills: [
       { name: "Prompt Engineering", level: 92 },
@@ -43,7 +43,7 @@ const techCategories = [
     ],
   },
   {
-    title: "Deployment & Hosting",
+    titleKey: "deployment",
     icon: Server,
     skills: [
       { name: "CPanel", level: 95 },
@@ -54,7 +54,7 @@ const techCategories = [
     ],
   },
   {
-    title: "Database & ORM",
+    titleKey: "database",
     icon: Database,
     skills: [
       { name: "Microsoft SQL Server", level: 85 },
@@ -65,7 +65,7 @@ const techCategories = [
     ],
   },
   {
-    title: "Tools & DevOps",
+    titleKey: "tools",
     icon: Wrench,
     skills: [
       { name: "Git / GitFlow", level: 95 },
@@ -102,7 +102,7 @@ export function TechStack() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {techCategories.map((category, catIndex) => (
             <motion.div
-              key={category.title}
+              key={category.titleKey}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: catIndex * 0.1 }}
@@ -110,7 +110,7 @@ export function TechStack() {
             >
               <div className="flex items-center gap-3 mb-5">
                 <category.icon size={20} className="text-emerald-400" />
-                <h3 className="font-display text-lg font-semibold text-zinc-100">{category.title}</h3>
+                <h3 className="font-display text-lg font-semibold text-zinc-100">{t(category.titleKey)}</h3>
               </div>
               <div className="space-y-4">
                 {category.skills.map((skill) => (
@@ -143,8 +143,8 @@ export function TechStack() {
           >
             <h3 className="font-display text-lg font-semibold text-zinc-100 mb-4">{t("softSkills")}</h3>
             <div className="flex flex-wrap gap-2">
-              {["Agile", "Team Leadership", "Problem Solving", "Communication", "Research", "Data Analysis"].map((skill) => (
-                <span key={skill} className="px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">{skill}</span>
+              {["softSkillA", "softSkillB", "softSkillC", "softSkillD", "softSkillE", "softSkillF"].map((skill) => (
+                <span key={skill} className="px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-800 text-zinc-400 border border-zinc-700">{t(skill)}</span>
               ))}
             </div>
           </motion.div>
@@ -158,12 +158,12 @@ export function TechStack() {
             <h3 className="font-display text-lg font-semibold text-zinc-100 mb-4">{t("languages")}</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-zinc-300">Portuguese</span>
-                <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400">Native</span>
+                <span className="text-sm text-zinc-300">{t("portuguese")}</span>
+                <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400">{t("native")}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-zinc-300">English</span>
-                <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400">Professional</span>
+                <span className="text-sm text-zinc-300">{t("english")}</span>
+                <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-400">{t("professional")}</span>
               </div>
             </div>
           </motion.div>

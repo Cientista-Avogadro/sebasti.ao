@@ -12,8 +12,9 @@ import { Footer } from "@/components/Footer";
 
 const GitHubStats = dynamic(() => import("@/components/sections/GitHubStats").then(mod => ({ default: mod.GitHubStats })));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials").then(mod => ({ default: mod.Testimonials })));
-const Gallery = dynamic(() => import("@/components/sections/Gallery").then(mod => ({ default: mod.Gallery })));
+const Courses = dynamic(() => import("@/components/sections/Courses").then(mod => ({ default: mod.Courses })));
 const Articles = dynamic(() => import("@/components/sections/Articles").then(mod => ({ default: mod.Articles })));
+const Gallery = dynamic(() => import("@/components/sections/Gallery").then(mod => ({ default: mod.Gallery })));
 const Contact = dynamic(() => import("@/components/sections/Contact").then(mod => ({ default: mod.Contact })));
 const FloatingButtons = dynamic(() => import("@/components/FloatingButtons"));
 
@@ -32,8 +33,9 @@ export default function Home() {
         <LearningAndValue />
         <GitHubStats />
         <Testimonials />
-        <Gallery />
+        <Courses />
         <Articles />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

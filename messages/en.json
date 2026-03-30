@@ -1,110 +1,137 @@
 {
   "nav": {
     "about": "About",
-    "expertise": "Expertise",
-    "projects": "Projects",
+    "expertise": "Systems",
+    "projects": "Case Studies",
     "experience": "Experience",
     "education": "Education",
+    "certifications": "Certifications",
     "gallery": "Gallery",
     "articles": "Articles",
-    "contact": "Contact"
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu",
+    "githubProfile": "GitHub Profile",
+    "linkedinProfile": "LinkedIn Profile",
+    "instagramProfile": "Instagram Profile",
+    "facebookProfile": "Facebook Profile",
+    "switchToEnglish": "Switch to English",
+    "switchToPortuguese": "Switch to Portuguese"
   },
   "hero": {
-    "badge": "Available for new opportunities",
-    "welcome": "Welcome to my portfolio",
-    "subtitle": "Senior Software Engineer | Tech Lead",
-    "description": "Senior Software Engineer with 6+ years of experience delivering production systems for enterprises across Angola, Europe, and Brazil.",
-    "viewProjects": "View Projects",
-    "getInTouch": "Get in Touch",
-    "yearsExp": "6+ Years Experience",
-    "location": "Luanda, Angola",
-    "projectsDelivered": "30+ Projects Delivered",
-    "techStack": "Stack: React, Next.js, TypeScript, C#/.NET, AI Integration, Cloud Deploy"
+    "badge": "Available for senior remote roles",
+    "eyebrow": "Senior software engineer building revenue-critical systems",
+    "headline": "I design and ship production systems that help businesses operate, bill, and scale.",
+    "description": "Senior Software Engineer with 6+ years building multi-tenant SaaS, billing platforms, agricultural operations software, and internal business tools used in production environments.",
+    "proofA": "Multi-tenant billing SaaS",
+    "proofB": "Agricultural operations platform",
+    "proofC": "Production systems across Angola, Brazil, and Europe",
+    "primaryCta": "View selected work",
+    "secondaryCta": "Discuss a role",
+    "summaryLabel": "Why recruiters reach out",
+    "yearsExp": "Years building production software",
+    "summaryA": "SaaS, billing, and admin platforms",
+    "summaryB": "Built for real operating teams",
+    "capabilitiesLabel": "Core strengths",
+    "location": "Luanda, Angola"
   },
   "about": {
-    "label": "01 — ABOUT",
-    "title": "Engineering production systems that",
-    "titleHighlight": "scale internationally",
-    "p1": "Senior Software Engineer with 6+ years of experience building enterprise-grade systems. Specialized in Frontend Engineering and Full-Stack Development, delivering production-ready applications for businesses across Angola, Europe, and Brazil.",
-    "p2": "As a Tech Lead, I've architected and shipped complex systems including ERP, CRM, POS, hotel management, and education platforms. My expertise in C#/.NET and React/Next.js enables me to build complete solutions end-to-end.",
-    "p3": "Passionate about AI Integration, bringing intelligent features to production systems through LLM integration, prompt engineering, and AI-powered automation.",
-    "p4": "Bachelor's in Computer Science from ISPM Angola. Currently studying Systems Analysis & Development at AIEC (Brazil - Online). Based in Luanda, Angola — available for international remote work.",
-    "years": "Years Experience",
-    "projects": "Projects Delivered",
-    "companies": "Companies Served",
-    "education": "Education",
-    "bachelor": "Bachelor's in Computer Science",
-    "bachelorSchool": "Instituto Superior Politécnico Metropolitano de Angola (2023 - 2028)",
-    "systems": "Systems Analysis & Development",
-    "systemsSchool": "AIEC Brazil - Online (Expected: Feb 2026)",
-    "ipil": "High School - Computer Systems Management",
-    "ipilSchool": "IPIL Makarenco (2018 - 2022)",
-    "ipilGrade": "17 Values",
-    "ipilProject": "Event Publication and Scheduling System"
+    "label": "01 - POSITIONING",
+    "title": "Senior engineer focused on",
+    "titleHighlight": "systems, ownership, and business value",
+    "p1": "I am a Software Engineer with over 6 years of experience building real systems that run in production and support day-to-day business operations.",
+    "p2": "My strongest work is in software that matters operationally: multi-tenant SaaS, billing and invoicing systems, agricultural management platforms, and internal tools that teams rely on to execute.",
+    "p3": "I do not position myself as a feature-only engineer. I work across system design, implementation, workflow modeling, reliability, and delivery quality.",
+    "p4": "My goal is to contribute at senior level in international remote teams where ownership, product quality, and business impact are expected, not optional.",
+    "years": "Years in production",
+    "projects": "Systems across billing, agriculture, finance, and operations",
+    "companies": "Ready for international remote teams",
+    "proofLabel": "Signals of seniority",
+    "proofTitle": "Built for real workflows, not tutorial portfolios",
+    "proofCta": "See the case studies",
+    "proofItemATitle": "Product thinking",
+    "proofItemADesc": "I work from business problem to system design, delivery, and operational fit.",
+    "proofItemBTitle": "Ownership",
+    "proofItemBDesc": "I have shipped products under pressure, across multiple projects, with accountability for quality and outcomes."
   },
   "expertise": {
-    "label": "02 — EXPERTISE",
-    "title": "Core Competencies",
-    "subtitle": "From concept to deployment — delivering production-ready systems that scale internationally.",
-    "frontendTitle": "Frontend Engineering",
-    "frontendDesc": "Building high-performance, accessible web applications with modern frameworks. Crafting responsive UIs that deliver exceptional user experiences across all devices.",
-    "fullstackTitle": "Full-Stack Development",
-    "fullstackDesc": "End-to-end product development from architecture to final delivery. Building robust APIs, managing complex databases, and delivering production-ready applications.",
-    "aiTitle": "AI & Automation",
-    "aiDesc": "Integrating AI into production systems. Building intelligent applications with LLM integration, process automation, and AI-powered features to optimize operations.",
-    "systemTitle": "System Architecture",
-    "systemDesc": "Designing scalable and robust systems from database schema to cloud deployment. Ensuring security, performance, and reliability in production environments.",
-    "analysisTitle": "System Analysis & Reports",
-    "analysisDesc": "Translating complex business requirements into precise technical solutions. Creating professional enterprise reports with DevExpress and XtraReports for data-driven decisions.",
-    "enterpriseTitle": "Enterprise Solutions",
-    "enterpriseDesc": "Delivering ERP, CRM, POS, and invoicing systems for businesses. Managing complex databases and building solutions that handle real enterprise workloads.",
-    "skills": "Skills: React, Next.js, TypeScript, Blazor, Tailwind CSS, Chakra UI"
+    "label": "02 - WHAT I BUILD",
+    "title": "Systems I build",
+    "subtitle": "This portfolio is intentionally focused on software that moves operations, revenue, and decision-making.",
+    "frontendTitle": "Multi-tenant SaaS platforms",
+    "frontendDesc": "Shared platforms where multiple businesses operate independently with the right boundaries, permissions, and workflows.",
+    "fullstackTitle": "Billing and invoicing systems",
+    "fullstackDesc": "Revenue-critical products that combine invoicing, POS, payment tracking, receivables, and reporting.",
+    "aiTitle": "Agricultural and production management",
+    "aiDesc": "Operational platforms for farms and production teams with planning, inventory, field activity, and execution visibility.",
+    "systemTitle": "Internal business tools",
+    "systemDesc": "Admin platforms and process automation tools that reduce manual work and make teams faster and more reliable.",
+    "analysisTitle": "",
+    "analysisDesc": "",
+    "enterpriseTitle": "",
+    "enterpriseDesc": "",
+    "skills": ""
   },
   "projects": {
-    "label": "03 — WORK",
-    "title": "Featured Projects",
-    "subtitle": "A selection of production systems that solve real business challenges and deliver measurable impact.",
-    "viewAll": "View All",
+    "label": "03 - CASE STUDIES",
+    "title": "Selected work",
+    "subtitle": "A curated set of systems that best reflect ownership, architecture depth, and business impact.",
+    "viewAll": "View all selected systems",
     "role": "Role",
     "impact": "Impact",
-    "viewProject": "View Project",
+    "scope": "Who it served",
+    "outcome": "Why it mattered",
+    "engineeringFocus": "Engineering focus",
+    "viewProject": "Open project",
     "source": "Source",
-    "allProjects": "All Projects",
+    "allProjects": "Selected systems archive",
     "filterBy": "Filter by technology:",
     "clear": "Clear",
     "featured": "Featured",
     "live": "Live",
     "github": "GitHub",
-    "rokiz": { "tagline": "Personal Development Forum", "description": "The Personal and Professional Development Forum, in its 4th edition, stands out as one of the main platforms for sharing experiences, connecting, and inspiring leaders in Angola.", "role": "Senior Software Engineer", "impact": "Inspiring leaders in Angola" },
-    "ngola": { "tagline": "Smart Cities Platform", "description": "Passionate about smart cities. Uniting technology, innovation and commitment to transform urban environments into more efficient, safe and sustainable places.", "role": "Senior Software Engineer", "impact": "Transforming urban environments" },
-    "uaushow": { "tagline": "Entertainment Platform", "description": "Entertainment and events platform showcasing the best shows and cultural events in Angola.", "role": "Senior Software Engineer", "impact": "Entertainment events in Angola" },
-    "terapia": { "tagline": "Special Education Center", "description": "Development center dedicated to serving children with special educational needs, speech disorders, and neurodevelopmental disorders.", "role": "Senior Software Engineer", "impact": "Supporting children with special needs" },
-    "penttinali": { "tagline": "Cybersecurity Services", "description": "Wide range of services designed to protect your company against cyber threats, ensure regulatory compliance and strengthen your operational security.", "role": "Senior Software Engineer", "impact": "Cybersecurity solutions" },
-    "ayonas": { "tagline": "Urban Transport Company", "description": "Urban transport company based in Luanda, Angola, operating as a car fleet in urban areas.", "role": "Senior Software Engineer", "impact": "Urban transport in Luanda" },
-    "ozuna": { "tagline": "Engineering & Infrastructure", "description": "Angolan company operating for almost 10 years in the areas of Engineering and Infrastructure with high technical rigor.", "role": "Senior Software Engineer", "impact": "Engineering solutions in Angola" },
-    "elizandra": { "tagline": "Human Development Specialist", "description": "Human development specialist focused on self-knowledge, emotional intelligence, and mental health.", "role": "Senior Software Engineer", "impact": "Empowering women leaders" },
-    "cafe": { "tagline": "Agricultural Management", "description": "Digital platform for modern agricultural management designed for small and medium-sized properties.", "role": "Senior Software Engineer", "impact": "Agricultural management" },
-    "sikolasoft": { "tagline": "Educational Management System", "description": "Angola's most complete software for managing administrative, pedagogical, academic, and financial routines.", "role": "Senior Software Developer", "impact": "Managing educational institutions" },
-    "kitandasoft": { "tagline": "Business Management Suite", "description": "Complete suite of business management solutions including ERP, POS, restaurant management, invoicing, and CRM.", "role": "Senior Developer & Tech Lead", "impact": "Empowering 50+ companies" },
-    "dealbusinesshub": { "tagline": "European Marketplace Platform", "description": "Europe's largest online marketplace for buying and selling real estate and businesses.", "role": "Senior Developer & Tech Lead", "impact": "Connecting European markets" },
-    "kiari": { "tagline": "Event Management Platform", "description": "Complete events application with features for organizers and attendees.", "role": "Frontend Developer", "impact": "Event management in Angola" },
-    "eco": { "tagline": "Online Education Platform", "description": "Leading platform in the education and technology sector providing high-quality online educational services.", "role": "Senior Developer & Tech Lead", "impact": "Online education in Angola" },
-    "nzimbupay": { "tagline": "Banking Application", "description": "Banking application for financial transactions with senior report development and database administration.", "role": "Full-Stack Developer", "impact": "Processing banking transactions" },
-    "hotel": { "tagline": "Hotel Management", "description": "Complete hotel management system with reservations, guest management, billing, and operational features.", "role": "Frontend Developer", "impact": "Managing hotel operations" },
-    "sadoc": { "tagline": "Currency Exchange Platform", "description": "Application for international currency transactions and money transfers.", "role": "Frontend Developer", "impact": "International currency transactions" },
-    "xgrow": { "tagline": "Education Platform", "description": "Educational platform development including calendar features and live sessions.", "role": "Frontend Developer", "impact": "Online education in Brazil" },
-    "macovi": { "tagline": "Sports Club Website", "description": "Modern and responsive website for a sports club with event management and team information.", "role": "Frontend Developer", "impact": "Sports club digital presence" },
-    "femb": { "tagline": "Corporate Website", "description": "Corporate website for FEMB consulting company showcasing services and business solutions.", "role": "Frontend Developer", "impact": "Corporate digital presence" },
-    "docampo": { "tagline": "Document Management Platform", "description": "Digital document management platform to organize and share documents securely.", "role": "Frontend Developer", "impact": "Document management" },
-    "stmaze": { "tagline": "Interactive Game", "description": "Interactive maze game with engaging gameplay and modern design.", "role": "Frontend Developer", "impact": "Interactive gaming experience" },
-    "mambo": { "tagline": "Weather Application", "description": "Modern weather application with real-time forecasts and an attractive interface.", "role": "Frontend Developer", "impact": "Weather information platform" }
+    "kibera": {
+      "tagline": "Multi-tenant billing and operations platform",
+      "description": "A production billing system designed for businesses that need invoicing, POS, payment tracking, customer management, and tenant isolation in a single product. Built to reduce operational friction and replace manual, error-prone workflows.",
+      "role": "Finance teams, operators, and administrators running multiple businesses on one shared platform.",
+      "impact": "Turned billing, receivables, and day-to-day operations into a structured, scalable workflow instead of spreadsheet-driven execution."
+    },
+    "cafe": {
+      "tagline": "Agricultural management platform",
+      "description": "A platform for managing farms and agricultural operations from property structure to crop planning, irrigation, pests, inventory, and financial tracking. Built for real operational visibility, not a showcase prototype.",
+      "role": "Farm managers and operational teams handling planning, execution, and production control.",
+      "impact": "Improved organization, traceability, and decision-making across agricultural workflows that are typically fragmented or manual."
+    },
+    "kitandasoft": {
+      "tagline": "Business management suite",
+      "description": "A suite of management tools covering ERP, POS, invoicing, CRM, and related operational workflows. Built for businesses that need a practical system to run daily operations, not isolated features.",
+      "role": "Business operators, finance teams, and managers responsible for commercial operations.",
+      "impact": "Consolidated key operational workflows into one structured system and supported real company execution at scale."
+    },
+    "dealbusinesshub": {
+      "tagline": "European marketplace platform",
+      "description": "A marketplace platform for buying and selling businesses and real estate, requiring product clarity, scalable flows, and delivery quality aligned with an international market.",
+      "role": "Marketplace operators, buyers, sellers, and business stakeholders in the European market.",
+      "impact": "Supported a more credible and scalable transaction platform for a category where trust, structure, and workflow quality matter."
+    },
+    "nzimbupay": {
+      "tagline": "Financial operations and reporting system",
+      "description": "A financial application involving transactional workflows, sensitive data handling, reporting, and database administration responsibilities in a production environment.",
+      "role": "Financial operators and internal teams working with transaction and reporting workflows.",
+      "impact": "Strengthened reporting and operational support in a domain where reliability and data integrity are essential."
+    },
+    "sadoc": {
+      "tagline": "Cross-border remittance experience",
+      "description": "A remittance and exchange application focused on critical frontend flows such as authentication, validation-heavy forms, exchange calculation, and responsive transactional UX.",
+      "role": "Users sending or managing international remittance and currency exchange operations.",
+      "impact": "Improved usability in a complex transactional flow where trust, clarity, and accurate input handling directly affect conversion."
+    }
   },
   "experience": {
-    "label": "04 — EXPERIENCE",
-    "title": "Professional Journey",
-    "subtitle": "Building production systems across multiple industries and technologies.",
-    "keyHighlights": "Key Highlights",
-    "projects": "Projects",
+    "label": "04 - EXPERIENCE",
+    "title": "Experience built around delivery",
+    "subtitle": "I have worked across product, platform, and internal systems with consistent ownership in production environments.",
+    "keyHighlights": "Key highlights",
+    "projects": "Relevant systems",
     "period": "Period",
     "location": "Location",
     "workType": "Type",
@@ -116,103 +143,73 @@
     "years": "years",
     "monthsShort": "mo",
     "yearsShort": "yr",
-    "sadoc": {
-      "description": "Frontend Developer for international currency transaction platform. Built complete user-facing features for SADOC remittance application.",
-      "highlights": {
-        "1": "SADOC: International currency exchange and remittance platform",
-        "2": "Login flows, exchange calculator, responsive pages, registration forms",
-        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
-      }
-    },
     "devtest": {
-      "description": "Team Lead responsible for the entire development department. Building enterprise web, desktop, and mobile applications using cutting-edge technologies. Full-Stack development focused on Frontend Excellence, SEO optimization, and user experience.",
+      "description": "Leading and shipping multiple production systems in parallel, with responsibility that goes beyond feature delivery into architecture, implementation quality, and execution under pressure.",
       "highlights": {
-        "1": "10+ enterprise websites and platforms delivered",
-        "2": "Team Lead: Management and mentoring of the development team",
-        "3": "Frontend & Full-Stack in projects using Next.js, PayloadCMS, Hasura Cloud",
-        "4": "SEO optimized, mobile-first, and user-friendly applications",
-        "5": "Desktop apps with Tauri & Electron (CAFÉ Platform)",
-        "6": "React Native for internal mobile projects",
-        "7": "Analytics integration with Microsoft Clarity for performance insights",
-        "8": "Sectors: smart cities, cybersecurity, education, and transport"
+        "1": "Worked across multiple active products at the same time without sacrificing delivery quality.",
+        "2": "Built and supported platforms in domains such as agriculture, smart cities, cybersecurity, transport, and internal operations.",
+        "3": "Took part in technical structuring decisions instead of acting only as an implementer.",
+        "4": "Delivered systems meant for real users, real workflows, and ongoing production use.",
+        "5": "Operated effectively in a high-demand environment with limited capacity and strong delivery expectations."
       }
     },
     "tailordeal": {
-      "description": "Tech Lead for Europe's largest online marketplace for real estate and business transactions. Architected scalable solutions using Blazor and .NET 8.",
+      "description": "Senior developer and tech lead on a European marketplace product, contributing to platform quality, scalability, and implementation direction.",
       "highlights": {
-        "1": "Tech Lead for DealBusinessHub - Europe's largest marketplace",
-        "2": "Scalable Blazor/.NET 8 platform for the European market",
-        "3": "Stack: C#, Blazor, .NET 8, Blazorise, PostgreSQL"
+        "1": "Worked on a marketplace product serving an international audience and a more mature market expectation.",
+        "2": "Contributed to architectural direction and implementation quality using Blazor and .NET 8.",
+        "3": "Balanced delivery speed with product credibility and maintainability.",
+        "4": "Operated remotely with cross-border collaboration requirements."
       }
     },
     "eco": {
-      "description": "Frontend Tech Lead for the innovative Angolan educational technology platform. Delivering high-quality online educational services to students nationwide.",
+      "description": "Senior developer and tech lead on an education product, helping shape delivery and interface quality for a platform serving real students and operators.",
       "highlights": {
-        "1": "Frontend Tech Lead for the online education platform",
-        "2": "Building responsive dashboards and learning interfaces",
-        "3": "Stack: React, C#, ASP.NET Core, MariaDB, Bootstrap"
+        "1": "Owned frontend delivery quality for a live education product.",
+        "2": "Worked across dashboards, learning flows, and operational interfaces.",
+        "3": "Contributed as a senior individual contributor with leadership responsibility."
       }
     },
     "gclucan": {
-      "description": "Led the development of enterprise-level software solutions serving over 300 companies in Angola. Architected and delivered complete management systems generating over 50M Kz in annual client revenue.",
+      "description": "A defining period for enterprise software delivery, building management systems used by real businesses across Angola.",
       "highlights": {
-        "1": "300+ active companies using our software solutions",
-        "2": "50M+ Kz in annual client revenue processed by our systems",
-        "3": "Hotel System: Complete hotel management with React, Node.js, Chakra UI",
-        "4": "SIKOLASOFT: Angola's most complete educational management software",
-        "5": "KITANDASOFT Suite: ERP, POS, restaurant, invoicing, CRM",
-        "6": "Stack: C#, ASP.NET, WebForms, Blazor, .NET 6-8, MariaDB",
-        "7": "Professional enterprise reports development with DevExpress and XtraReports"
-      }
-    },
-    "zenitech": {
-      "description": "Full-Stack Developer for a Brazilian software company. Built landing pages and web applications for ed-tech clients.",
-      "highlights": {
-        "1": "Aligner-Flix: Production landing page for Brazilian ed-tech",
-        "2": "Full-stack development: from frontend to backend",
-        "3": "Stack: ReactJS, Angular, PHP, Node.js, WordPress, Chakra UI"
-      }
-    },
-    "xgrow": {
-      "description": "Frontend Developer for a Brazilian software factory. Built and maintained features for the educational platform used by thousands of students.",
-      "highlights": {
-        "1": "Educational Platform: Calendar, Lives Page, and core features",
-        "2": "Bug fixing and feature implementation",
-        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket",
-        "4": "State management and complex UI logic with Redux and Chakra UI"
-      }
-    },
-    "teclat": {
-      "description": "Frontend Developer for a Brazilian company. Focused on the SADOC application for international remittances.",
-      "highlights": {
-        "1": "SADOC: International currency exchange and remittance platform",
-        "2": "Login flows, exchange calculator, responsive pages",
-        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
-      }
-    },
-    "kiari": {
-      "description": "Frontend Developer building an event management platform for the Angolan market. Developed a complete web application with a modern React ecosystem.",
-      "highlights": {
-        "1": "Complete development of the company website",
-        "2": "Kiari Events: Event organizer and client app with React, Redux, GraphQL",
-        "3": "Stack: React, Next.js, Redux, GraphQL, Chakra UI",
-        "4": "Modern React ecosystem: Vite, Redux Toolkit, and GraphQL integration"
+        "1": "Worked on software used by more than 300 companies in real operational environments.",
+        "2": "Delivered systems across ERP, education, hospitality, invoicing, CRM, and reporting.",
+        "3": "Combined development work with technical leadership and product structuring responsibilities.",
+        "4": "Handled enterprise reporting and operational data requirements using DevExpress and related tooling.",
+        "5": "Built credibility through systems that had to keep working after delivery, not just demo well."
       }
     },
     "snir": {
-      "description": "Full-Stack Developer for an Angolan financial services company. Built enterprise insurance and banking systems handling sensitive financial data.",
+      "description": "Worked on financial and insurance systems where reporting quality, database reliability, and sensitive workflows were central to the work.",
       "highlights": {
-        "1": "International Insurance: Complete insurance management system - DBA, Backend, DevOps",
-        "2": "NZIMBUPAY: Banking application with senior report development",
-        "3": "Stack: React, Next.js, C#, ASP.NET, SQL Server, Docker, DevExpress, Python, GraphQL",
-        "4": "Database administration and performance optimization for SQL Server"
+        "1": "Contributed across frontend, backend, reporting, and database administration responsibilities.",
+        "2": "Worked on financial and insurance-related systems with higher reliability expectations.",
+        "3": "Handled SQL Server administration and performance-sensitive workflows.",
+        "4": "Built reporting capabilities that supported business and operational visibility."
+      }
+    },
+    "teclat": {
+      "description": "Frontend engineer focused on transactional product flows for a remittance and exchange platform.",
+      "highlights": {
+        "1": "Built validation-heavy transactional flows with strong UX requirements.",
+        "2": "Worked on authentication, exchange calculation, and responsive forms.",
+        "3": "Contributed to a product where user trust depended on interface clarity and correctness."
+      }
+    },
+    "xgrow": {
+      "description": "Frontend engineer on an education platform, contributing to core product features in a remote team context.",
+      "highlights": {
+        "1": "Delivered product features used in a live learning environment.",
+        "2": "Worked inside a structured delivery process with GitFlow, Jira, and collaborative engineering routines.",
+        "3": "Built maintainable UI logic for a real product, not one-off pages."
       }
     }
   },
   "education": {
-    "label": "05 — EDUCATION",
-    "title": "Education & Certifications",
-    "subtitle": "Continuous learning and professional development.",
+    "label": "05 - EDUCATION",
+    "title": "Academic Background",
+    "subtitle": "Formal education and technical foundations behind my software engineering work.",
     "certifications": "Certifications",
     "viewCertificate": "View Certificate",
     "viewAll": "View all",
@@ -221,12 +218,16 @@
     "technical": "Technical Course",
     "grade": "Grade",
     "inProgress": "In progress",
-    "expected": "Expected"
+    "expected": "Expected",
+    "focusTitle": "Academic Focus",
+    "focusA": "Formal training in software engineering, problem-solving, systems thinking, and structured technical foundations.",
+    "focusB": "Academic path built across higher education, systems analysis, and technical secondary education with practical orientation.",
+    "focusC": "Professional courses and certifications are presented separately to keep academic background and continuous training distinct."
   },
   "techStack": {
-    "label": "06 — STACK",
+    "label": "06 - STACK",
     "title": "Technical Proficiency",
-    "subtitle": "Production-proven skills across the full development lifecycle — from frontend to backend, from database to deployment.",
+    "subtitle": "Production-proven skills across the full development lifecycle.",
     "softSkills": "Soft Skills",
     "languages": "Languages",
     "other": "Other Technologies",
@@ -237,31 +238,97 @@
     "database": "Database & ORM",
     "tools": "Tools & DevOps",
     "native": "Native",
-    "professional": "Professional"
+    "professional": "Professional",
+    "softSkillA": "Agile delivery",
+    "softSkillB": "Team leadership",
+    "softSkillC": "Problem solving",
+    "softSkillD": "Communication",
+    "softSkillE": "Research",
+    "softSkillF": "Data analysis",
+    "portuguese": "Portuguese",
+    "english": "English"
+  },
+  "courses": {
+    "label": "06 - CERTIFICATIONS",
+    "allLabel": "06 - ALL CERTIFICATIONS",
+    "title": "Professional Certifications",
+    "allTitle": "All Certifications",
+    "subtitle": "Selected courses and certifications focused on frontend engineering, JavaScript, TypeScript, React, and applied software development.",
+    "allSubtitle": "{count} of {total} certifications",
+    "countLabel": "{count} Certifications",
+    "filter": "Filter:",
+    "clearFilters": "Clear filters",
+    "platform": "Platform:",
+    "category": "Category:",
+    "empty": "No certifications match the selected filters.",
+    "viewCertificate": "View Certificate",
+    "viewAll": "View All Certifications ({count})",
+    "categoryFrontend": "Frontend",
+    "categoryBackend": "Backend",
+    "categoryBootcamp": "Bootcamp",
+    "name1": "Basic JavaScript Syntax",
+    "desc1": "JavaScript language fundamentals",
+    "name2": "Internet Programming with JavaScript",
+    "desc2": "Web development with JavaScript",
+    "name3": "Essential JavaScript ES6",
+    "desc3": "Core ECMAScript 6 concepts",
+    "name4": "Advanced Development with JavaScript ES6",
+    "desc4": "Advanced JavaScript ES6 techniques",
+    "name5": "Introduction to the jQuery Library",
+    "desc5": "Introduction to jQuery for DOM manipulation",
+    "name6": "Introduction to ReactJS",
+    "desc6": "ReactJS core concepts",
+    "name7": "Working with Components in React",
+    "desc7": "React component structure and lifecycle",
+    "name8": "Advanced Practices in ReactJS Projects",
+    "desc8": "Advanced techniques for ReactJS projects",
+    "name9": "Introduction to TypeScript: Classes, Types and Interfaces",
+    "desc9": "TypeScript classes, types, and interfaces",
+    "name10": "Welcome to Decola Tech 2nd Edition",
+    "desc10": "Decola Tech bootcamp and professional immersion",
+    "name11": "Welcome to Eduzz Fullstack Developer Bootcamp #2",
+    "desc11": "Eduzz Fullstack Developer bootcamp",
+    "name12": "Internet Application Development with ReactJS",
+    "desc12": "Web application development with ReactJS",
+    "name13": "Welcome to Cognizant Java Developer Bootcamp",
+    "desc13": "Cognizant Java Developer bootcamp",
+    "name14": "ReactJS",
+    "desc14": "Verified ReactJS certification",
+    "name15": "Fullstack Blazor .NET Course",
+    "desc15": "Fullstack development with Blazor and .NET"
   },
   "learning": {
-    "label": "07 — WHY CHOOSE ME",
-    "title": "What Sets Me Apart",
-    "subtitle": "A unique combination of technical excellence, business understanding, and continuous growth.",
-    "currentlyLearning": "Currently Learning",
-    "learningSubtitle": "Constantly expanding my skills to deliver cutting-edge solutions.",
-    "valueProposition": "Value Proposition",
-    "valueSubtitle": "Why I am the right choice for your next project.",
-    "endToEnd": "End-to-End Delivery",
-    "endToEndDesc": "From architecture to deployment — I ship complete, production-ready systems. No handoffs, no gaps.",
-    "international": "International Experience",
-    "internationalDesc": "Proven experience with teams and clients across Angola, Brazil, and Europe. Fluent in cross-cultural collaboration.",
-    "business": "Business Impact Focus",
-    "businessDesc": "I don't just write code — I solve business problems. 300+ businesses trust the systems I've built.",
-    "learner": "Continuous Learner",
-    "learnerDesc": "Always studying the latest tech. Currently diving into AI/ML, Cloud Architecture, and Rust.",
+    "label": "05 - ENGINEERING APPROACH",
+    "title": "How I work",
+    "subtitle": "The strongest signal I can send is not animation. It is clarity of thinking, execution quality, and reliability under production constraints.",
+    "currentlyLearning": "Engineering approach",
+    "learningSubtitle": "My default mode is to simplify systems, protect reliability, and design for long-term maintainability.",
+    "principleA": "Design from workflow, not from screens",
+    "principleADesc": "I map users, operational steps, data boundaries, and failure cases before optimizing UI.",
+    "principleB": "Build for maintainability",
+    "principleBDesc": "I prefer systems that remain understandable and adaptable after the first release.",
+    "principleC": "Reduce operational friction",
+    "principleCDesc": "The best systems remove manual work, lower error rates, and make teams faster.",
+    "principleD": "Be reliable under pressure",
+    "principleDDesc": "Shipping in demanding environments taught me to prioritize stability, clarity, and execution discipline.",
+    "valueProposition": "Available for remote teams",
+    "valueSubtitle": "I am open to senior remote roles where ownership, product quality, and business impact matter.",
+    "endToEnd": "End-to-end ownership",
+    "endToEndDesc": "I can move from problem framing and system design to implementation and delivery without needing heavy supervision.",
+    "international": "International collaboration",
+    "internationalDesc": "I have worked across Angola, Brazil, and Europe and can operate effectively in remote, cross-cultural teams.",
+    "business": "Impact over activity",
+    "businessDesc": "I focus on systems that change how teams operate, not just feature counts or visual polish.",
+    "learner": "Open to remote opportunities",
+    "learnerDesc": "If you need a senior engineer who can take ownership of business-critical systems and ship production-ready software, let's talk.",
+    "cta": "Start the conversation",
     "complete": "complete",
-    "aiLearning": "AI & Machine Learning",
-    "cloudLearning": "Cloud & DevOps",
-    "modernStack": "Modern Stack"
+    "aiLearning": "",
+    "cloudLearning": "",
+    "modernStack": ""
   },
   "github": {
-    "label": "08 — GITHUB",
+    "label": "08 - GITHUB",
     "title": "Open Source Activity",
     "subtitle": "Consistent contributor across multiple organizations with focus on production-ready code.",
     "viewProfile": "View Profile",
@@ -283,10 +350,18 @@
     "topLanguages": "Top Languages",
     "pullShark": "Pull Shark",
     "pairExtra": "Pair Extraordinaire",
-    "trophies": "Trophies"
+    "trophies": "Trophies",
+    "contribShort": "Contrib.",
+    "reposShort": "Repos",
+    "starsShort": "Stars",
+    "followersShort": "Followers",
+    "followingShort": "Following",
+    "activityDesc": "719 contributions in the last year across 50+ repositories",
+    "achievementTitle": "Achievements",
+    "activityTitle": "Contribution Activity"
   },
   "gallery": {
-    "label": "09 — GALLERY",
+    "label": "09 - GALLERY",
     "title": "Events & Speaking",
     "subtitle": "Moments from tech events, conferences, and speaking engagements.",
     "photos": "photos",
@@ -300,7 +375,7 @@
       "cafeTi": { "tagline": "DevTest Event", "description": "Meeting of developers and IT professionals for networking and knowledge sharing." },
       "expoHuila": { "tagline": "Technology Fair", "description": "Participation at Expo Huila showcasing technological solutions for regional development." },
       "projectSummit": { "tagline": "Tech Conference", "description": "Participation in a technology and innovation conference." },
-      "angoTic": { "tagline": "Angola TIC Conference", "description": "Angola's largest technology and innovation conference. Networking with professionals and companies in the tech sector." },
+      "angoTic": { "tagline": "Angola TIC Conference", "description": "Angola's largest technology and innovation conference." },
       "codeMoments": { "tagline": "Programming & Development", "description": "Coding moments, projects, and software development." },
       "gcLucan": { "tagline": "Company Events", "description": "Moments and events from the GC-LUCAN team." },
       "snir": { "tagline": "Company Events", "description": "Moments from the SNIR team." },
@@ -310,27 +385,27 @@
     }
   },
   "testimonials": {
-    "label": "10 — TESTIMONIALS",
+    "label": "10 - TESTIMONIALS",
     "title": "Client & Peer Feedback",
     "subtitle": "What professionals I've worked with say about my technical skills and collaboration.",
     "viewAll": "View all recommendations",
     "items": {
       "lietson": {
-        "quote": "I had the opportunity to work with Sebastião during my internship at SNIR, where he acted as a software developer and took on part of my technical supervision. From day one, he proved to be a very friendly person and made clear his solid mastery of technologies, problem-solving skills, and a technical vision far above average. I recommend Sebastião for new challenges and collaboration opportunities in any project that requires competence, commitment, and high technical rigor.",
-        "relation": "Worked with Sebastião at SNIR"
+        "quote": "I had the opportunity to work with Sebastiao during my internship at SNIR. From day one, he demonstrated strong technical mastery, solid problem-solving skills, and a level of technical vision well above average.",
+        "relation": "Worked with Sebastiao at SNIR"
       },
       "adao": {
-        "quote": "He is a great professional in application development, I highly recommend him for various activities. Working with 'Cientista' (The Scientist) has been a very good experience.",
-        "relation": "Worked with Sebastião at GC-LUCAN"
+        "quote": "He is a strong professional in application development and I highly recommend him for complex technical work.",
+        "relation": "Worked with Sebastiao at GC-LUCAN"
       },
       "edmilson": {
-        "quote": "A great programmer. Highly recommended.",
-        "relation": "Worked with Sebastião at Tecla T"
+        "quote": "An excellent programmer. Highly recommended.",
+        "relation": "Worked with Sebastiao at Tecla T"
       }
     }
   },
   "articles": {
-    "label": "11 — ARTICLES",
+    "label": "11 - ARTICLES",
     "title": "Technical Articles",
     "subtitle": "Thoughts on software development, technology, and best practices.",
     "readMore": "Read Article",
@@ -342,26 +417,26 @@
     "clearFilter": "Clear filter"
   },
   "contact": {
-    "label": "12 — CONTACT",
-    "title": "Let's Work Together",
-    "subtitle": "Looking for a technical partner who understands both code and business? I'm available to discuss new projects, innovative ideas, or opportunities to be part of your vision.",
+    "label": "06 - CONTACT",
+    "title": "Available for senior remote opportunities",
+    "subtitle": "If you're hiring an engineer to own complex product work, improve delivery quality, or build revenue-critical systems, I'm open to the right remote role.",
     "location": "Location",
     "luanda": "Luanda, Angola",
     "available": "Available for remote work worldwide",
-    "connect": "Connect with me",
+    "connect": "Direct contact",
     "name": "Name",
     "yourName": "Your name",
     "email": "Email",
     "yourEmail": "you@company.com",
     "message": "Message",
-    "messagePlaceholder": "Tell me about your project, timeline, and budget...",
-    "send": "Send Message",
+    "messagePlaceholder": "Tell me about the role, team, product, or system you are hiring for...",
+    "send": "Start the conversation",
     "sending": "Sending...",
     "sent": "Message Sent!",
     "phone": "Phone"
   },
   "footer": {
-    "tagline": "Building digital solutions from Angola for the world.",
+    "tagline": "Building production software from Angola for global teams.",
     "rights": "All rights reserved.",
     "email": "Email"
   },
