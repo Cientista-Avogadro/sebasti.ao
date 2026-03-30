@@ -1,4 +1,5 @@
 "use client";
+// Force rebuild - v0 update
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
@@ -84,7 +85,7 @@ export function Projects({ showAll = false }: ProjectsProps) {
 
         {!showAll && (
           <div className="space-y-24 mb-24">
-            {projects.filter(p => p.featured).map((project, index) => (
+            {projects.filter(p => p.link && p.link !== "#").map((project, index) => (
               <CaseStudy
                 key={project.name}
                 project={project}
@@ -97,12 +98,12 @@ export function Projects({ showAll = false }: ProjectsProps) {
 
         {showAll && (
           <>
-            {/* Case Studies Section */}
-            {filteredProjects.filter(p => p.featured).length > 0 && (
+            {/* Case Studies Section - Projects with live links */}
+            {filteredProjects.filter(p => p.link && p.link !== "#").length > 0 && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="mb-20">
                 <h3 className="text-2xl font-bold text-zinc-100 mb-12">{t("caseStudies")}</h3>
                 <div className="space-y-24">
-                  {filteredProjects.filter(p => p.featured).map((project, index) => (
+                  {filteredProjects.filter(p => p.link && p.link !== "#").map((project, index) => (
                     <CaseStudy
                       key={project.name}
                       project={project}
@@ -114,13 +115,13 @@ export function Projects({ showAll = false }: ProjectsProps) {
               </motion.div>
             )}
 
-            {/* Grid Projects Section */}
+            {/* Grid Projects Section - Projects without live links */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4 }}>
-              {filteredProjects.filter(p => !p.featured).length > 0 && (
+              {filteredProjects.filter(p => !p.link || p.link === "#").length > 0 && (
                 <>
                   <h3 className="text-2xl font-bold text-zinc-100 mb-8">{t("otherProjects")}</h3>
                   <div className="grid lg:grid-cols-2 gap-8">
-                    {filteredProjects.filter(p => !p.featured).map((project, index) => (
+                    {filteredProjects.filter(p => !p.link || p.link === "#").map((project, index) => (
                       <ProjectCard
                         key={project.name}
                         project={project}
