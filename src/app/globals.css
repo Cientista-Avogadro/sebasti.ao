@@ -55,6 +55,10 @@
 }
 
 html {
+  scroll-behavior: auto;
+}
+
+html[data-scroll-behavior="smooth"] {
   scroll-behavior: smooth;
 }
 

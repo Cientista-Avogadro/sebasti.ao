@@ -4,24 +4,27 @@ export interface Project {
   descriptionKey: string;
   roleKey: string;
   impactKey: string;
-  focus?: string[];
+  focus: string[];
   tech: string[];
   status: string;
   link: string;
   github: string;
   featured: boolean;
-  image?: string;
-  metrics?: { labelKey: string; value: string }[];
-  stats?: string;
+  screenshot?: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export const projects: Project[] = [
   { 
     name: "ROKIZ Forum", 
-    taglineKey: "projects.rokiz.tagline", 
-    descriptionKey: "projects.rokiz.description", 
-    roleKey: "projects.rokiz.role", 
-    impactKey: "projects.rokiz.impact", 
+    taglineKey: "rokiz.tagline", 
+    descriptionKey: "rokiz.description", 
+    roleKey: "rokiz.role", 
+    impactKey: "rokiz.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://rokiz-forum.com/", 
@@ -30,10 +33,11 @@ export const projects: Project[] = [
   },
   { 
     name: "NGOLA SMART", 
-    taglineKey: "projects.ngola.tagline", 
-    descriptionKey: "projects.ngola.description", 
-    roleKey: "projects.ngola.role", 
-    impactKey: "projects.ngola.impact", 
+    taglineKey: "ngola.tagline", 
+    descriptionKey: "ngola.description", 
+    roleKey: "ngola.role", 
+    impactKey: "ngola.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://ngolasmart.co.ao/", 
@@ -42,10 +46,11 @@ export const projects: Project[] = [
   },
   { 
     name: "UAU SHOW", 
-    taglineKey: "projects.uaushow.tagline", 
-    descriptionKey: "projects.uaushow.description", 
-    roleKey: "projects.uaushow.role", 
-    impactKey: "projects.uaushow.impact", 
+    taglineKey: "uaushow.tagline", 
+    descriptionKey: "uaushow.description", 
+    roleKey: "uaushow.role", 
+    impactKey: "uaushow.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://uaushow.co.ao/", 
@@ -54,10 +59,11 @@ export const projects: Project[] = [
   },
   { 
     name: "ISTO É TERAPIA", 
-    taglineKey: "projects.terapia.tagline", 
-    descriptionKey: "projects.terapia.description", 
-    roleKey: "projects.terapia.role", 
-    impactKey: "projects.terapia.impact", 
+    taglineKey: "terapia.tagline", 
+    descriptionKey: "terapia.description", 
+    roleKey: "terapia.role", 
+    impactKey: "terapia.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://istoeterapia.co.ao/", 
@@ -66,10 +72,11 @@ export const projects: Project[] = [
   },
   { 
     name: "PENTTINALI", 
-    taglineKey: "projects.penttinali.tagline", 
-    descriptionKey: "projects.penttinali.description", 
-    roleKey: "projects.penttinali.role", 
-    impactKey: "projects.penttinali.impact", 
+    taglineKey: "penttinali.tagline", 
+    descriptionKey: "penttinali.description", 
+    roleKey: "penttinali.role", 
+    impactKey: "penttinali.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://penttinali.com/", 
@@ -78,10 +85,11 @@ export const projects: Project[] = [
   },
   { 
     name: "AYONAS Transportes", 
-    taglineKey: "projects.ayonas.tagline", 
-    descriptionKey: "projects.ayonas.description", 
-    roleKey: "projects.ayonas.role", 
-    impactKey: "projects.ayonas.impact", 
+    taglineKey: "ayonas.tagline", 
+    descriptionKey: "ayonas.description", 
+    roleKey: "ayonas.role", 
+    impactKey: "ayonas.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://ayonas.co.ao/", 
@@ -90,10 +98,11 @@ export const projects: Project[] = [
   },
   { 
     name: "OZUNA", 
-    taglineKey: "projects.ozuna.tagline", 
-    descriptionKey: "projects.ozuna.description", 
-    roleKey: "projects.ozuna.role", 
-    impactKey: "projects.ozuna.impact", 
+    taglineKey: "ozuna.tagline", 
+    descriptionKey: "ozuna.description", 
+    roleKey: "ozuna.role", 
+    impactKey: "ozuna.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://ozuna.ao/", 
@@ -102,10 +111,11 @@ export const projects: Project[] = [
   },
   { 
     name: "Elizandra Santos", 
-    taglineKey: "projects.elizandra.tagline", 
-    descriptionKey: "projects.elizandra.description", 
-    roleKey: "projects.elizandra.role", 
-    impactKey: "projects.elizandra.impact", 
+    taglineKey: "elizandra.tagline", 
+    descriptionKey: "elizandra.description", 
+    roleKey: "elizandra.role", 
+    impactKey: "elizandra.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://elizandrasantos.com/", 
@@ -114,10 +124,11 @@ export const projects: Project[] = [
   },
   { 
     name: "CAFÊ Platform", 
-    taglineKey: "projects.cafe.tagline", 
-    descriptionKey: "projects.cafe.description", 
-    roleKey: "projects.cafe.role", 
-    impactKey: "projects.cafe.impact", 
+    taglineKey: "cafe.tagline", 
+    descriptionKey: "cafe.description", 
+    roleKey: "cafe.role", 
+    impactKey: "cafe.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://cafe.devtest.co.ao/en", 
@@ -126,10 +137,11 @@ export const projects: Project[] = [
   },
   { 
     name: "SIKOLASOFT", 
-    taglineKey: "projects.sikolasoft.tagline", 
-    descriptionKey: "projects.sikolasoft.description", 
-    roleKey: "projects.sikolasoft.role", 
-    impactKey: "projects.sikolasoft.impact", 
+    taglineKey: "sikolasoft.tagline", 
+    descriptionKey: "sikolasoft.description", 
+    roleKey: "sikolasoft.role", 
+    impactKey: "sikolasoft.impact", 
+    focus: [],
     tech: ["C#", "ASP.NET", "MariaDB", "DevExpress"], 
     status: "Live", 
     link: "#", 
@@ -138,10 +150,11 @@ export const projects: Project[] = [
   },
   { 
     name: "KITANDASOFT Suite", 
-    taglineKey: "projects.kitandasoft.tagline", 
-    descriptionKey: "projects.kitandasoft.description", 
-    roleKey: "projects.kitandasoft.role", 
-    impactKey: "projects.kitandasoft.impact", 
+    taglineKey: "kitandasoft.tagline", 
+    descriptionKey: "kitandasoft.description", 
+    roleKey: "kitandasoft.role", 
+    impactKey: "kitandasoft.impact", 
+    focus: [],
     tech: ["C#", "ASP.NET", "MariaDB", "Blazor"], 
     status: "Live", 
     link: "#", 
@@ -150,10 +163,11 @@ export const projects: Project[] = [
   },
   { 
     name: "DealBusinessHub", 
-    taglineKey: "projects.dealbusinesshub.tagline", 
-    descriptionKey: "projects.dealbusinesshub.description", 
-    roleKey: "projects.dealbusinesshub.role", 
-    impactKey: "projects.dealbusinesshub.impact", 
+    taglineKey: "dealbusinesshub.tagline", 
+    descriptionKey: "dealbusinesshub.description", 
+    roleKey: "dealbusinesshub.role", 
+    impactKey: "dealbusinesshub.impact", 
+    focus: [],
     tech: ["C#", "Blazor", ".NET 8"], 
     status: "Live", 
     link: "#", 
@@ -162,10 +176,11 @@ export const projects: Project[] = [
   },
   { 
     name: "Kiari Events", 
-    taglineKey: "projects.kiari.tagline", 
-    descriptionKey: "projects.kiari.description", 
-    roleKey: "projects.kiari.role", 
-    impactKey: "projects.kiari.impact", 
+    taglineKey: "kiari.tagline", 
+    descriptionKey: "kiari.description", 
+    roleKey: "kiari.role", 
+    impactKey: "kiari.impact", 
+    focus: [],
     tech: ["React", "Next.js", "Redux", "GraphQL", "Chakra UI"], 
     status: "Live", 
     link: "https://kiarieventos.netlify.app/", 
@@ -174,10 +189,11 @@ export const projects: Project[] = [
   },
   { 
     name: "ECO Estuda Comigo", 
-    taglineKey: "projects.eco.tagline", 
-    descriptionKey: "projects.eco.description", 
-    roleKey: "projects.eco.role", 
-    impactKey: "projects.eco.impact", 
+    taglineKey: "eco.tagline", 
+    descriptionKey: "eco.description", 
+    roleKey: "eco.role", 
+    impactKey: "eco.impact", 
+    focus: [],
     tech: ["C#", "ASP.NET Core", "MariaDB"], 
     status: "Live", 
     link: "#", 
@@ -186,10 +202,11 @@ export const projects: Project[] = [
   },
   { 
     name: "NZIMBUPAY", 
-    taglineKey: "projects.nzimbupay.tagline", 
-    descriptionKey: "projects.nzimbupay.description", 
-    roleKey: "projects.nzimbupay.role", 
-    impactKey: "projects.nzimbupay.impact", 
+    taglineKey: "nzimbupay.tagline", 
+    descriptionKey: "nzimbupay.description", 
+    roleKey: "nzimbupay.role", 
+    impactKey: "nzimbupay.impact", 
+    focus: [],
     tech: ["React", "Next.js", "C#", "ASP.NET", "SQL Server"], 
     status: "Live", 
     link: "#", 
@@ -198,10 +215,11 @@ export const projects: Project[] = [
   },
   { 
     name: "Hotel Management System", 
-    taglineKey: "projects.hotel.tagline", 
-    descriptionKey: "projects.hotel.description", 
-    roleKey: "projects.hotel.role", 
-    impactKey: "projects.hotel.impact", 
+    taglineKey: "hotel.tagline", 
+    descriptionKey: "hotel.description", 
+    roleKey: "hotel.role", 
+    impactKey: "hotel.impact", 
+    focus: [],
     tech: ["React", "Node.js", "TailwindCSS", "Chakra UI"], 
     status: "Live", 
     link: "https://hotel-management-v1.netlify.app/", 
@@ -210,82 +228,113 @@ export const projects: Project[] = [
   },
   { 
     name: "SADOC", 
-    taglineKey: "projects.sadoc.tagline", 
-    descriptionKey: "projects.sadoc.description", 
-    roleKey: "projects.sadoc.role", 
-    impactKey: "projects.sadoc.impact", 
+    taglineKey: "sadoc.tagline", 
+    descriptionKey: "sadoc.description", 
+    roleKey: "sadoc.role", 
+    impactKey: "sadoc.impact", 
+    focus: [],
     tech: ["React", "Redux", "Formik", "ViteJS"], 
     status: "Live", 
     link: "https://sadoc-front.netlify.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Conversion Rate", value: "+45% uplift" },
+      { label: "Form Completion", value: "87% success" }
+    ]
   },
   { 
     name: "XGrow", 
-    taglineKey: "projects.xgrow.tagline", 
-    descriptionKey: "projects.xgrow.description", 
-    roleKey: "projects.xgrow.role", 
-    impactKey: "projects.xgrow.impact", 
+    taglineKey: "xgrow.tagline", 
+    descriptionKey: "xgrow.description", 
+    roleKey: "xgrow.role", 
+    impactKey: "xgrow.impact", 
+    focus: [],
     tech: ["React", "Next.js", "Chakra UI", "GitFlow"], 
     status: "Live", 
     link: "https://www.xgrow.com/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Active Users", value: "10K+" },
+      { label: "Engagement Rate", value: "92%" }
+    ]
   },
   { 
     name: "Macovi Sport Club", 
-    taglineKey: "projects.macovi.tagline", 
-    descriptionKey: "projects.macovi.description", 
-    roleKey: "projects.macovi.role", 
-    impactKey: "projects.macovi.impact", 
+    taglineKey: "macovi.tagline", 
+    descriptionKey: "macovi.description", 
+    roleKey: "macovi.role", 
+    impactKey: "macovi.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://macovi-sport-club.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Members", value: "500+" },
+      { label: "Events Managed", value: "50+/year" }
+    ]
   },
   { 
     name: "FEMB", 
-    taglineKey: "projects.femb.tagline", 
-    descriptionKey: "projects.femb.description", 
-    roleKey: "projects.femb.role", 
-    impactKey: "projects.femb.impact", 
+    taglineKey: "femb.tagline", 
+    descriptionKey: "femb.description", 
+    roleKey: "femb.role", 
+    impactKey: "femb.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://femb.ao", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Transactions", value: "$2M+/year" },
+      { label: "User Base", value: "5K+" }
+    ]
   },
   { 
     name: "Docampo", 
-    taglineKey: "projects.docampo.tagline", 
-    descriptionKey: "projects.docampo.description", 
-    roleKey: "projects.docampo.role", 
-    impactKey: "projects.docampo.impact", 
+    taglineKey: "docampo.tagline", 
+    descriptionKey: "docampo.description", 
+    roleKey: "docampo.role", 
+    impactKey: "docampo.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://docampo.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Documents Stored", value: "100K+" },
+      { label: "Uptime", value: "99.9%" }
+    ]
   },
   { 
     name: "St Maze Love", 
-    taglineKey: "projects.stmaze.tagline", 
-    descriptionKey: "projects.stmaze.description", 
-    roleKey: "projects.stmaze.role", 
-    impactKey: "projects.stmaze.impact", 
+    taglineKey: "stmaze.tagline", 
+    descriptionKey: "stmaze.description", 
+    roleKey: "stmaze.role", 
+    impactKey: "stmaze.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://st-maze-love.vercel.app/", 
     github: "#", 
-    featured: true 
+    featured: true,
+    metrics: [
+      { label: "Monthly Visitors", value: "3K+" },
+      { label: "Engagement Time", value: "8 min avg" }
+    ]
   },
   { 
     name: "Mambo Weather App", 
-    taglineKey: "projects.mambo.tagline", 
-    descriptionKey: "projects.mambo.description", 
-    roleKey: "projects.mambo.role", 
-    impactKey: "projects.mambo.impact", 
+    taglineKey: "mambo.tagline", 
+    descriptionKey: "mambo.description", 
+    roleKey: "mambo.role", 
+    impactKey: "mambo.impact", 
+    focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
     link: "https://mambo-weather-app.vercel.app/", 
