@@ -55,7 +55,7 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
             </div>
           </div>
 
-          {project.focus.length > 0 && (
+          {project.focus && project.focus.length > 0 && (
             <div className="mb-6">
               <div className="mb-3 text-xs text-zinc-500">{t("engineeringFocus")}</div>
               <div className="flex flex-wrap gap-2">

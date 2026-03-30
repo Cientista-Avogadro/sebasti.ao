@@ -131,6 +131,114 @@
       "description": "A remittance and exchange application focused on critical frontend flows such as authentication, validation-heavy forms, exchange calculation, and responsive transactional UX.",
       "role": "Users sending or managing international remittance and currency exchange operations.",
       "impact": "Improved usability in a complex transactional flow where trust, clarity, and accurate input handling directly affect conversion."
+    },
+    "rokiz": {
+      "tagline": "Community forum platform",
+      "description": "A modern community forum platform built for engagement and discussions. Provides a responsive interface for users to create topics, participate in conversations, and connect with like-minded individuals.",
+      "role": "Community members, moderators, and administrators managing discussions and community growth.",
+      "impact": "Enabled an accessible and engaging platform for community-driven conversations with clean UX and responsive design."
+    },
+    "ngola": {
+      "tagline": "Smart services marketplace",
+      "description": "A comprehensive marketplace platform connecting service providers with customers. Includes service discovery, booking management, and real-time communication features.",
+      "role": "Service providers and customers seeking reliable services in their area.",
+      "impact": "Built a trusted marketplace that improved service accessibility and provider visibility in the local market."
+    },
+    "uaushow": {
+      "tagline": "Event and entertainment platform",
+      "description": "A platform dedicated to entertainment events, shows, and cultural activities. Provides event discovery, ticketing, and community engagement features.",
+      "role": "Event organizers, performers, and entertainment enthusiasts.",
+      "impact": "Centralized event discovery and ticketing, making it easier for audiences to find and attend entertainment events."
+    },
+    "terapia": {
+      "tagline": "Mental health and wellness platform",
+      "description": "A digital platform connecting individuals with therapy and wellness services. Supports appointment scheduling, resource access, and mental health support.",
+      "role": "Therapists, wellness coaches, and individuals seeking mental health support.",
+      "impact": "Made mental health services more accessible and reduced barriers to finding professional support."
+    },
+    "penttinali": {
+      "tagline": "Luxury fashion e-commerce",
+      "description": "An elegant e-commerce platform for luxury fashion products. Features high-quality product displays, secure checkout, and personalized shopping experience.",
+      "role": "Fashion enthusiasts and luxury brand customers.",
+      "impact": "Created a premium shopping experience that reflected brand prestige and enhanced customer trust."
+    },
+    "ayonas": {
+      "tagline": "Transportation and logistics services",
+      "description": "A transportation platform offering logistics services and vehicle rental options. Provides booking management, fleet visibility, and customer support.",
+      "role": "Businesses and individuals requiring transportation and logistics solutions.",
+      "impact": "Streamlined transportation operations and improved service availability for customers."
+    },
+    "ozuna": {
+      "tagline": "Music and artist platform",
+      "description": "A platform dedicated to music promotion and artist discovery. Supports music sharing, artist profiles, and audience engagement.",
+      "role": "Musicians, artists, and music enthusiasts.",
+      "impact": "Provided artists with tools to reach audiences and built community engagement around music content."
+    },
+    "elizandra": {
+      "tagline": "Personal portfolio and brand",
+      "description": "A professional portfolio website showcasing work, skills, and professional background. Designed to create strong first impressions and demonstrate expertise.",
+      "role": "Professional contacts, employers, and business partners.",
+      "impact": "Established a credible online presence and professional brand with quality presentation."
+    },
+    "sikolasoft": {
+      "tagline": "School management system",
+      "description": "A comprehensive school management platform handling student records, grades, attendance, and administrative workflows. Built for educational institutions.",
+      "role": "School administrators, teachers, parents, and students.",
+      "impact": "Simplified school operations, improved administrative efficiency, and enhanced communication between stakeholders."
+    },
+    "kiari": {
+      "tagline": "Event management platform",
+      "description": "A complete event management solution for organizing and promoting events. Features ticket sales, attendee management, and event analytics.",
+      "role": "Event organizers, promoters, and attendees.",
+      "impact": "Reduced event organization complexity and improved attendance tracking and audience engagement."
+    },
+    "eco": {
+      "tagline": "Online learning and tutoring platform",
+      "description": "A platform connecting students with tutors for personalized learning. Features lesson scheduling, progress tracking, and educational content management.",
+      "role": "Students, tutors, and educational stakeholders.",
+      "impact": "Expanded access to quality tutoring services and made personalized education more affordable."
+    },
+    "hotel": {
+      "tagline": "Hotel management system",
+      "description": "A comprehensive system for hotel operations including room booking, guest management, staff scheduling, and billing.",
+      "role": "Hotel managers, staff, and guests.",
+      "impact": "Improved operational efficiency and guest experience through streamlined booking and management processes."
+    },
+    "xgrow": {
+      "tagline": "Education platform for learners",
+      "description": "An interactive learning platform providing courses, interactive lessons, and progress tracking. Built with focus on user engagement and learning outcomes.",
+      "role": "Students and learners seeking quality educational content.",
+      "impact": "Made quality education accessible with an engaging platform that improved learning retention."
+    },
+    "macovi": {
+      "tagline": "Sports club management",
+      "description": "A platform for sports club operations including membership management, event scheduling, and member communications.",
+      "role": "Sports club administrators and members.",
+      "impact": "Centralized club operations and improved member engagement through organized event management."
+    },
+    "femb": {
+      "tagline": "Financial services and business hub",
+      "description": "A comprehensive platform for financial services and business support. Provides business tools, financial resources, and professional guidance.",
+      "role": "Business owners and financial services clients.",
+      "impact": "Provided integrated business support that helped entrepreneurs manage finances and operations more effectively."
+    },
+    "docampo": {
+      "tagline": "Document management solution",
+      "description": "A document management platform for organizing, storing, and retrieving important documents. Features secure access and version control.",
+      "role": "Individuals and businesses managing document workflows.",
+      "impact": "Improved document organization and reduced time spent searching for and managing files."
+    },
+    "stmaze": {
+      "tagline": "Adventure and maze experience",
+      "description": "An interactive platform for maze adventures and interactive storytelling. Provides engaging entertainment with puzzle-solving elements.",
+      "role": "Entertainment seekers and puzzle enthusiasts.",
+      "impact": "Created an engaging entertainment experience that combined storytelling with interactive challenges."
+    },
+    "mambo": {
+      "tagline": "Weather forecasting application",
+      "description": "A weather information platform providing accurate forecasts, weather alerts, and climate data. Features intuitive interface and location-based services.",
+      "role": "Weather enthusiasts and general users needing weather information.",
+      "impact": "Delivered accessible weather information with beautiful presentation and reliable forecasting."
     }
   },
   "experience": {
