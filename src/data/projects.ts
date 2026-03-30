@@ -10,9 +10,9 @@ export interface Project {
   link: string;
   github: string;
   featured: boolean;
-  screenshot?: string;
+  image?: string;
   metrics?: {
-    label: string;
+    labelKey: string;
     value: string;
   }[];
   stats?: string;
@@ -240,8 +240,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Conversion Rate", value: "+45% uplift" },
-      { label: "Form Completion", value: "87% success" }
+      { labelKey: "Conversion Rate", value: "+45% uplift" },
+      { labelKey: "Form Completion", value: "87% success" }
     ]
   },
   { 
@@ -257,8 +257,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Active Users", value: "10K+" },
-      { label: "Engagement Rate", value: "92%" }
+      { labelKey: "Active Users", value: "10K+" },
+      { labelKey: "Engagement Rate", value: "92%" }
     ]
   },
   { 
@@ -274,8 +274,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Members", value: "500+" },
-      { label: "Events Managed", value: "50+/year" }
+      { labelKey: "Members", value: "500+" },
+      { labelKey: "Events Managed", value: "50+/year" }
     ]
   },
   { 
@@ -291,8 +291,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Transactions", value: "$2M+/year" },
-      { label: "User Base", value: "5K+" }
+      { labelKey: "Transactions", value: "$2M+/year" },
+      { labelKey: "User Base", value: "5K+" }
     ]
   },
   { 
@@ -308,8 +308,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Documents Stored", value: "100K+" },
-      { label: "Uptime", value: "99.9%" }
+      { labelKey: "Documents Stored", value: "100K+" },
+      { labelKey: "Uptime", value: "99.9%" }
     ]
   },
   { 
@@ -325,8 +325,8 @@ export const projects: Project[] = [
     github: "#", 
     featured: true,
     metrics: [
-      { label: "Monthly Visitors", value: "3K+" },
-      { label: "Engagement Time", value: "8 min avg" }
+      { labelKey: "Monthly Visitors", value: "3K+" },
+      { labelKey: "Engagement Time", value: "8 min avg" }
     ]
   },
   { 

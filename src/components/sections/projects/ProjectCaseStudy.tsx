@@ -125,13 +125,14 @@ export function ProjectCaseStudy({ project, index, isInView }: ProjectCaseStudyP
           <div className="absolute -inset-4 bg-emerald-500/10 rounded-[2rem] blur-2xl opacity-0 group-hover/image:opacity-100 transition-opacity duration-700" />
           
           <div className="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950 aspect-video">
-            {project.image ? (
+            {(project.image || (project.link !== "#")) ? (
               <Image
-                src={project.image}
+                src={project.image || `https://api.microlink.io/?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`}
                 alt={project.name}
                 fill
                 className="object-cover object-top group-hover/image:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                unoptimized={!project.image} // Usually better for external dynamic APIs to avoid double optimization or if domain is not fully known
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-zinc-900">

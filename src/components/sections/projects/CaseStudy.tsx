@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, TrendingUp } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Project } from "@/data/projects";
 
 interface CaseStudyProps {
@@ -27,7 +28,7 @@ export function CaseStudy({ project, index, isInView }: CaseStudyProps) {
         <div className={`order-2 ${isEvenIndex ? "lg:order-1" : "lg:order-2"}`}>
           <div className="relative">
             {/* Background accent */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute -inset-4 bg-linear-to-br from-emerald-500/10 to-transparent rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
             <div className="relative space-y-6">
               <div>
@@ -44,10 +45,10 @@ export function CaseStudy({ project, index, isInView }: CaseStudyProps) {
               {project.metrics && project.metrics.length > 0 && (
                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-zinc-800">
                   {project.metrics.map((metric) => (
-                    <div key={metric.label} className="space-y-1">
+                    <div key={metric.labelKey} className="space-y-1">
                       <div className="flex items-center gap-2">
                         <TrendingUp size={16} className="text-emerald-400" />
-                        <span className="text-xs text-zinc-500 font-medium uppercase tracking-wider">{metric.label}</span>
+                        <span className="text-xs text-zinc-500 font-medium uppercase tracking-wider">{t(metric.labelKey)}</span>
                       </div>
                       <p className="text-2xl font-bold text-zinc-100">{metric.value}</p>
                     </div>
@@ -115,26 +116,37 @@ export function CaseStudy({ project, index, isInView }: CaseStudyProps) {
         {/* Visual side - Screenshot/Image placeholder */}
         <div className={`order-1 ${isEvenIndex ? "lg:order-2" : "lg:order-1"}`}>
           <div className="relative group/image">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-emerald-500 to-transparent rounded-2xl opacity-20 blur-3xl group-hover/image:opacity-30 transition-opacity duration-700" />
+            <div className="absolute inset-0 bg-linear-to-br from-emerald-500 via-emerald-500 to-transparent rounded-2xl opacity-20 blur-3xl group-hover/image:opacity-30 transition-opacity duration-700" />
             
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 group-hover/image:border-emerald-500/30 transition-all duration-500 shadow-2xl">
-              <div className="aspect-video flex items-center justify-center">
-                <div className="text-center space-y-3">
-                  <div className="text-4xl font-bold text-emerald-400/20">{project.name}</div>
-                  <p className="text-sm text-zinc-500">Screenshot coming soon</p>
-                  <div className="pt-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-lg border border-emerald-500/20 hover:border-emerald-500/40 transition-all"
-                    >
-                      Visit Project
-                      <ExternalLink size={14} />
-                    </a>
+            <div className="relative rounded-2xl overflow-hidden bg-linear-to-br from-zinc-800 to-zinc-900 border border-zinc-700 group-hover/image:border-emerald-500/30 transition-all duration-500 shadow-2xl aspect-video">
+              {(project.image || (project.link !== "#")) ? (
+                <Image
+                  src={project.image || `https://api.microlink.io/?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`}
+                  alt={project.name}
+                  fill
+                  className="object-cover object-top group-hover/image:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  unoptimized={!project.image}
+                />
+              ) : (
+                <div className="aspect-video flex items-center justify-center">
+                  <div className="text-center space-y-3">
+                    <div className="text-4xl font-bold text-emerald-400/20">{project.name}</div>
+                    <p className="text-sm text-zinc-500">Screenshot coming soon</p>
+                    <div className="pt-4">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-sm font-medium rounded-lg border border-emerald-500/20 hover:border-emerald-500/40 transition-all"
+                      >
+                        Visit Project
+                        <ExternalLink size={14} />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
