@@ -196,6 +196,7 @@ export const projects: Project[] = [
     status: "Live", 
     link: "#", 
     github: "#", 
+    image: "/projects/dealbusinesshub.png", 
     featured: false 
   },
   { 
