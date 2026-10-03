@@ -132,7 +132,7 @@ export const projects: Project[] = [
     featured: false 
   },
   { 
-    name: "CAFÊ Platform", 
+    name: "CAFÉ Platform", 
     taglineKey: "cafe.tagline", 
     descriptionKey: "cafe.description", 
     roleKey: "cafe.role", 

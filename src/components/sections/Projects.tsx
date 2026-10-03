@@ -12,15 +12,14 @@ import { CaseStudy } from "./projects/CaseStudy";
 interface ProjectsProps { showAll?: boolean; }
 
 // Curated order for the home page: strongest, verifiable stories first.
-const HOME_CASE_STUDY_ORDER = ["SADOC", "KITANDASOFT Suite", "CAFE Platform", "Kibera", "DealBusinessHub", "Docampo", "XGrow"];
+const HOME_CASE_STUDY_ORDER = ["SADOC", "KITANDASOFT Suite", "CAFÉ Platform", "Kibera", "DealBusinessHub", "Docampo", "XGrow"];
 
 export function Projects({ showAll = false }: ProjectsProps) {
   const t = useTranslations("projects");
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
 
-  const linkedProjects = projects.filter((p) => p.link && p.link !== "#");
   const homeCaseStudies = HOME_CASE_STUDY_ORDER.flatMap((name) => {
-    const found = linkedProjects.find((p) => p.name === name);
+    const found = projects.find((p) => p.name === name);
     return found ? [found] : [];
   });
 
