@@ -18,7 +18,7 @@ export interface Experience {
 }
 
 export const projects: Project[] = [
-  { name: "Kibera", company: "DevTest", link: "#" },
+  { name: "Kibera", company: "DevTest", link: "https://kibera.devtest.co.ao" },
   { name: "CAFE Platform", company: "DevTest", link: "https://cafe.devtest.co.ao/en" },
   { name: "DealBusinessHub", company: "TailorDeal", link: "#" },
   { name: "ECO Estuda Comigo", company: "ECO Estuda Comigo", link: "#" },
