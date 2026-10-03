@@ -39,7 +39,9 @@
     "capabilityC": "System design",
     "capabilityD": "React / Next.js",
     "capabilityE": "Node.js / PostgreSQL",
-    "capabilityF": "Product delivery"
+    "capabilityF": "Product delivery",
+    "profileName": "Sebastião de Sousa Moniz",
+    "roleLine": "Senior Software Engineer & Team Lead"
   },
   "about": {
     "label": "01 - POSITIONING",
@@ -219,16 +221,16 @@
       "impact": "Centralized club operations and improved member engagement through organized event management."
     },
     "femb": {
-      "tagline": "Financial services and business hub",
-      "description": "A comprehensive platform for financial services and business support. Provides business tools, financial resources, and professional guidance.",
-      "role": "Business owners and financial services clients.",
-      "impact": "Provided integrated business support that helped entrepreneurs manage finances and operations more effectively."
+      "tagline": "Corporate website",
+      "description": "Corporate website for FEMB, a consultancy company, presenting its services and business solutions. Deployed on Vercel with end-to-end domain management.",
+      "role": "Frontend Developer",
+      "impact": "Corporate digital presence with a fast, responsive and SEO friendly website."
     },
     "docampo": {
-      "tagline": "Document management solution",
-      "description": "A document management platform for organizing, storing, and retrieving important documents. Features secure access and version control.",
-      "role": "Individuals and businesses managing document workflows.",
-      "impact": "Improved document organization and reduced time spent searching for and managing files."
+      "tagline": "Agricultural marketplace (pre-launch)",
+      "description": "Co-founded agricultural marketplace connecting producers and buyers, in pre-launch with its first users. Sole developer of the platform, from data model to interface.",
+      "role": "Co-founder and Lead Developer",
+      "impact": "Built the entire platform alone, from the data model to the interface, and prepared it for onboarding its first users."
     },
     "stmaze": {
       "tagline": "Adventure and maze experience",
@@ -241,7 +243,22 @@
       "description": "A weather information platform providing accurate forecasts, weather alerts, and climate data. Features intuitive interface and location-based services.",
       "role": "Weather enthusiasts and general users needing weather information.",
       "impact": "Delivered accessible weather information with beautiful presentation and reliable forecasting."
-    }
+    },
+    "metrics": {
+      "conversionRate": "Conversion Rate",
+      "formCompletion": "Form Completion",
+      "activeUsers": "Active Users",
+      "engagementRate": "Engagement Rate",
+      "members": "Members",
+      "eventsManaged": "Events Managed",
+      "engagementTime": "Engagement Time",
+      "monthlyVisitors": "Monthly Visitors"
+    },
+    "pre-launch": "Pre-launch",
+    "offline": "Offline",
+    "countOf": "{shown} of {total} projects",
+    "builtWith": "Built with",
+    "viewLive": "View live"
   },
   "experience": {
     "label": "04 - EXPERIENCE",
@@ -261,22 +278,25 @@
     "monthsShort": "mo",
     "yearsShort": "yr",
     "devtest": {
-      "description": "Leading and shipping multiple production systems in parallel, with responsibility that goes beyond feature delivery into architecture, implementation quality, and execution under pressure.",
+      "description": "Team Lead of the development and testing department, a team of under 8 engineers, also acting as Senior Software Engineer and owning the cycle from requirements to production release.",
       "highlights": {
-        "1": "Worked across multiple active products at the same time without sacrificing delivery quality.",
-        "2": "Built and supported platforms in domains such as agriculture, smart cities, cybersecurity, transport, and internal operations.",
-        "3": "Took part in technical structuring decisions instead of acting only as an implementer.",
-        "4": "Delivered systems meant for real users, real workflows, and ongoing production use.",
-        "5": "Operated effectively in a high-demand environment with limited capacity and strong delivery expectations."
+        "1": "Lead the development and testing department, a team of under 8 engineers covering frontend, backend and QA, while also acting as Senior Software Engineer on the codebase.",
+        "2": "Shipped an agribusiness ERP for coffee production, live on 5 farms and expanding, by mapping harvest, stock and traceability workflows into a Next.js and Hasura Cloud platform.",
+        "3": "Delivered Kibera, a business management and invoicing suite for the Angolan market, by architecting it in Next.js and PayloadCMS with compliant fiscal document generation.",
+        "4": "Delivered 10+ enterprise web, desktop and mobile platforms by creating a shared TypeScript component library reused across Tauri, Electron and React Native.",
+        "5": "Integrated AI features into client and in-house products by combining Hugging Face LLM inference, embedding based matching and AI assisted decision rules over PostgreSQL.",
+        "6": "Own deployment and hosting for the delivered frontend projects, including FEMB, by managing releases on Netlify and Vercel and configuring domains and subdomains end to end.",
+        "7": "Standardised engineering practice across the team by enforcing code review on every pull request, GitFlow branching and Docker based environments."
       }
     },
     "tailordeal": {
-      "description": "Senior developer and tech lead on a European marketplace product, contributing to platform quality, scalability, and implementation direction.",
+      "description": "Tech Lead of DealBusinessHub, a European marketplace for real estate and business transactions, on Blazor and .NET 8.",
       "highlights": {
-        "1": "Worked on a marketplace product serving an international audience and a more mature market expectation.",
-        "2": "Contributed to architectural direction and implementation quality using Blazor and .NET 8.",
-        "3": "Balanced delivery speed with product credibility and maintainability.",
-        "4": "Operated remotely with cross-border collaboration requirements."
+        "1": "Led the technical direction of DealBusinessHub, a European marketplace connecting brokers, investors and business owners, by architecting a modular Blazor and .NET 8 platform on PostgreSQL.",
+        "2": "Reduced page load time across the listings area by optimising Entity Framework queries, adding server-side caching and lazy loading heavy Blazorise components.",
+        "3": "Kept the platform available across both cloud and legacy targets by deploying and maintaining infrastructure on AWS and Azure alongside the SmartASP IIS hosting environment.",
+        "4": "Kept the codebase consistent as the platform grew by enforcing static code analysis and peer reviewed pull requests on every change.",
+        "5": "Kept a predictable release cadence on a distributed team by running Jira sprint planning and enforcing GitFlow branching."
       }
     },
     "eco": {
@@ -288,22 +308,23 @@
       }
     },
     "gclucan": {
-      "description": "A defining period for enterprise software delivery, building management systems used by real businesses across Angola.",
+      "description": "Senior Software Engineer and Technical Lead for the KITANDASOFT suite and SIKOLASOFT, software used daily by 300+ active businesses across Angola.",
       "highlights": {
-        "1": "Worked on software used by more than 300 companies in real operational environments.",
-        "2": "Delivered systems across ERP, education, hospitality, invoicing, CRM, and reporting.",
-        "3": "Combined development work with technical leadership and product structuring responsibilities.",
-        "4": "Handled enterprise reporting and operational data requirements using DevExpress and related tooling.",
-        "5": "Built credibility through systems that had to keep working after delivery, not just demo well."
+        "1": "Led engineering for the KITANDASOFT suite (ERP, POS, restaurant, invoicing, CRM) and SIKOLASOFT, reaching 300+ active business customers across Angola.",
+        "2": "Delivered SIKOLASOFT, a complete school management platform, by building its administrative, pedagogical, academic and financial modules in C# and ASP.NET on MariaDB.",
+        "3": "Built the shared reporting and invoicing engine used by all five products in the suite by designing a reusable class library with DevExpress and XtraReports.",
+        "4": "Modernised the CRM module by migrating it from ASP.NET WebForms to Blazor and .NET 8, reducing page response time.",
+        "5": "Kept all five products available to customers by administering the on-premises IIS hosting environment and piloting a migration path to Azure.",
+        "6": "Grew the team as Team Lead and head of the development area by mentoring 3+ interns to full autonomy through pairing and code review.",
+        "7": "Shipped the frontend of a hotel management system by pairing React and TailwindCSS with a Node.js API."
       }
     },
     "snir": {
-      "description": "Worked on financial and insurance systems where reporting quality, database reliability, and sensitive workflows were central to the work.",
+      "description": "Software developer focused on backend services, reporting and database administration for insurance and banking systems.",
       "highlights": {
-        "1": "Contributed across frontend, backend, reporting, and database administration responsibilities.",
-        "2": "Worked on financial and insurance-related systems with higher reliability expectations.",
-        "3": "Handled SQL Server administration and performance-sensitive workflows.",
-        "4": "Built reporting capabilities that supported business and operational visibility."
+        "1": "Built and maintained International Insurance, a full insurance management system, by developing backend services in C# and ASP.NET on Microsoft SQL Server.",
+        "2": "Delivered NZIMBUPAY, a banking application, by owning senior report development and backend features in C#, ASP.NET and DevExpress.",
+        "3": "Kept both systems reliable in production across three years by administering the SQL Server databases and resolving reporting incidents as the dedicated DBA."
       }
     },
     "teclat": {
@@ -599,5 +620,21 @@
     "featured": "Featured",
     "live": "Live",
     "closed": "Closed"
+  },
+  "cv": {
+    "title": "Download CV",
+    "close": "Close",
+    "template": "Template",
+    "standardDesc": "Classic Europass-style, ATS-friendly",
+    "modernDesc": "Two-column with sidebar, tech-focused",
+    "executiveDesc": "Elegant, traditional corporate style",
+    "photo": "Photo",
+    "withPhoto": "With photo",
+    "withoutPhoto": "Without photo",
+    "withPhotoDesc": "Includes your professional photo",
+    "withoutPhotoDesc": "ATS-friendly, recommended for general applications",
+    "language": "Language",
+    "generate": "Download PDF",
+    "generating": "Generating PDF"
   }
 }

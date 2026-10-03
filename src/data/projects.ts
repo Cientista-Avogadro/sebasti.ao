@@ -27,8 +27,8 @@ export const projects: Project[] = [
     impactKey: "rokiz.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Live", 
-    link: "https://rokiz-forum.com/", 
+    status: "Offline",
+    link: "#", 
     github: "#", 
     featured: false 
   },
@@ -41,7 +41,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://ngolasmart.co.ao/", 
+    link: "https://ngolasmart.co.ao/",
+    image: "/projects/ngola-smart.png", 
     github: "#", 
     featured: false 
   },
@@ -54,7 +55,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://uaushow.co.ao/", 
+    link: "https://uaushow.co.ao/",
+    image: "/projects/uau-show.png", 
     github: "#", 
     featured: false 
   },
@@ -67,7 +69,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://istoeterapia.co.ao/", 
+    link: "https://istoeterapia.co.ao/",
+    image: "/projects/isto-e-terapia.png", 
     github: "#", 
     featured: false 
   },
@@ -93,7 +96,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://ayonas.co.ao/", 
+    link: "https://ayonas.co.ao/",
+    image: "/projects/ayonas.png", 
     github: "#", 
     featured: false 
   },
@@ -105,8 +109,8 @@ export const projects: Project[] = [
     impactKey: "ozuna.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Live", 
-    link: "https://ozuna.ao/", 
+    status: "Offline",
+    link: "#", 
     github: "#", 
     featured: false 
   },
@@ -119,7 +123,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://elizandrasantos.com/", 
+    link: "https://elizandrasantos.com/",
+    image: "/projects/elizandra-santos.png", 
     github: "#", 
     featured: false 
   },
@@ -184,7 +189,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "Redux", "GraphQL", "Chakra UI"], 
     status: "Live", 
-    link: "https://kiarieventos.netlify.app/", 
+    link: "https://kiarieventos.netlify.app/",
+    image: "/projects/kiari-events.png", 
     github: "#", 
     featured: false 
   },
@@ -223,7 +229,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Node.js", "TailwindCSS", "Chakra UI"], 
     status: "Live", 
-    link: "https://hotel-management-v1.netlify.app/", 
+    link: "https://hotel-management-v1.netlify.app/",
+    image: "/projects/hotel-management.png", 
     github: "#", 
     featured: false 
   },
@@ -236,12 +243,13 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Redux", "Formik", "ViteJS"], 
     status: "Live", 
-    link: "https://sadoc-front.netlify.app/", 
+    link: "https://sadoc-front.netlify.app/",
+    image: "/projects/sadoc.png", 
     github: "#", 
     featured: true,
     metrics: [
-      { labelKey: "Conversion Rate", value: "+45% uplift" },
-      { labelKey: "Form Completion", value: "87% success" }
+      { labelKey: "metrics.conversionRate", value: "+45% uplift" },
+      { labelKey: "metrics.formCompletion", value: "87% success" }
     ]
   },
   { 
@@ -253,12 +261,13 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "Chakra UI", "GitFlow"], 
     status: "Live", 
-    link: "https://www.xgrow.com/", 
+    link: "https://www.xgrow.com/",
+    image: "/projects/xgrow.png", 
     github: "#", 
     featured: true,
     metrics: [
-      { labelKey: "Active Users", value: "10K+" },
-      { labelKey: "Engagement Rate", value: "92%" }
+      { labelKey: "metrics.activeUsers", value: "10K+" },
+      { labelKey: "metrics.engagementRate", value: "92%" }
     ]
   },
   { 
@@ -270,12 +279,13 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://macovi-sport-club.vercel.app/", 
+    link: "https://macovi-sport-club.vercel.app/",
+    image: "/projects/macovi.png", 
     github: "#", 
     featured: true,
     metrics: [
-      { labelKey: "Members", value: "500+" },
-      { labelKey: "Events Managed", value: "50+/year" }
+      { labelKey: "metrics.members", value: "500+" },
+      { labelKey: "metrics.eventsManaged", value: "50+/year" }
     ]
   },
   { 
@@ -287,13 +297,10 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://femb.ao", 
+    link: "https://femb.ao",
+    image: "/projects/femb.png", 
     github: "#", 
-    featured: true,
-    metrics: [
-      { labelKey: "Transactions", value: "$2M+/year" },
-      { labelKey: "User Base", value: "5K+" }
-    ]
+    featured: true
   },
   { 
     name: "Docampo", 
@@ -303,14 +310,11 @@ export const projects: Project[] = [
     impactKey: "docampo.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Live", 
-    link: "https://docampo.vercel.app/", 
+    status: "Pre-launch", 
+    link: "https://docampo.vercel.app/",
+    image: "/projects/docampo.png", 
     github: "#", 
-    featured: true,
-    metrics: [
-      { labelKey: "Documents Stored", value: "100K+" },
-      { labelKey: "Uptime", value: "99.9%" }
-    ]
+    featured: true
   },
   { 
     name: "St Maze Love", 
@@ -321,12 +325,13 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://st-maze-love.vercel.app/", 
+    link: "https://st-maze-love.vercel.app/",
+    image: "/projects/st-maze-love.png", 
     github: "#", 
     featured: true,
     metrics: [
-      { labelKey: "Monthly Visitors", value: "3K+" },
-      { labelKey: "Engagement Time", value: "8 min avg" }
+      { labelKey: "metrics.monthlyVisitors", value: "3K+" },
+      { labelKey: "metrics.engagementTime", value: "8 min avg" }
     ]
   },
   { 
@@ -338,7 +343,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://mambo-weather-app.vercel.app/", 
+    link: "https://mambo-weather-app.vercel.app/",
+    image: "/projects/mambo.png", 
     github: "#", 
     featured: false 
   },
