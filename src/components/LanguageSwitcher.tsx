@@ -22,7 +22,7 @@ export function LanguageSwitcher() {
         aria-label={t("switchToEnglish")}
         aria-pressed={locale === "en"}
         className={cn(
-          "px-1.5 py-0.5 transition-colors",
+          "px-2 py-2 transition-colors",
           locale === "en" ? "text-accent underline underline-offset-4" : "text-soft hover:text-ink"
         )}
       >
@@ -34,7 +34,7 @@ export function LanguageSwitcher() {
         aria-label={t("switchToPortuguese")}
         aria-pressed={locale === "pt"}
         className={cn(
-          "px-1.5 py-0.5 transition-colors",
+          "px-2 py-2 transition-colors",
           locale === "pt" ? "text-accent underline underline-offset-4" : "text-soft hover:text-ink"
         )}
       >

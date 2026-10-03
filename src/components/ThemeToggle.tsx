@@ -40,7 +40,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={t("themeToggle")}
       aria-pressed={isDark}
-      className="text-soft hover:text-ink transition-colors"
+      className="p-2 text-soft hover:text-ink transition-colors"
     >
       {isDark ? <Sun size={16} aria-hidden="true" /> : <Moon size={16} aria-hidden="true" />}
     </button>

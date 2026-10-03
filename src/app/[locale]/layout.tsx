@@ -4,7 +4,6 @@ import { Metadata } from 'next';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import MicrosoftClarity from '@/components/MicrosoftClarity';
 import { CVDownload } from '@/components/cv';
 
 const serif = Fraunces({
@@ -180,7 +179,6 @@ export default async function LocaleLayout({
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <MicrosoftClarity />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
@@ -201,8 +199,10 @@ export default async function LocaleLayout({
           {children}
           <CVDownload />
         </NextIntlClientProvider>
-        <Analytics />
-        <SpeedInsights />
+        {/* Measurement scripts only run on Vercel: on local production servers
+            their script endpoints do not exist and would log console errors. */}
+        {process.env.VERCEL === "1" && <Analytics />}
+        {process.env.VERCEL === "1" && <SpeedInsights />}
       </body>
     </html>
   );
