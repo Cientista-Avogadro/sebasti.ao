@@ -63,7 +63,7 @@ export interface CVData {
 
 export const cvData: Record<"en" | "pt", CVData> = {
   en: {
-    name: "SEBASTIAO DE SOUSA MONIZ",
+    name: "SEBASTIÃO DE SOUSA MONIZ",
     title: "Senior Software Engineer & Team Lead · Frontend & AI Engineering",
     locationLine: "Luanda, Angola (open to remote, EU and US time zones)",
     contactLine1: "+244 972 745 066  ·  moniz.techs@gmail.com",
@@ -173,7 +173,7 @@ export const cvData: Record<"en" | "pt", CVData> = {
     languages: "Portuguese native · English professional working proficiency.",
   },
   pt: {
-    name: "SEBASTIAO DE SOUSA MONIZ",
+    name: "SEBASTIÃO DE SOUSA MONIZ",
     title: "Engenheiro de Software Sénior e Team Lead · Frontend e Engenharia de IA",
     locationLine: "Luanda, Angola (disponível para remoto, fusos da Europa e EUA)",
     contactLine1: "+244 972 745 066  ·  moniz.techs@gmail.com",
