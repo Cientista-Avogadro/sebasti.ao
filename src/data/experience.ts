@@ -24,7 +24,7 @@ export const projects: Project[] = [
   { name: "ECO Estuda Comigo", company: "ECO Estuda Comigo", link: "#" },
   { name: "KITANDASOFT Suite", company: "GC-LUCAN", link: "#" },
   { name: "SIKOLASOFT", company: "GC-LUCAN", link: "#" },
-  { name: "NZIMBUPAY", company: "SNIR", link: "#" },
+  { name: "NZIMBUPAY", company: "SNIR, S.A.", link: "#" },
   { name: "SADOC", company: "Tecla T", link: "#" },
   { name: "XGrow", company: "XGrow", link: "https://www.xgrow.com/" },
 ];
