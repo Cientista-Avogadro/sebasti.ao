@@ -84,7 +84,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://penttinali.com/", 
+    link: "https://penttinali.com/",
+    image: "/projects/penttinali.png", 
     github: "#", 
     featured: false 
   },
