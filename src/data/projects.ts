@@ -158,21 +158,22 @@ export const projects: Project[] = [
     github: "#", 
     featured: false 
   },
-  { 
-    name: "KITANDASOFT Suite", 
-    taglineKey: "kitandasoft.tagline", 
-    descriptionKey: "kitandasoft.description", 
-    roleKey: "kitandasoft.role", 
-    impactKey: "kitandasoft.impact", 
+  {
+    name: "KITANDASOFT Suite",
+    taglineKey: "kitandasoft.tagline",
+    descriptionKey: "kitandasoft.description",
+    roleKey: "kitandasoft.role",
+    impactKey: "kitandasoft.impact",
     focus: [],
-    tech: ["C#", "ASP.NET", "MariaDB", "Blazor"], 
-    status: "Live", 
-    link: "#", 
-    github: "#", 
-    featured: false 
+    tech: ["C#", "ASP.NET", "MariaDB", "Blazor"],
+    status: "Live",
+    link: "https://www.kitandasoft.ao",
+    image: "/projects/kitandasoft.png",
+    github: "#",
+    featured: false
   },
-  { 
-    name: "Kibera", 
+  {
+    name: "Kibera",
     taglineKey: "kibera.tagline", 
     descriptionKey: "kibera.description", 
     roleKey: "kibera.role", 
