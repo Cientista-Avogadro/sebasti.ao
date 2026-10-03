@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     height: 64,
     borderStyle: "solid",
     borderWidth: 1,
+    objectFit: "cover",
     borderColor: colors.line,
   },
   section: {

@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     height: 70,
     borderStyle: "solid",
     borderWidth: 1,
+    objectFit: "cover",
     borderColor: colors.line,
   },
   name: {
