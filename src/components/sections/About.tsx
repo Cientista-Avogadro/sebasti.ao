@@ -34,7 +34,7 @@ export function About() {
               </div>
               <div>
                 <dt className="label">{t("companies")}</dt>
-                <dd className="font-display text-3xl mt-2">7</dd>
+                <dd className="font-display text-3xl mt-2">9</dd>
               </div>
             </dl>
           </div>

@@ -214,7 +214,7 @@ const cvData = {
     ],
     education: [
       { degree: "Bachelor's in Computer Science", school: 'Instituto Superior Politecnico Metropolitano de Angola (ISPM)', period: '2023 - 2028' },
-      { degree: 'Systems Analysis & Development', school: 'AIEC Brazil - Online', period: 'In progress (Expected: Feb 2026)' },
+      { degree: 'Systems Analysis & Development', school: 'AIEC Brazil - Online', period: 'In progress (started Feb 2026)' },
     ],
     skills: {
       frontend: 'React.js, Next.js, TypeScript, JavaScript (ES6+), Blazor, React Native',
@@ -296,7 +296,7 @@ const cvData = {
     ],
     education: [
       { degree: 'Licenciatura em Ciencias da Computacao', school: 'Instituto Superior Politecnico Metropolitano de Angola (ISPM)', period: '2023 - 2028' },
-      { degree: 'Analise e Desenvolvimento de Sistemas', school: 'AIEC Brasil - EAD', period: 'Em progresso (Previsto: Fev 2026)' },
+      { degree: 'Analise e Desenvolvimento de Sistemas', school: 'AIEC Brasil - EAD', period: 'Em progresso (desde Fev 2026)' },
     ],
     skills: {
       frontend: 'React.js, Next.js, TypeScript, JavaScript (ES6+), Blazor, React Native',

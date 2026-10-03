@@ -379,7 +379,7 @@
     "snir": {
       "description": "Desenvolvedor de software focado em backend, relatórios e administração de base de dados para sistemas de seguros e banca.",
       "highlights": {
-        "1": "Construiu e manteve o International Insurance, sistema completo de gestão de seguros, desenvolvendo serviços backend em C# e ASP.NET sobre Microsoft SQL Server.",
+        "1": "Construiu e manteve o International Insurance, sistema completo de gestão de seguros, actuando em serviços backend, administração de base de dados e DevOps em C# e ASP.NET sobre Microsoft SQL Server.",
         "2": "Entregou o NZIMBUPAY, aplicação bancária, assumindo o desenvolvimento de relatórios séniores e funcionalidades backend em C#, ASP.NET e DevExpress.",
         "3": "Manteve ambos os sistemas fiáveis em produção durante três anos, administrando as bases de dados SQL Server e resolvendo incidentes de relatórios como DBA dedicado."
       }
@@ -401,7 +401,8 @@
     "focusTitle": "Foco Académico",
     "focusA": "Formação formal em engenharia de software, resolução de problemas, pensamento sistémico e bases técnicas estruturadas.",
     "focusB": "Percurso académico construído entre o ensino superior, análise de sistemas e o ensino técnico secundário com orientação prática.",
-    "focusC": "Os cursos profissionais e certificações são apresentados em separado para manter distinta a formação académica e a formação contínua."
+    "focusC": "Os cursos profissionais e certificações são apresentados em separado para manter distinta a formação académica e a formação contínua.",
+    "ipilProject": "Sistema de Publicação e Agendamento de Eventos"
   },
   "techStack": {
     "label": "06 — STACK",

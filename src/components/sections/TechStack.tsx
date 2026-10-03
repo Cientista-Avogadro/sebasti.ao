@@ -10,7 +10,7 @@ const techCategories = [
   },
   {
     titleKey: "backend",
-    skills: ["C# / .NET", "ASP.NET Core", "Java Spring Boot", "Node.js", "PHP", "GraphQL"],
+    skills: ["C# / .NET", "ASP.NET Core", "Java Spring Boot", "Node.js", "PHP", "GraphQL", "Payload CMS", "Payment Gateways"],
   },
   {
     titleKey: "ai",
@@ -26,7 +26,7 @@ const techCategories = [
   },
   {
     titleKey: "tools",
-    skills: ["Git / GitFlow", "Docker", "JIRA", "Redux / Redux Toolkit", "DevExpress / XtraReports"],
+    skills: ["Git / GitFlow", "Docker", "JIRA", "Redux / Redux Toolkit", "DevExpress / XtraReports", "WordPress"],
   },
 ];
 

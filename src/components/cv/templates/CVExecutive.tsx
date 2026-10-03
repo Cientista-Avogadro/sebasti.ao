@@ -216,7 +216,7 @@ const cvData = {
     education: [
       { degree: 'High School - Computer Systems Management', school: 'IPIL Makarenco', period: '2018 - 2022', grade: '17 Values', project: 'Event Publication and Scheduling System' },
       { degree: "Bachelor's in Computer Science", school: 'Instituto Superior Politecnico Metropolitano de Angola (ISPM)', period: '2023 - 2028' },
-      { degree: 'Systems Analysis & Development', school: 'AIEC Brazil - Online', period: 'In progress (Expected: Feb 2026)' },
+      { degree: 'Systems Analysis & Development', school: 'AIEC Brazil - Online', period: 'In progress (started Feb 2026)' },
     ],
     skills: {
       frontend: 'React.js, Next.js, TypeScript, JavaScript (ES6+), Blazor, React Native',
@@ -291,7 +291,7 @@ const cvData = {
     education: [
       { degree: 'Ensino Medio - Gestao de Sistemas Informaticos', school: 'IPIL Makarenco', period: '2018 - 2022', grade: '17 Valores', project: 'Sistema de Publicacao e Agendamento de Eventos' },
       { degree: 'Licenciatura em Ciencias da Computacao', school: 'Instituto Superior Politecnico Metropolitano de Angola (ISPM)', period: '2023 - 2028' },
-      { degree: 'Analise e Desenvolvimento de Sistemas', school: 'AIEC Brasil - EAD', period: 'Em progresso (Previsto: Fev 2026)' },
+      { degree: 'Analise e Desenvolvimento de Sistemas', school: 'AIEC Brasil - EAD', period: 'Em progresso (desde Fev 2026)' },
     ],
     skills: {
       frontend: 'React.js, Next.js, TypeScript, JavaScript (ES6+), Blazor, React Native',

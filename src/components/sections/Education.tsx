@@ -8,7 +8,15 @@ import { SectionHeader } from "@/components/SectionHeader";
 export function Education() {
   const t = useTranslations("education");
 
-  const academic = [
+  interface EducationEntry {
+    degree: string;
+    school: string;
+    period: string;
+    status: string;
+    project?: string;
+  }
+
+  const academic: EducationEntry[] = [
     {
       degree: "BSc, Computer Science",
       school: "Instituto Superior Politécnico Metropolitano de Angola (ISPM), Luanda",
@@ -18,17 +26,24 @@ export function Education() {
     {
       degree: "Technologist, Systems Analysis and Development",
       school: "Faculdade AIEC, Brazil (online)",
-      period: "2024 - 2026",
-      status: `${t("expected")}: Feb 2026`,
+      period: "2026 - Present",
+      status: t("inProgress"),
     },
   ];
 
-  const technical = [
+  const technical: EducationEntry[] = [
     {
       degree: "Technical Diploma, Computer Systems Management",
       school: "IPIL Makarenco, Luanda",
       period: "2018 - 2022",
       status: `${t("grade")}: 17/20`,
+      project: t("ipilProject"),
+    },
+    {
+      degree: "Technical Course, General Electronics and Home Appliance Repair",
+      school: "Mapess (INEFOP), Luanda",
+      period: "",
+      status: `${t("grade")}: 19/20`,
     },
   ];
 
@@ -51,6 +66,7 @@ export function Education() {
                   <div>
                     <p className="font-display text-lg leading-snug">{entry.degree}</p>
                     <p className="text-soft text-sm mt-1">{entry.school}</p>
+                    {entry.project && <p className="text-faint text-xs mt-1">{entry.project}</p>}
                   </div>
                   <div className="font-mono text-xs text-soft md:text-right md:pt-1.5">
                     <p>{entry.period}</p>
@@ -67,6 +83,7 @@ export function Education() {
                   <div>
                     <p className="font-display text-lg leading-snug">{entry.degree}</p>
                     <p className="text-soft text-sm mt-1">{entry.school}</p>
+                    {entry.project && <p className="text-faint text-xs mt-1">{entry.project}</p>}
                   </div>
                   <div className="font-mono text-xs text-soft md:text-right md:pt-1.5">
                     <p>{entry.period}</p>
