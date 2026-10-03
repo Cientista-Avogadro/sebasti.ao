@@ -29,7 +29,7 @@ export function Testimonials() {
             <figcaption className="flex items-center gap-4 mt-8">
               {current.photo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={current.photo} alt={current.author} className="w-12 h-12 rounded-full object-cover grayscale" />
+                <img src={current.photo} alt={current.author} loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover grayscale" />
               ) : (
                 <div className="w-12 h-12 rounded-full bg-line" aria-hidden="true" />
               )}
@@ -42,7 +42,7 @@ export function Testimonials() {
           </figure>
 
           <div className="flex items-center justify-between mt-8">
-            <div className="flex items-center gap-2" role="tablist" aria-label="Testimonials">
+            <div className="flex items-center gap-1" role="tablist" aria-label="Testimonials">
               {testimonials.map((item, index) => (
                 <button
                   key={item.id}
@@ -50,11 +50,15 @@ export function Testimonials() {
                   aria-selected={index === currentIndex}
                   aria-label={`${index + 1} / ${testimonials.length}`}
                   onClick={() => setCurrentIndex(index)}
-                  className={cn(
-                    "w-2 h-2 transition-colors",
-                    index === currentIndex ? "bg-accent" : "bg-line hover:bg-soft"
-                  )}
-                />
+                  className="w-6 h-6 flex items-center justify-center"
+                >
+                  <span
+                    className={cn(
+                      "w-2 h-2 transition-colors",
+                      index === currentIndex ? "bg-accent" : "bg-line hover:bg-soft"
+                    )}
+                  />
+                </button>
               ))}
             </div>
             <div className="flex items-center gap-3">
