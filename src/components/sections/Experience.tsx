@@ -1,60 +1,89 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { SectionHeader } from "@/components/SectionHeader";
 import { experiences, projects } from "@/data/experience";
-import { ExperienceCard } from "./experience/ExperienceCard";
+import { calculateDuration } from "@/lib/utils";
 
 export function Experience() {
   const t = useTranslations("experience");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [expandedCompany, setExpandedCompany] = useState<string | null>(experiences[0].company);
 
-  const getCompanyProjects = (company: string) => {
-    return projects.filter(p => p.company === company);
-  };
-
-  const toggleCompany = (company: string) => {
-    setExpandedCompany(expandedCompany === company ? null : company);
-  };
+  const getCompanyProjects = (company: string) =>
+    projects.filter((project) => project.company === company);
 
   return (
-    <section id="experience" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-t from-transparent via-zinc-900/50 to-transparent" />
-      
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="mb-16"
-        >
-          <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">{t("label")}</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-50">
-            {t("title")}
-          </h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl">
-            {t("subtitle")}
-          </p>
-        </motion.div>
+    <section id="experience" className="scroll-mt-24 border-t border-line">
+      <div className="container-site py-24">
+        <SectionHeader
+          index="04"
+          label={t("label")}
+          title={t("title")}
+          subtitle={t("subtitle")}
+        />
 
-        <div className="relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-emerald-500/50 via-emerald-500/30 to-transparent" />
+        <ol>
+          {experiences.map((experience, index) => {
+            const duration = calculateDuration(experience.startDate, experience.endDate);
+            const companyProjects = getCompanyProjects(experience.company);
 
-          {experiences.map((exp, index) => (
-            <ExperienceCard
-              key={exp.company}
-              experience={exp}
-              index={index}
-              isExpanded={expandedCompany === exp.company}
-              onToggle={() => toggleCompany(exp.company)}
-              companyProjects={getCompanyProjects(exp.company)}
-            />
-          ))}
-        </div>
+            return (
+              <li
+                key={experience.company}
+                className={`grid gap-4 md:grid-cols-[190px_1fr] md:gap-12 py-10 ${index > 0 ? "border-t border-line" : ""}`}
+              >
+                <div className="font-mono text-xs text-soft space-y-1.5 md:pt-1.5">
+                  <p>{experience.period}</p>
+                  <p>
+                    {duration.years > 0 && `${duration.years} ${duration.years === 1 ? t("yearsShort") : t("years")} `}
+                    {duration.months > 0 && `${duration.months} ${duration.months === 1 ? t("monthsShort") : t("months")}`}
+                  </p>
+                  <p className="text-accent">{t(experience.workType)}</p>
+                  <p className="text-faint">{experience.location}</p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-2xl">{experience.company}</h3>
+                  <p className="text-accent font-medium mt-1">{experience.role}</p>
+                  <p className="text-soft mt-4 leading-relaxed max-w-3xl">
+                    {t(experience.descriptionKey)}
+                  </p>
+
+                  <h4 className="label mt-6">{t("keyHighlights")}</h4>
+                  <ul className="mt-3 space-y-2 max-w-3xl">
+                    {Array.from({ length: experience.highlightsCount }).map((_, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[0.95rem] text-ink/85">
+                        <span className="mt-[0.55rem] h-px w-4 bg-accent shrink-0" aria-hidden="true" />
+                        {t(`${experience.highlightsKey}.${i + 1}`)}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {companyProjects.length > 0 && (
+                    <div className="mt-6">
+                      <h4 className="label">{t("projects")}</h4>
+                      <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+                        {companyProjects.map((project, i) => (
+                          <li key={i}>
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-sm text-ink/85 hover:text-accent transition-colors"
+                            >
+                              {project.name}
+                              {project.link !== "#" && <ExternalLink size={12} aria-hidden="true" />}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );

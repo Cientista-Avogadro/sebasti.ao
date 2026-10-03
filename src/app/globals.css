@@ -1,57 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --accent: #10b981;
-  --accent-foreground: #09090b;
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  --border: #27272a;
-  --card: #18181b;
-  --card-foreground: #fafafa;
+  --paper: #f6f3ec;
+  --raised: #fdfbf4;
+  --ink: #201d16;
+  --soft: #6b6455;
+  --faint: #8d8676;
+  --line: #d9d2c2;
+  --accent: #1f5c40;
+  --accent-deep: #143d2a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
   --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --font-display: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #27272a #09090b;
-}
-
-*::-webkit-scrollbar {
-  width: 6px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #09090b;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 3px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
-}
-
-::selection {
-  background: #10b981;
-  color: #09090b;
+  --color-accent-deep: var(--accent-deep);
+  --font-display: var(--font-serif), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono-brand), ui-monospace, "Courier New", monospace;
 }
 
 html {
@@ -63,211 +34,116 @@ html[data-scroll-behavior="smooth"] {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
-.font-display {
-  font-family: var(--font-display);
+::selection {
+  background: var(--accent);
+  color: var(--paper);
 }
 
-.font-body {
-  font-family: var(--font-body);
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+::-webkit-scrollbar-track {
+  background: var(--paper);
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border: 3px solid var(--paper);
+  border-radius: 6px;
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Small caps metadata label used across sections */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--soft);
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Understated text link with underline that thickens on hover */
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-thickness 0.15s ease;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.link:hover {
+  text-decoration-thickness: 2px;
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.25);
-  }
+/* Solid ink call to action */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.btn:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+/* Quiet bordered secondary action */
+.btn-quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--ink);
+  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+.btn-quiet:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
-.animate-slide-left {
-  animation: slideInLeft 0.8s ease-out forwards;
+/* Standard page column */
+.container-site {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
 
-.animate-slide-right {
-  animation: slideInRight 0.8s ease-out forwards;
+/* Serif opening paragraph, editorial lede */
+.lede {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--ink) 85%, transparent);
 }
-
-.animate-scale-in {
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease infinite;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.grain-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-.glass {
-  background: rgba(24, 24, 27, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(39, 39, 42, 0.5);
-}
-
-.hover-lift {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.hover-scale {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-scale:hover {
-  transform: scale(1.02);
-}
-
-.hover-glow {
-  transition: box-shadow 0.4s ease, border-color 0.4s ease;
-}
-
-.hover-glow:hover {
-  border-color: rgba(16, 185, 129, 0.3);
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
-}
-
-.focus-ring:focus {
-  outline: none;
-  ring: 2px;
-  ring-offset: 2px;
-  ring-offset-background: var(--background);
-  ring-color: var(--accent);
-}
-
-.stagger-1 { animation-delay: 100ms; }
-.stagger-2 { animation-delay: 200ms; }
-.stagger-3 { animation-delay: 300ms; }
-.stagger-4 { animation-delay: 400ms; }
-.stagger-5 { animation-delay: 500ms; }
-.stagger-6 { animation-delay: 600ms; }
-.stagger-7 { animation-delay: 700ms; }
-.stagger-8 { animation-delay: 800ms; }

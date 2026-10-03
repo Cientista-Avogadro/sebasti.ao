@@ -1,23 +1,42 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
-import { MobileMenuProvider } from '@/lib/context/MobileMenuContext';
+import { CVDownload } from '@/components/cv';
+
+const serif = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  axes: ['SOFT', 'WONK'],
+});
+
+const sans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-sans',
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono-brand',
+});
 
 const APP_URL = process.env.APP_URL || "https://sebasti.ao";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo' });
-  
+
   const isPT = locale === 'pt';
-  
+
   return {
     metadataBase: new URL(APP_URL),
-    title: isPT 
-      ? 'Sebastião Moniz | Engenheiro de Software Sénior'
-      : 'Sebastião Moniz | Senior Software Engineer',
+    title: isPT
+      ? 'Sebastião Moniz | Engenheiro de Software Sénior & Team Lead'
+      : 'Sebastião Moniz | Senior Software Engineer & Team Lead',
     description: isPT
       ? 'Engenheiro de Software Sénior com 6+ anos de experiência. Especializado em Frontend, Full-Stack, IA e Soluções Empresariais. Baseado em Luanda, Angola.'
       : 'Senior Software Engineer with 6+ years of experience. Specialized in Frontend, Full-Stack, AI, and Enterprise Solutions. Based in Luanda, Angola.',
@@ -57,18 +76,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: isPT ? 'pt_AO' : 'en_US',
       alternateLocale: isPT ? 'en_US' : 'pt_AO',
       url: `${APP_URL}/${locale}`,
-      siteName: isPT ? 'Sebastião Moniz' : 'Sebastião Moniz',
+      siteName: 'Sebastião Moniz',
       title: isPT
-        ? 'Sebastião Moniz | Engenheiro de Software Sénior & Tech Lead'
-        : 'Sebastião Moniz | Senior Software Engineer & Tech Lead',
+        ? 'Sebastião Moniz | Engenheiro de Software Sénior & Team Lead'
+        : 'Sebastião Moniz | Senior Software Engineer & Team Lead',
       description: isPT
         ? 'Engenheiro de Software Sénior com 6+ anos de experiência. Especializado em Frontend, Full-Stack, IA e Soluções Empresariais. Baseado em Luanda, Angola.'
         : 'Senior Software Engineer with 6+ years of experience. Specialized in Frontend, Full-Stack, AI, and Enterprise Solutions. Based in Luanda, Angola.',
       images: [
         {
-          url: `${APP_URL}/og-image.svg`,
+          url: `${APP_URL}/og-image.png`,
           width: 1200,
           height: 630,
+          type: 'image/png',
           alt: isPT ? 'Sebastião Moniz - Engenheiro de Software' : 'Sebastião Moniz - Senior Software Engineer',
         },
       ],
@@ -76,13 +96,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: {
       card: 'summary_large_image',
       title: isPT
-        ? 'Sebastião Moniz | Engenheiro de Software Sénior'
-        : 'Sebastião Moniz | Senior Software Engineer',
+        ? 'Sebastião Moniz | Engenheiro de Software Sénior & Team Lead'
+        : 'Sebastião Moniz | Senior Software Engineer & Team Lead',
       description: isPT
         ? 'Engenheiro de Software Sénior com 6+ anos de experiência.'
         : 'Senior Software Engineer with 6+ years of experience.',
-      images: [`${APP_URL}/og-image.svg`],
-      creator: '@CientistaAvogadro',
+      images: [`${APP_URL}/og-image.png`],
+      creator: '@cientista_2022',
     },
     alternates: {
       canonical: locale === 'en' ? APP_URL : `${APP_URL}/${locale}`,
@@ -127,7 +147,7 @@ export default async function LocaleLayout({
       "https://www.instagram.com/sebastiao_moniz_scientist/",
       "https://web.facebook.com/Cientistass",
     ],
-    jobTitle: locale === 'pt' ? "Engenheiro de Software Sénior | Tech Lead" : "Senior Software Engineer | Tech Lead",
+    jobTitle: locale === 'pt' ? "Team Lead, Desenvolvimento e Testes de Software | Engenheiro de Software Sénior" : "Team Lead, Software Development & Testing | Senior Software Engineer",
     worksFor: [
       {
         "@type": "Organization",
@@ -149,26 +169,25 @@ export default async function LocaleLayout({
     alumniOf: [
       {
         "@type": "EducationalOrganization",
-        name: "Instituto Superior Politécnico do Moxico (ISPM)",
+        name: "Instituto Superior Politécnico Metropolitano de Angola (ISPM)",
       },
     ],
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <MicrosoftClarity />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#09090b] text-zinc-50 antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-paper text-ink antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <MobileMenuProvider>
-            {children}
-          </MobileMenuProvider>
+          {children}
+          <CVDownload />
         </NextIntlClientProvider>
         <Analytics />
       </body>

@@ -1,49 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Download, FileText, X, Check, Layout, Briefcase, Crown, User, UserX } from "lucide-react";
+import { Briefcase, Check, Crown, Download, FileText, Layout, Loader2, User, UserX, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { CVStandard, CVModern, CVExecutive } from "./templates";
+import { cn } from "@/lib/utils";
 
 type Template = "standard" | "modern" | "executive";
 type Locale = "en" | "pt";
 type PhotoOption = "with" | "without";
 
-interface CVDownloadProps {
-  currentLocale: Locale;
-}
+const templates: { key: Template; name: string; icon: typeof FileText }[] = [
+  { key: "standard", name: "Standard", icon: FileText },
+  { key: "modern", name: "Modern", icon: Briefcase },
+  { key: "executive", name: "Executive", icon: Crown },
+];
 
-const templates = {
-  standard: {
-    name: "Standard",
-    description: "Classic Europass-style, ATS-friendly",
-    icon: Layout,
-  },
-  modern: {
-    name: "Modern",
-    description: "Two-column with sidebar, tech-focused",
-    icon: Briefcase,
-  },
-  executive: {
-    name: "Executive",
-    description: "Elegant, traditional corporate style",
-    icon: Crown,
-  },
-};
-
-const languages = {
-  en: { name: "English", flag: "🇬🇧" },
-  pt: { name: "Português", flag: "🇦🇴" },
-};
-
-const photoOptions = {
-  with: { name: "Com foto", description: "Inclui sua foto profissional" },
-  without: { name: "Sem foto", description: "ATS-friendly, sem foto" },
-};
-
-export function CVDownload({ currentLocale }: CVDownloadProps) {
+export function CVDownload() {
+  const t = useTranslations("cv");
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState<Locale>(currentLocale);
+  const [selectedLang, setSelectedLang] = useState<Locale>(locale === "pt" ? "pt" : "en");
   const [selectedTemplate, setSelectedTemplate] = useState<Template>("standard");
   const [photoOption, setPhotoOption] = useState<PhotoOption>("without");
   const [isGenerating, setIsGenerating] = useState(false);
@@ -54,19 +31,16 @@ export function CVDownload({ currentLocale }: CVDownloadProps) {
     try {
       const { pdf } = await import("@react-pdf/renderer");
 
-      let DocumentComponent;
-      switch (selectedTemplate) {
-        case "modern":
-          DocumentComponent = <CVModern locale={selectedLang} withPhoto={photoOption === "with"} />;
-          break;
-        case "executive":
-          DocumentComponent = <CVExecutive locale={selectedLang} withPhoto={photoOption === "with"} />;
-          break;
-        default:
-          DocumentComponent = <CVStandard locale={selectedLang} withPhoto={photoOption === "with"} />;
-      }
+      const documentComponent =
+        selectedTemplate === "modern" ? (
+          <CVModern locale={selectedLang} withPhoto={photoOption === "with"} />
+        ) : selectedTemplate === "executive" ? (
+          <CVExecutive locale={selectedLang} withPhoto={photoOption === "with"} />
+        ) : (
+          <CVStandard locale={selectedLang} withPhoto={photoOption === "with"} />
+        );
 
-      const blob = await pdf(DocumentComponent).toBlob();
+      const blob = await pdf(documentComponent).toBlob();
 
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -85,194 +59,137 @@ export function CVDownload({ currentLocale }: CVDownloadProps) {
     }
   };
 
+  const templateDescriptions: Record<Template, string> = {
+    standard: t("standardDesc"),
+    modern: t("modernDesc"),
+    executive: t("executiveDesc"),
+  };
+
   return (
     <>
-      <motion.button
+      <button
         onClick={() => setIsOpen(true)}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 flex items-center justify-center shadow-lg shadow-emerald-500/25 transition-all hover:scale-110"
-        aria-label="Download CV"
+        className="fixed bottom-5 right-5 z-40 border border-ink bg-paper px-4 py-2.5 font-mono text-xs uppercase tracking-[0.15em] text-ink transition-colors hover:bg-ink hover:text-paper"
+        aria-label={t("title")}
       >
-        <FileText size={24} className="text-white" />
-      </motion.button>
+        CV
+      </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          >
-            <div
-              className="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm"
-              onClick={() => setIsOpen(false)}
-            />
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-lg bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden"
-            >
-              <div className="p-6 border-b border-zinc-800">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-zinc-100 flex items-center gap-2">
-                    <Download size={20} className="text-emerald-400" />
-                    Download CV
-                  </h3>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={t("title")}>
+          <div className="absolute inset-0 bg-ink/40" onClick={() => setIsOpen(false)} aria-hidden="true" />
+          <div className="relative w-full max-w-lg border border-ink bg-paper">
+            <div className="flex items-center justify-between border-b border-line px-6 py-4">
+              <h3 className="font-display text-lg">{t("title")}</h3>
+              <button
+                onClick={() => setIsOpen(false)}
+                aria-label={t("close")}
+                className="p-1.5 text-soft hover:text-ink transition-colors"
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="max-h-[70vh] overflow-y-auto p-6 space-y-8">
+              <fieldset>
+                <legend className="label mb-3">{t("template")}</legend>
+                <div className="grid grid-cols-3 gap-3">
+                  {templates.map(({ key, name, icon: Icon }) => (
+                    <button
+                      key={key}
+                      onClick={() => setSelectedTemplate(key)}
+                      aria-pressed={selectedTemplate === key}
+                      className={cn(
+                        "flex flex-col items-center gap-2 p-3 border transition-colors",
+                        selectedTemplate === key
+                          ? "border-accent text-accent bg-accent/5"
+                          : "border-line text-soft hover:border-ink hover:text-ink"
+                      )}
+                    >
+                      <Icon size={18} aria-hidden="true" />
+                      <span className="text-xs font-medium">{name}</span>
+                    </button>
+                  ))}
+                </div>
+                <p className="text-xs text-soft mt-2">{templateDescriptions[selectedTemplate]}</p>
+              </fieldset>
+
+              <fieldset>
+                <legend className="label mb-3">{t("photo")}</legend>
+                <div className="grid grid-cols-2 gap-3">
                   <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 rounded-lg hover:bg-zinc-800 transition-colors"
+                    onClick={() => setPhotoOption("with")}
+                    aria-pressed={photoOption === "with"}
+                    className={cn(
+                      "flex items-center justify-center gap-2 px-4 py-3 border text-sm transition-colors",
+                      photoOption === "with"
+                        ? "border-accent text-accent bg-accent/5"
+                        : "border-line text-soft hover:border-ink hover:text-ink"
+                    )}
                   >
-                    <X size={20} className="text-zinc-400" />
+                    <User size={16} aria-hidden="true" />
+                    {t("withPhoto")}
+                    {photoOption === "with" && <Check size={14} aria-hidden="true" />}
+                  </button>
+                  <button
+                    onClick={() => setPhotoOption("without")}
+                    aria-pressed={photoOption === "without"}
+                    className={cn(
+                      "flex items-center justify-center gap-2 px-4 py-3 border text-sm transition-colors",
+                      photoOption === "without"
+                        ? "border-accent text-accent bg-accent/5"
+                        : "border-line text-soft hover:border-ink hover:text-ink"
+                    )}
+                  >
+                    <UserX size={16} aria-hidden="true" />
+                    {t("withoutPhoto")}
+                    {photoOption === "without" && <Check size={14} aria-hidden="true" />}
                   </button>
                 </div>
-              </div>
+                <p className="text-xs text-soft mt-2">
+                  {photoOption === "with" ? t("withPhotoDesc") : t("withoutPhotoDesc")}
+                </p>
+              </fieldset>
 
-              <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
-                {/* Template Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-3">
-                    Template
-                  </label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {(Object.keys(templates) as Template[]).map((key) => {
-                      const template = templates[key];
-                      const Icon = template.icon;
-                      return (
-                        <button
-                          key={key}
-                          onClick={() => setSelectedTemplate(key)}
-                          className={`flex flex-col items-center gap-2 p-3 rounded-lg border transition-all ${
-                            selectedTemplate === key
-                              ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                              : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
-                          }`}
-                        >
-                          <Icon size={20} />
-                          <span className="text-xs font-medium">{template.name}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                  <p className="text-xs text-zinc-500 mt-2">
-                    {templates[selectedTemplate].description}
-                  </p>
-                </div>
-
-                {/* Photo Option */}
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-3">
-                    Foto
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
+              <fieldset>
+                <legend className="label mb-3">{t("language")}</legend>
+                <div className="grid grid-cols-2 gap-3">
+                  {(["en", "pt"] as Locale[]).map((key) => (
                     <button
-                      onClick={() => setPhotoOption("with")}
-                      className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border transition-all ${
-                        photoOption === "with"
-                          ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                          : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
-                      }`}
+                      key={key}
+                      onClick={() => setSelectedLang(key)}
+                      aria-pressed={selectedLang === key}
+                      className={cn(
+                        "flex items-center justify-center gap-2 px-4 py-3 border font-mono text-sm transition-colors",
+                        selectedLang === key
+                          ? "border-accent text-accent bg-accent/5"
+                          : "border-line text-soft hover:border-ink hover:text-ink"
+                      )}
                     >
-                      <User size={18} />
-                      <span className="font-medium">Com foto</span>
-                      {photoOption === "with" && <Check size={16} />}
+                      {key.toUpperCase()}
+                      {selectedLang === key && <Check size={14} aria-hidden="true" />}
                     </button>
-                    <button
-                      onClick={() => setPhotoOption("without")}
-                      className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border transition-all ${
-                        photoOption === "without"
-                          ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                          : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
-                      }`}
-                    >
-                      <UserX size={18} />
-                      <span className="font-medium">Sem foto</span>
-                      {photoOption === "without" && <Check size={16} />}
-                    </button>
-                  </div>
-                  <p className="text-xs text-zinc-500 mt-2">
-                    {photoOption === "with" 
-                      ? "Inclui sua foto profissional (algumas empresas preferem)"
-                      : "ATS-friendly, recomendado para aplicações gerais"}
-                  </p>
+                  ))}
                 </div>
+              </fieldset>
 
-                {/* Language Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-3">
-                    Language / Idioma
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {(Object.keys(languages) as Locale[]).map((key) => (
-                      <button
-                        key={key}
-                        onClick={() => setSelectedLang(key)}
-                        className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border transition-all ${
-                          selectedLang === key
-                            ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
-                            : "bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:border-zinc-600"
-                        }`}
-                      >
-                        <span className="text-lg">{languages[key].flag}</span>
-                        <span className="font-medium">{languages[key].name}</span>
-                        {selectedLang === key && <Check size={16} />}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Download Button */}
-                <button
-                  onClick={handleDownload}
-                  disabled={isGenerating}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-lg bg-emerald-500 hover:bg-emerald-400 disabled:bg-emerald-500/50 text-zinc-900 font-semibold transition-all hover:shadow-lg hover:shadow-emerald-500/25"
-                >
-                  {isGenerating ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                          fill="none"
-                        />
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        />
-                      </svg>
-                      Generating PDF...
-                    </>
-                  ) : (
-                    <>
-                      <Download size={20} />
-                      Download PDF
-                    </>
-                  )}
-                </button>
-
-                {/* Preview Info */}
-                <div className="p-4 rounded-lg bg-zinc-800/50 border border-zinc-700/50">
-                  <h4 className="text-sm font-medium text-zinc-300 mb-2">Preview</h4>
-                  <div className="text-xs text-zinc-500 space-y-1">
-                    <p>• Template: {templates[selectedTemplate].name}</p>
-                    <p>• Language: {languages[selectedLang].name}</p>
-                    <p>• ATS-friendly (Applicant Tracking Systems)</p>
-                    <p>• 7 professional experiences</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <button onClick={handleDownload} disabled={isGenerating} className="btn w-full justify-center disabled:opacity-60">
+                {isGenerating ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+                    {t("generating")}
+                  </>
+                ) : (
+                  <>
+                    <Download size={16} aria-hidden="true" />
+                    {t("generate")}
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

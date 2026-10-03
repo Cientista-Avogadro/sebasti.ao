@@ -16,7 +16,6 @@ const Courses = dynamic(() => import("@/components/sections/Courses").then(mod =
 const Articles = dynamic(() => import("@/components/sections/Articles").then(mod => ({ default: mod.Articles })));
 const Gallery = dynamic(() => import("@/components/sections/Gallery").then(mod => ({ default: mod.Gallery })));
 const Contact = dynamic(() => import("@/components/sections/Contact").then(mod => ({ default: mod.Contact })));
-const FloatingButtons = dynamic(() => import("@/components/FloatingButtons"));
 
 export default function Home() {
   return (
@@ -39,7 +38,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <FloatingButtons />
     </>
   );
 }
