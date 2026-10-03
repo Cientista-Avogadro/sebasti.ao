@@ -27,8 +27,9 @@ export const projects: Project[] = [
     impactKey: "rokiz.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Offline",
-    link: "#", 
+    status: "Live",
+    link: "https://rokizforum.netlify.app/",
+    image: "/projects/rokiz-forum.png", 
     github: "#", 
     featured: false 
   },
@@ -83,7 +84,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://penttinali.com/", 
+    link: "https://penttinali.com/",
+    image: "/projects/penttinali.png", 
     github: "#", 
     featured: false 
   },
@@ -109,8 +111,9 @@ export const projects: Project[] = [
     impactKey: "ozuna.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Offline",
-    link: "#", 
+    status: "Live",
+    link: "https://ozuna-site.netlify.app/",
+    image: "/projects/ozuna.png", 
     github: "#", 
     featured: false 
   },
@@ -129,7 +132,7 @@ export const projects: Project[] = [
     featured: false 
   },
   { 
-    name: "CAFÊ Platform", 
+    name: "CAFÉ Platform", 
     taglineKey: "cafe.tagline", 
     descriptionKey: "cafe.description", 
     roleKey: "cafe.role", 
@@ -137,7 +140,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://cafe.devtest.co.ao/en", 
+    link: "https://cafe.devtest.co.ao/en",
+    image: "/projects/cafe-platform.png", 
     github: "#", 
     featured: false 
   },
@@ -154,18 +158,32 @@ export const projects: Project[] = [
     github: "#", 
     featured: false 
   },
-  { 
-    name: "KITANDASOFT Suite", 
-    taglineKey: "kitandasoft.tagline", 
-    descriptionKey: "kitandasoft.description", 
-    roleKey: "kitandasoft.role", 
-    impactKey: "kitandasoft.impact", 
+  {
+    name: "KITANDASOFT Suite",
+    taglineKey: "kitandasoft.tagline",
+    descriptionKey: "kitandasoft.description",
+    roleKey: "kitandasoft.role",
+    impactKey: "kitandasoft.impact",
     focus: [],
-    tech: ["C#", "ASP.NET", "MariaDB", "Blazor"], 
+    tech: ["C#", "ASP.NET", "MariaDB", "Blazor"],
+    status: "Live",
+    link: "https://www.kitandasoft.ao",
+    image: "/projects/kitandasoft.png",
+    github: "#",
+    featured: false
+  },
+  {
+    name: "Kibera",
+    taglineKey: "kibera.tagline", 
+    descriptionKey: "kibera.description", 
+    roleKey: "kibera.role", 
+    impactKey: "kibera.impact", 
+    focus: [],
+    tech: ["Next.js", "PayloadCMS", "TypeScript"], 
     status: "Live", 
-    link: "#", 
+    link: "https://kibera.devtest.co.ao", 
     github: "#", 
-    featured: false 
+    featured: true
   },
   { 
     name: "DealBusinessHub", 
@@ -178,6 +196,7 @@ export const projects: Project[] = [
     status: "Live", 
     link: "#", 
     github: "#", 
+    image: "/projects/dealbusinesshub.png", 
     featured: false 
   },
   { 

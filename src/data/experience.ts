@@ -22,7 +22,7 @@ export const projects: Project[] = [
   { name: "CAFE Platform", company: "DevTest", link: "https://cafe.devtest.co.ao/en" },
   { name: "DealBusinessHub", company: "TailorDeal", link: "#" },
   { name: "ECO Estuda Comigo", company: "ECO Estuda Comigo", link: "#" },
-  { name: "KITANDASOFT Suite", company: "GC-LUCAN", link: "#" },
+  { name: "KITANDASOFT Suite", company: "GC-LUCAN", link: "https://www.kitandasoft.ao" },
   { name: "SIKOLASOFT", company: "GC-LUCAN", link: "#" },
   { name: "NZIMBUPAY", company: "SNIR, S.A.", link: "#" },
   { name: "SADOC", company: "Tecla T", link: "#" },

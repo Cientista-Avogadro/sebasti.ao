@@ -97,10 +97,10 @@
     "live": "Online",
     "github": "GitHub",
     "rokiz": {
-      "tagline": "Fórum de Desenvolvimento Pessoal",
-      "description": "O Fórum de Desenvolvimento Pessoal e Profissional, na sua 4ª edição, destaca-se como uma das principais plataformas para partilhar experiências, conectar e inspirar líderes em Angola.",
-      "role": "Senior Software Engineer",
-      "impact": "Inspirando líderes em Angola"
+      "tagline": "Plataforma de evento para um forum nacional de desenvolvimento",
+      "description": "Website da 4ª edição do Fórum de Desenvolvimento Pessoal e Profissional, realizado sob o lema Liderança Visionária no âmbito dos 50 anos da Independência Nacional de Angola.",
+      "role": "Organizadores, oradores e participantes do fórum.",
+      "impact": "Um website de evento focado, que apresenta o programa, os oradores e a bilhética para uma audiência nacional."
     },
     "ngola": {
       "tagline": "Plataforma de Cidades Inteligentes",
@@ -121,10 +121,10 @@
       "impact": "Apoiando crianças com necessidades especiais"
     },
     "penttinali": {
-      "tagline": "Serviços de Cibersegurança",
-      "description": "Ampla gama de serviços concebidos para proteger a sua empresa contra ameaças cibernéticas, garantir conformidade regulatória e fortalecer a sua segurança operacional.",
-      "role": "Senior Software Engineer",
-      "impact": "Soluções de cibersegurança"
+      "tagline": "Cibersegurança e forense digital",
+      "description": "Website corporativo da Penttinali, consultora de cibersegurança que cobre forense digital, prevenção de fraude, gestão de crise, conformidade regulatória e formação especializada para empresas e instituições.",
+      "role": "Empresas e instituições a proteger dados e a cumprir requisitos regulatórios.",
+      "impact": "Uma presença profissional que posiciona os serviços de cibersegurança da firma e converte consultas em contratos."
     },
     "ayonas": {
       "tagline": "Empresa de Transporte Urbano",
@@ -133,10 +133,10 @@
       "impact": "Transporte urbano em Luanda"
     },
     "ozuna": {
-      "tagline": "Engenharia & Infraestrutura",
-      "description": "Empresa angolana a actuar há quase 10 anos nas áreas de Engenharia e Infraestrutura com elevado rigor técnico.",
-      "role": "Senior Software Engineer",
-      "impact": "Soluções de engenharia em Angola"
+      "tagline": "Engenharia e infraestruturas de telecomunicações",
+      "description": "Website corporativo da Ozuna Engineering, empresa angolana de infraestruturas de telecomunicações, energias renováveis, automação e construção civil, com mais de 150 projectos concluídos.",
+      "role": "Empresas que procuram parceiros de engenharia e telecomunicações.",
+      "impact": "Uma presença corporativa que apresenta mais de 10 anos de engenharia e converte visitantes em pedidos de projecto."
     },
     "elizandra": {
       "tagline": "Especialista em Desenvolvimento Humano",
@@ -250,10 +250,10 @@
       "monthlyVisitors": "Visitantes mensais"
     },
     "kibera": {
-      "tagline": "Plataforma multi-tenant de facturação e operações",
-      "description": "Plataforma SaaS de facturação pronta para produção, desenhada para suportar várias empresas num único sistema. Usada por empresas para gerir facturação, facturas, pagamentos, operações de POS e dados de clientes em cenários reais.",
-      "role": "Empresas, equipas financeiras, operadores e administradores que gerem facturação e pagamentos no dia a dia.",
-      "impact": "Desenhada com multi-tenancy para suportar várias empresas independentes numa só plataforma, com forte isolamento de dados, menos erros operacionais e fluxos de negócio mais escaláveis."
+      "tagline": "Suite de gestão e facturação",
+      "description": "Suite de gestão e facturação para o mercado angolano, arquitectada em Next.js e PayloadCMS com geração de documentos fiscais conforme.",
+      "role": "Empresas a gerir facturação, pagamentos e documentos fiscais.",
+      "impact": "Uma suite em produção que substitui processos manuais de facturação por processos digitais conformes."
     },
     "pre-launch": "Pré-lançamento",
     "offline": "Offline",
