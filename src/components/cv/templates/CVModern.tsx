@@ -52,7 +52,12 @@ const styles = StyleSheet.create({
   contact: {
     fontSize: 8,
     color: colors.soft,
-    marginTop: 2,
+    marginTop: 2.5,
+  },
+  headerLocation: {
+    fontSize: 8,
+    color: colors.soft,
+    marginTop: 9,
   },
   header: {
     marginBottom: 10,
@@ -172,7 +177,7 @@ export function CVModern({ locale, withPhoto }: CVModernProps) {
               <View style={{ flex: 1 }}>
                 <Text style={styles.name}>{data.name}</Text>
                 <Text style={styles.jobTitle}>{data.title}</Text>
-                <Text style={styles.contact}>{data.locationLine}</Text>
+                <Text style={styles.headerLocation}>{data.locationLine}</Text>
                 <Text style={styles.contact}>{data.contactLine1}</Text>
                 <Text style={styles.contact}>{data.contactLine2}</Text>
               </View>

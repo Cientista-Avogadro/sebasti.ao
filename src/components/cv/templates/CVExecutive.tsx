@@ -57,7 +57,12 @@ const styles = StyleSheet.create({
   contact: {
     fontSize: 8.4,
     color: colors.soft,
-    marginTop: 2,
+    marginTop: 2.5,
+  },
+  headerLocation: {
+    fontSize: 8.4,
+    color: colors.soft,
+    marginTop: 9,
   },
   section: {
     marginTop: 13,
@@ -169,7 +174,7 @@ export function CVExecutive({ locale, withPhoto }: CVExecutiveProps) {
           {withPhoto && <Image style={{ ...styles.photo, alignSelf: "center", marginBottom: 8 }} src="/myphoto.jpg" />}
           <Text style={styles.name}>{data.name}</Text>
           <Text style={styles.jobTitle}>{data.title}</Text>
-          <Text style={styles.contact}>{data.locationLine}</Text>
+          <Text style={styles.headerLocation}>{data.locationLine}</Text>
           <Text style={styles.contact}>{data.contactLine1}</Text>
           <Text style={styles.contact}>{data.contactLine2}</Text>
         </View>

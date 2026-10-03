@@ -40,12 +40,17 @@ const styles = StyleSheet.create({
   jobTitle: {
     fontSize: 10,
     fontWeight: 600,
-    marginTop: 4,
+    marginTop: 5,
   },
   contact: {
     fontSize: 8.4,
     color: colors.soft,
-    marginTop: 2,
+    marginTop: 2.5,
+  },
+  headerLocation: {
+    fontSize: 8.4,
+    color: colors.soft,
+    marginTop: 9,
   },
   headerRow: {
     flexDirection: "row",
@@ -172,7 +177,7 @@ export function CVStandard({ locale, withPhoto }: CVStandardProps) {
             <View style={{ alignItems: "center" }}>
               <Text style={styles.name}>{data.name}</Text>
               <Text style={styles.jobTitle}>{data.title}</Text>
-              <Text style={styles.contact}>{data.locationLine}</Text>
+              <Text style={styles.headerLocation}>{data.locationLine}</Text>
               <Text style={styles.contact}>{data.contactLine1}</Text>
               <Text style={styles.contact}>{data.contactLine2}</Text>
             </View>
