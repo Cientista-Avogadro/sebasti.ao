@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Articles as ArticlesSection } from "@/components/sections/Articles";
 import { Footer } from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
 export default async function ArticlesPage({
   params,
@@ -11,11 +10,10 @@ export default async function ArticlesPage({
   return (
     <>
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-14">
         <ArticlesSection showAll={true} />
       </main>
       <Footer />
-      <FloatingButtons />
     </>
   );
 }

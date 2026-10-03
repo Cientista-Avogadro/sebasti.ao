@@ -1,69 +1,89 @@
 "use client";
 
-import { motion, AnimatePresence, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { Quote, Star, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
-
+import { SectionHeader } from "@/components/SectionHeader";
 import { testimonials } from "@/data/testimonials";
+import { cn } from "@/lib/utils";
 
 export function Testimonials() {
   const t = useTranslations("testimonials");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
 
-  const next = () => { setDirection(1); setCurrentIndex((prev) => (prev + 1) % testimonials.length); };
-  const prev = () => { setDirection(-1); setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length); };
-
-  const variants = { enter: (d: number) => ({ x: d > 0 ? 300 : -300, opacity: 0 }), center: { x: 0, opacity: 1 }, exit: (d: number) => ({ x: d > 0 ? -300 : 300, opacity: 0 }) };
+  const prev = () => setCurrentIndex((index) => (index - 1 + testimonials.length) % testimonials.length);
+  const next = () => setCurrentIndex((index) => (index + 1) % testimonials.length);
+  const current = testimonials[currentIndex];
 
   return (
-    <section className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/[0.02] to-transparent" />
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <motion.div ref={ref} initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="text-center mb-16">
-          <span className="text-emerald-400 font-mono text-sm tracking-wider mb-4 block">{t("label")}</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-zinc-50">{t("title")}</h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">{t("subtitle")}</p>
-        </motion.div>
+    <section id="testimonials" className="scroll-mt-24 border-t border-line">
+      <div className="container-site py-24">
+        <SectionHeader index="09" label={t("label")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden min-h-[400px] flex items-center">
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div key={currentIndex} custom={direction} variants={variants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.4 }} className="w-full">
-                <div className="p-8 md:p-12 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 transition-all relative">
-                  <div className="absolute top-6 right-6 md:top-8 md:right-8"><Quote size={48} className="text-emerald-500/20" /></div>
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-1 mb-6">{[...Array(testimonials[currentIndex].rating)].map((_, i) => (<Star key={i} size={18} className="fill-emerald-500 text-emerald-500" />))}</div>
-                    <blockquote className="text-lg md:text-xl text-zinc-300 leading-relaxed mb-8">"{t(`items.${testimonials[currentIndex].id}.quote`)}"</blockquote>
-                    <div className="flex items-center gap-4 pt-6 border-t border-zinc-800">
-                      {testimonials[currentIndex].photo ? (<img src={testimonials[currentIndex].photo} alt={testimonials[currentIndex].author} className="w-14 h-14 rounded-full object-cover" />) : (<div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center"><span className="text-lg font-bold text-white">{testimonials[currentIndex].author.split(' ').map(n => n[0]).join('').slice(0, 2)}</span></div>)}
-                      <div>
-                        <p className="font-semibold text-zinc-100">{testimonials[currentIndex].author}</p>
-                        <p className="text-sm text-emerald-400">{testimonials[currentIndex].role}</p>
-                        <p className="text-xs text-zinc-500 mt-1">{t(`items.${testimonials[currentIndex].id}.relation`)}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+        <div className="max-w-3xl">
+          <figure className="border-t-2 border-ink pt-8">
+            <Quote size={28} className="text-line" aria-hidden="true" />
+            <blockquote className="font-display text-xl sm:text-2xl leading-relaxed mt-6">
+              {t(`items.${current.id}.quote`)}
+            </blockquote>
+            <figcaption className="flex items-center gap-4 mt-8">
+              {current.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={current.photo} alt={current.author} className="w-12 h-12 rounded-full object-cover grayscale" />
+              ) : (
+                <div className="w-12 h-12 rounded-full bg-line" aria-hidden="true" />
+              )}
+              <div>
+                <p className="font-medium">{current.author}</p>
+                <p className="text-soft text-sm">{current.role}</p>
+                <p className="text-faint text-xs mt-0.5">{t(`items.${current.id}.relation`)}</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <div className="flex items-center justify-between mt-8">
+            <div className="flex items-center gap-2" role="tablist" aria-label="Testimonials">
+              {testimonials.map((item, index) => (
+                <button
+                  key={item.id}
+                  role="tab"
+                  aria-selected={index === currentIndex}
+                  aria-label={`${index + 1} / ${testimonials.length}`}
+                  onClick={() => setCurrentIndex(index)}
+                  className={cn(
+                    "w-2 h-2 transition-colors",
+                    index === currentIndex ? "bg-accent" : "bg-line hover:bg-soft"
+                  )}
+                />
+              ))}
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={prev}
+                aria-label="Previous"
+                className="p-2 border border-line hover:border-ink transition-colors"
+              >
+                <ChevronLeft size={16} aria-hidden="true" />
+              </button>
+              <button
+                onClick={next}
+                aria-label="Next"
+                className="p-2 border border-line hover:border-ink transition-colors"
+              >
+                <ChevronRight size={16} aria-hidden="true" />
+              </button>
+            </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6 mt-8">
-            <button onClick={prev} className="w-12 h-12 rounded-full border border-zinc-700 hover:border-emerald-500/50 hover:bg-emerald-500/10 flex items-center justify-center transition-all" aria-label="Previous"><ChevronLeft size={20} className="text-zinc-400" /></button>
-            <div className="flex items-center gap-2" role="tablist">{testimonials.map((_, index) => (<button key={index} role="tab" aria-selected={index === currentIndex} aria-label={`Testimonial ${index + 1} of ${testimonials.length}`} onClick={() => { setDirection(index > currentIndex ? 1 : -1); setCurrentIndex(index); }} className={`min-w-[32px] min-h-[32px] h-2 rounded-full transition-all flex items-center justify-center ${index === currentIndex ? "bg-emerald-500 w-6" : "bg-zinc-700 hover:bg-zinc-600"}`} />))}</div>
-            <button onClick={next} className="w-12 h-12 rounded-full border border-zinc-700 hover:border-emerald-500/50 hover:bg-emerald-500/10 flex items-center justify-center transition-all" aria-label="Next"><ChevronRight size={20} className="text-zinc-400" /></button>
-          </div>
-        </div>
-
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }} className="mt-12 text-center">
-          <a href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/details/recommendations" target="_blank" rel="noopener noreferrer" aria-label="View all LinkedIn recommendations" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-700 hover:border-emerald-500/50 text-zinc-300 hover:text-emerald-400 transition-all">
-            <MessageSquare size={18} />{t("viewAll")}
+          <a
+            href="https://www.linkedin.com/in/sebasti%C3%A3o-de-sousa-moniz/details/recommendations"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link inline-block mt-10 text-sm"
+          >
+            {t("viewAll")}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -150,7 +150,7 @@ interface CVProps {
 const cvData = {
   en: {
     name: 'Sebastiao de Sousa Moniz',
-    title: 'Senior Software Engineer | Tech Lead',
+    title: 'Senior Software Engineer & Team Lead',
     location: 'Luanda, Angola',
     phone: '+244 972 745 066',
     email: 'moniz.techs@gmail.com',
@@ -160,25 +160,25 @@ const cvData = {
     experience: [
       {
         company: 'DevTest',
-        role: 'Senior Software Engineer',
+        role: 'Team Lead, Software Development & Testing | Senior Software Engineer',
         period: 'Oct 2024 - Present',
-        description: 'Team Lead responsible for the entire development department. Building enterprise web, desktop, and mobile applications.',
+        description: 'Team Lead of the development and testing department, a team of under 8 engineers, while also acting as Senior Software Engineer.',
       },
       {
         company: 'TailorDeal',
-        role: 'Senior Developer | Tech Lead',
+        role: 'Senior Software Developer and Tech Lead',
         period: 'Jan 2024 - Jan 2025',
-        description: "Tech Lead for Europe's leading online marketplace for real estate and business transactions.",
+        description: 'Tech Lead for a European marketplace for real estate and business transactions.',
       },
       {
         company: 'ECO Estuda Comigo',
-        role: 'Senior Developer | Tech Lead',
+        role: 'Frontend Tech Lead',
         period: 'Nov 2023 - Jan 2025',
         description: "Frontend Tech Lead for Angola's innovative education technology platform.",
       },
       {
         company: 'GC-LUCAN',
-        role: 'Senior Software Engineer | Tech Lead',
+        role: 'Senior Software Engineer and Technical Lead',
         period: 'Jul 2022 - Sep 2024',
         description: 'Led development of enterprise-grade software solutions serving 300+ businesses across Angola.',
       },
@@ -196,7 +196,7 @@ const cvData = {
       },
       {
         company: 'SNIR',
-        role: 'Software Developer',
+        role: 'Software Developer (Backend, Reports and DBA)',
         period: 'Feb 2021 - Feb 2024',
         description: 'Full-Stack Developer for Angolan financial services company.',
       },
@@ -225,7 +225,7 @@ const cvData = {
   },
   pt: {
     name: 'Sebastiao de Sousa Moniz',
-    title: 'Engenheiro de Software Senior | Tech Lead',
+    title: 'Engenheiro de Software Senior & Team Lead',
     location: 'Luanda, Angola',
     phone: '+244 972 745 066',
     email: 'moniz.techs@gmail.com',
@@ -235,25 +235,25 @@ const cvData = {
     experience: [
       {
         company: 'DevTest',
-        role: 'Engenheiro de Software Senior',
+        role: 'Team Lead, Desenvolvimento e Testes de Software | Engenheiro de Software Senior',
         period: 'Out 2024 - Presente',
-        description: 'Team Lead responsavel por todo o departamento de desenvolvimento. Construindo aplicacoes web, desktop e mobile empresariais.',
+        description: 'Team Lead do departamento de desenvolvimento e testes, uma equipa de menos de 8 engenheiros, actuando tambem como Engenheiro de Software Senior.',
       },
       {
         company: 'TailorDeal',
-        role: 'Desenvolvedor Senior | Tech Lead',
+        role: 'Desenvolvedor Senior de Software e Tech Lead',
         period: 'Jan 2024 - Jan 2025',
-        description: 'Tech Lead do maior marketplace online da Europa para transaccoes imobliarias.',
+        description: 'Tech Lead de um marketplace europeu para transaccoes imobiliarias e empresariais.',
       },
       {
         company: 'ECO Estuda Comigo',
-        role: 'Desenvolvedor Senior | Tech Lead',
+        role: 'Frontend Tech Lead',
         period: 'Nov 2023 - Jan 2025',
         description: 'Frontend Tech Lead da plataforma angolana de tecnologia educacional.',
       },
       {
         company: 'GC-LUCAN',
-        role: 'Engenheiro de Software Senior | Tech Lead',
+        role: 'Engenheiro de Software Senior e Technical Lead',
         period: 'Jul 2022 - Set 2024',
         description: 'Liderou o desenvolvimento de solucoes de software para mais de 300 empresas em Angola.',
       },
@@ -271,7 +271,7 @@ const cvData = {
       },
       {
         company: 'SNIR',
-        role: 'Desenvolvedor de Software',
+        role: 'Desenvolvedor de Software (Backend, Relatorios e DBA)',
         period: 'Fev 2021 - Fev 2024',
         description: 'Desenvolvedor Full-Stack para empresa angolana de servicos financeiros.',
       },
