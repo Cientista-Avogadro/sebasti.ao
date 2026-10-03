@@ -12,7 +12,7 @@ import { CaseStudy } from "./projects/CaseStudy";
 interface ProjectsProps { showAll?: boolean; }
 
 // Curated order for the home page: strongest, verifiable stories first.
-const HOME_CASE_STUDY_ORDER = ["SADOC", "XGrow", "FEMB", "Docampo", "Macovi Sport Club", "Kiari Events"];
+const HOME_CASE_STUDY_ORDER = ["SADOC", "KITANDASOFT Suite", "CAFE Platform", "DealBusinessHub", "Docampo", "XGrow"];
 
 export function Projects({ showAll = false }: ProjectsProps) {
   const t = useTranslations("projects");

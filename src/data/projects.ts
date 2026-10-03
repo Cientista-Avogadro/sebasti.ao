@@ -137,7 +137,8 @@ export const projects: Project[] = [
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
     status: "Live", 
-    link: "https://cafe.devtest.co.ao/en", 
+    link: "https://cafe.devtest.co.ao/en",
+    image: "/projects/cafe-platform.png", 
     github: "#", 
     featured: false 
   },
