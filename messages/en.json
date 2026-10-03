@@ -15,7 +15,8 @@
     "instagramProfile": "Instagram Profile",
     "facebookProfile": "Facebook Profile",
     "switchToEnglish": "Switch to English",
-    "switchToPortuguese": "Switch to Portuguese"
+    "switchToPortuguese": "Switch to Portuguese",
+    "themeToggle": "Toggle dark mode"
   },
   "hero": {
     "badge": "Available for senior remote roles",
@@ -630,7 +631,8 @@
   "footer": {
     "tagline": "Based in Angola — working globally.",
     "rights": "All rights reserved.",
-    "email": "Email"
+    "email": "Email",
+    "updated": "Last updated"
   },
   "common": {
     "loading": "Loading...",

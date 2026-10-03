@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import { CVDownload } from '@/components/cv';
 
@@ -178,18 +179,30 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <MicrosoftClarity />
+        <script
+          id="theme-init"
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen bg-paper text-ink antialiased overflow-x-hidden">
+        <a href="#main" className="skip-link no-print">
+          {locale === "pt" ? "Ir para o conteúdo" : "Skip to content"}
+        </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
           <CVDownload />
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

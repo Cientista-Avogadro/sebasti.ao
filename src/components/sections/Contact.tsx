@@ -36,6 +36,7 @@ export function Contact() {
 
   const channels = [
     { icon: Mail, label: "Email", value: "moniz.techs@gmail.com", href: "mailto:moniz.techs@gmail.com" },
+    { icon: Phone, label: "WhatsApp", value: "+244 972 745 066", href: "https://wa.me/244972745066" },
     { icon: Phone, label: "Phone", value: "+244 972 745 066", href: "tel:+244972745066" },
     { icon: MapPin, label: t("location"), value: t("luanda"), href: null },
   ];
