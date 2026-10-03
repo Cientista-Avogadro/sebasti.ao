@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname, useRouter, Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 
 export function Navbar() {
@@ -68,6 +69,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-5">
             <LanguageSwitcher />
+            <ThemeToggle />
             <a
               href="https://github.com/Cientista-Avogadro"
               target="_blank"
@@ -104,8 +106,9 @@ export function Navbar() {
                 {item.label}
               </button>
             ))}
-            <div className="mt-8">
+            <div className="mt-8 flex items-center gap-6">
               <LanguageSwitcher />
+              <ThemeToggle />
             </div>
           </nav>
         </div>

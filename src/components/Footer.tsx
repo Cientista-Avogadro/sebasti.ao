@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const lastUpdated = new Date().toLocaleDateString("en-GB", { month: "short", year: "numeric" });
 
   return (
     <footer className="border-t-2 border-ink">
@@ -10,6 +11,7 @@ export function Footer() {
           <div>
             <p className="font-display text-lg">Sebastião de Sousa Moniz</p>
             <p className="text-soft text-sm mt-1">{t("tagline")}</p>
+            <p className="text-faint text-xs mt-3 font-mono">Next.js · {t("updated")} {lastUpdated}</p>
           </div>
           <div className="font-mono text-xs text-soft space-y-1.5 md:text-right">
             <p>Luanda, Angola · 8.8383° S, 13.2344° E · UTC+1</p>

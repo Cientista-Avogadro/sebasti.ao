@@ -5,10 +5,21 @@
   --raised: #fdfbf4;
   --ink: #201d16;
   --soft: #6b6455;
-  --faint: #8d8676;
+  --faint: #756e5f;
   --line: #d9d2c2;
   --accent: #1f5c40;
   --accent-deep: #143d2a;
+}
+
+[data-theme="dark"] {
+  --paper: #16130d;
+  --raised: #1e1a13;
+  --ink: #ece7db;
+  --soft: #a89f8c;
+  --faint: #847c6b;
+  --line: #37311f;
+  --accent: #57bd8b;
+  --accent-deep: #7fd6a9;
 }
 
 @theme inline {
@@ -146,4 +157,52 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.15rem;
   line-height: 1.7;
   color: color-mix(in srgb, var(--ink) 85%, transparent);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Printing the site yields a clean paper document */
+@media print {
+  :root, [data-theme="dark"] {
+    --paper: #ffffff;
+    --raised: #ffffff;
+    --ink: #111111;
+    --soft: #444444;
+    --faint: #666666;
+    --line: #cccccc;
+    --accent: #1f5c40;
+    --accent-deep: #143d2a;
+  }
+  header nav button, .no-print {
+    display: none !important;
+  }
+  section {
+    break-inside: avoid-page;
+  }
+}
+
+/* Skip link, visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 60;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }

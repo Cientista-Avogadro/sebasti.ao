@@ -352,7 +352,7 @@ export const projects: Project[] = [
 
 export const filterCategories = [
   { name: "Frontend", techs: ["React", "Next.js", "TailwindCSS", "Chakra UI", "Redux"] },
-  { name: "Backend", techs: ["C#", ".NET", "ASP.NET", "Blazor", "Node.js"] },
+  { name: "Backend", techs: ["C#", ".NET 8", "ASP.NET", "ASP.NET Core", "Blazor", "Node.js", "GraphQL"] },
   { name: "Database", techs: ["MariaDB", "SQL Server"] },
-  { name: "Tools", techs: ["Vercel"] }
+  { name: "Tools", techs: ["Vercel", "GitFlow"] }
 ];

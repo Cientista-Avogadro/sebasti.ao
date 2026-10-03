@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { SectionHeader } from "@/components/SectionHeader";
 import { cn } from "@/lib/utils";
 
@@ -122,10 +123,10 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
         )}
 
         {!showAll && (
-          <a href="/articles" className="link inline-flex items-center gap-1.5 mt-8 text-sm">
+          <Link href="/articles" className="link inline-flex items-center gap-1.5 mt-8 text-sm">
             {t("viewAll")}
             <ArrowUpRight size={13} aria-hidden="true" />
-          </a>
+          </Link>
         )}
       </div>
     </section>

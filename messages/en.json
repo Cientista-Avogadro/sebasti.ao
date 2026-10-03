@@ -15,7 +15,8 @@
     "instagramProfile": "Instagram Profile",
     "facebookProfile": "Facebook Profile",
     "switchToEnglish": "Switch to English",
-    "switchToPortuguese": "Switch to Portuguese"
+    "switchToPortuguese": "Switch to Portuguese",
+    "themeToggle": "Toggle dark mode"
   },
   "hero": {
     "badge": "Available for senior remote roles",
@@ -322,7 +323,7 @@
     "snir": {
       "description": "Software developer focused on backend services, reporting and database administration for insurance and banking systems.",
       "highlights": {
-        "1": "Built and maintained International Insurance, a full insurance management system, by developing backend services in C# and ASP.NET on Microsoft SQL Server.",
+        "1": "Built and maintained International Insurance, a full insurance management system, acting on backend services, database administration and DevOps in C# and ASP.NET on Microsoft SQL Server.",
         "2": "Delivered NZIMBUPAY, a banking application, by owning senior report development and backend features in C#, ASP.NET and DevExpress.",
         "3": "Kept both systems reliable in production across three years by administering the SQL Server databases and resolving reporting incidents as the dedicated DBA."
       }
@@ -342,6 +343,23 @@
         "2": "Worked inside a structured delivery process with GitFlow, Jira, and collaborative engineering routines.",
         "3": "Built maintainable UI logic for a real product, not one-off pages."
       }
+    },
+    "kiari": {
+      "description": "Frontend developer at an Angolan software company, owning the company website end to end and building the Kiari Events application for organisers and customers.",
+      "highlights": {
+        "1": "Built the complete company website, owning the application from scratch.",
+        "2": "Kiari Events: event application covering both the organiser side and the customer side, with React, Redux and GraphQL.",
+        "3": "Built with React, Next.js, Redux Toolkit, GraphQL and Chakra UI, with geolocation features.",
+        "4": "Modern React ecosystem: Vite, Redux Toolkit, Context API and GraphQL integration."
+      }
+    },
+    "zenitech": {
+      "description": "Fullstack developer at a Brazilian software company, building websites, systems and landing pages for ed-tech clients.",
+      "highlights": {
+        "1": "Aligner-Flix: production landing page for a Brazilian ed-tech client.",
+        "2": "Delivered fullstack work from frontend to backend, including website creation and bug fixes.",
+        "3": "Stack: React, Angular, PHP, Node.js and WordPress."
+      }
     }
   },
   "education": {
@@ -360,7 +378,8 @@
     "focusTitle": "Academic Focus",
     "focusA": "Formal training in software engineering, problem-solving, systems thinking, and structured technical foundations.",
     "focusB": "Academic path built across higher education, systems analysis, and technical secondary education with practical orientation.",
-    "focusC": "Professional courses and certifications are presented separately to keep academic background and continuous training distinct."
+    "focusC": "Professional courses and certifications are presented separately to keep academic background and continuous training distinct.",
+    "ipilProject": "Event Publishing and Scheduling System"
   },
   "techStack": {
     "label": "06 - STACK",
@@ -612,7 +631,8 @@
   "footer": {
     "tagline": "Based in Angola — working globally.",
     "rights": "All rights reserved.",
-    "email": "Email"
+    "email": "Email",
+    "updated": "Last updated"
   },
   "common": {
     "loading": "Loading...",

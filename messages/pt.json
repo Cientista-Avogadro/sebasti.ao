@@ -15,19 +15,14 @@
     "instagramProfile": "Perfil no Instagram",
     "facebookProfile": "Perfil no Facebook",
     "switchToEnglish": "Mudar para Inglês",
-    "switchToPortuguese": "Mudar para Português"
+    "switchToPortuguese": "Mudar para Português",
+    "themeToggle": "Alternar modo escuro"
   },
   "hero": {
     "badge": "Disponível para novas oportunidades",
-    "welcome": "Bem-vindo ao meu portfólio",
-    "subtitle": "Engenheiro de Software | Tech Lead",
     "description": "Engenheiro de Software Sénior com mais de 6 anos de experiência a entregar sistemas de produção para empresas em Angola, Europa e Brasil.",
-    "viewProjects": "Ver Projectos",
-    "getInTouch": "Entre em Contacto",
     "yearsExp": "6+ Anos de Experiência",
     "location": "Luanda, Angola",
-    "projectsDelivered": "30+ Projectos Entregues",
-    "techStack": "Stack: React, Next.js, TypeScript, C#/.NET, IA Integration, Cloud Deploy",
     "eyebrow": "Engenheiro de software sénior a construir sistemas críticos para o negócio",
     "headline": "Construo plataformas SaaS escaláveis e sistemas reais usados em produção.",
     "authorityLine": "Já entreguei sistemas em produção, incluindo uma plataforma de facturação multi-tenant e um sistema de gestão agrícola.",
@@ -60,15 +55,6 @@
     "years": "Anos de Experiência",
     "projects": "Projectos Entregues",
     "companies": "Empresas Atendidas",
-    "education": "Educação",
-    "bachelor": "Licenciatura em Ciências da Computação",
-    "bachelorSchool": "Instituto Superior Politécnico Metropolitano de Angola (2023 - 2028)",
-    "systems": "Análise e Desenvolvimento de Sistemas",
-    "systemsSchool": "AIEC Brasil - EAD (Previsto: Fev 2026)",
-    "ipil": "Ensino Médio - Gestão de Sistemas Informáticos",
-    "ipilSchool": "IPIL Makarenco (2018 - 2022)",
-    "ipilGrade": "17 Valores",
-    "ipilProject": "Sistema de Publicação e Agendamento de Eventos",
     "proofLabel": "Sinais de senoridade",
     "proofTitle": "Feito para fluxos de trabalho reais, não portfolios de tutorial",
     "proofCta": "Ver os case studies",
@@ -292,14 +278,6 @@
     "years": "anos",
     "monthsShort": "mês",
     "yearsShort": "ano",
-    "sadoc": {
-      "description": "Desenvolvedor Frontend para plataforma de transacções cambiais internacionais. Construiu funcionalidades completas para a aplicação SADOC de remessas.",
-      "highlights": {
-        "1": "SADOC: Plataforma de câmbio internacional e remessas de valores",
-        "2": "Fluxos de login, calculadora de câmbio, páginas responsivas, formulários de registo",
-        "3": "Stack: React, ViteJS, Redux, Formik, Yup, Axios, Adobe XD"
-      }
-    },
     "devtest": {
       "description": "Team Lead do departamento de desenvolvimento e testes, uma equipa de menos de 8 engenheiros, actuando também como Engenheiro de Software Sénior e responsável pelo ciclo completo, dos requisitos à produção.",
       "highlights": {
@@ -355,8 +333,7 @@
       "highlights": {
         "1": "Plataforma Educacional: Calendário, Página de Lives e funcionalidades principais",
         "2": "Resolução de bugs e implementação de funcionalidades",
-        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket",
-        "4": "Gestão de estado e lógica de UI complexa com Redux e Chakra UI"
+        "3": "Stack: React, Next.js, Chakra UI, GitFlow, Jira, BitBucket"
       }
     },
     "teclat": {
@@ -379,7 +356,7 @@
     "snir": {
       "description": "Desenvolvedor de software focado em backend, relatórios e administração de base de dados para sistemas de seguros e banca.",
       "highlights": {
-        "1": "Construiu e manteve o International Insurance, sistema completo de gestão de seguros, desenvolvendo serviços backend em C# e ASP.NET sobre Microsoft SQL Server.",
+        "1": "Construiu e manteve o International Insurance, sistema completo de gestão de seguros, actuando em serviços backend, administração de base de dados e DevOps em C# e ASP.NET sobre Microsoft SQL Server.",
         "2": "Entregou o NZIMBUPAY, aplicação bancária, assumindo o desenvolvimento de relatórios séniores e funcionalidades backend em C#, ASP.NET e DevExpress.",
         "3": "Manteve ambos os sistemas fiáveis em produção durante três anos, administrando as bases de dados SQL Server e resolvendo incidentes de relatórios como DBA dedicado."
       }
@@ -401,7 +378,8 @@
     "focusTitle": "Foco Académico",
     "focusA": "Formação formal em engenharia de software, resolução de problemas, pensamento sistémico e bases técnicas estruturadas.",
     "focusB": "Percurso académico construído entre o ensino superior, análise de sistemas e o ensino técnico secundário com orientação prática.",
-    "focusC": "Os cursos profissionais e certificações são apresentados em separado para manter distinta a formação académica e a formação contínua."
+    "focusC": "Os cursos profissionais e certificações são apresentados em separado para manter distinta a formação académica e a formação contínua.",
+    "ipilProject": "Sistema de Publicação e Agendamento de Eventos"
   },
   "techStack": {
     "label": "06 — STACK",
@@ -604,7 +582,8 @@
   "footer": {
     "tagline": "Construindo soluções digitais de Angola para o mundo.",
     "rights": "Todos os direitos reservados.",
-    "email": "Email"
+    "email": "Email",
+    "updated": "Atualizado em"
   },
   "common": {
     "loading": "A carregar...",

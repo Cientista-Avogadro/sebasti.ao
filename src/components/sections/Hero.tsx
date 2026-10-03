@@ -45,14 +45,16 @@ export function Hero() {
 
           <aside className="border border-ink/25 bg-raised">
             <div className="border-b border-line">
-              <Image
-                src="/myphoto.jpg"
-                alt={t("profileName")}
-                width={480}
-                height={560}
-                priority
-                className="w-full h-auto object-cover"
-              />
+              <div className="relative aspect-[6/7] overflow-hidden">
+                <Image
+                  src="/myphoto.jpg"
+                  alt={t("profileName")}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                  className="object-cover object-top"
+                />
+              </div>
             </div>
             <div className="p-6">
               <p className="font-display text-lg leading-snug">{t("profileName")}</p>
