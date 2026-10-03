@@ -14,6 +14,9 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    // One-shot sync with the pre-paint theme script. The attribute is set on
+    // the html element before hydration, so it cannot live in initial state.
+    // eslint-disable-next-line
     setIsDark(document.documentElement.getAttribute("data-theme") === "dark");
   }, []);
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { SectionHeader } from "@/components/SectionHeader";
 import { GalleryItem } from "./gallery/GalleryItem";
 import { Lightbox } from "./gallery/Lightbox";
@@ -49,10 +50,10 @@ export function Gallery({ showAll = false }) {
           }
           action={
             !showAll ? (
-              <a href="/gallery" className="link inline-flex items-center gap-1.5 text-sm whitespace-nowrap">
+              <Link href="/gallery" className="link inline-flex items-center gap-1.5 text-sm whitespace-nowrap">
                 {t("viewAll")}
                 <ArrowUpRight size={14} aria-hidden="true" />
-              </a>
+              </Link>
             ) : undefined
           }
         />
