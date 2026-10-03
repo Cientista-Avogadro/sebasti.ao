@@ -102,10 +102,10 @@
     "caseStudies": "Featured Case Studies",
     "otherProjects": "Other Projects",
     "kibera": {
-      "tagline": "Multi-tenant billing and operations platform",
-      "description": "A production-ready SaaS billing platform designed to support multiple businesses within a single system. Used by businesses to manage billing, invoices, payments, POS operations, and customer data in real-world scenarios.",
-      "role": "Businesses, finance teams, operators, and administrators managing day-to-day billing and payment workflows.",
-      "impact": "Designed with multi-tenancy to support multiple independent companies within one platform, with strong data isolation, lower operational errors, and more scalable business workflows."
+      "tagline": "Business management and invoicing suite",
+      "description": "A business management and invoicing suite for the Angolan market, architected in Next.js and PayloadCMS with compliant fiscal document generation.",
+      "role": "Businesses managing invoicing, payments and fiscal documents.",
+      "impact": "A production suite replacing manual invoicing workflows with compliant digital processes."
     },
     "cafe": {
       "tagline": "Agricultural management platform",
@@ -138,10 +138,10 @@
       "impact": "Improved usability in a complex transactional flow where trust, clarity, and accurate input handling directly affect conversion."
     },
     "rokiz": {
-      "tagline": "Community forum platform",
-      "description": "A modern community forum platform built for engagement and discussions. Provides a responsive interface for users to create topics, participate in conversations, and connect with like-minded individuals.",
-      "role": "Community members, moderators, and administrators managing discussions and community growth.",
-      "impact": "Enabled an accessible and engaging platform for community-driven conversations with clean UX and responsive design."
+      "tagline": "Event platform for a national development forum",
+      "description": "Website for the 4th edition of the Personal and Professional Development Forum, held under the motto Lideranca Visionaria as part of Angola's 50 years of independence celebrations.",
+      "role": "Organisers, speakers and attendees of the forum.",
+      "impact": "A focused event website presenting the programme, speakers and ticketing for a national audience."
     },
     "ngola": {
       "tagline": "Smart services marketplace",
@@ -162,10 +162,10 @@
       "impact": "Made mental health services more accessible and reduced barriers to finding professional support."
     },
     "penttinali": {
-      "tagline": "Luxury fashion e-commerce",
-      "description": "An elegant e-commerce platform for luxury fashion products. Features high-quality product displays, secure checkout, and personalized shopping experience.",
-      "role": "Fashion enthusiasts and luxury brand customers.",
-      "impact": "Created a premium shopping experience that reflected brand prestige and enhanced customer trust."
+      "tagline": "Cybersecurity and digital forensics",
+      "description": "Corporate website for Penttinali, a cybersecurity consultancy covering digital forensics, fraud prevention, crisis management, regulatory compliance and specialised training for companies and institutions.",
+      "role": "Companies and institutions protecting data and meeting regulatory requirements.",
+      "impact": "A professional presence that positions the firm's cybersecurity services and turns consultations into engagements."
     },
     "ayonas": {
       "tagline": "Transportation and logistics services",
@@ -174,10 +174,10 @@
       "impact": "Streamlined transportation operations and improved service availability for customers."
     },
     "ozuna": {
-      "tagline": "Music and artist platform",
-      "description": "A platform dedicated to music promotion and artist discovery. Supports music sharing, artist profiles, and audience engagement.",
-      "role": "Musicians, artists, and music enthusiasts.",
-      "impact": "Provided artists with tools to reach audiences and built community engagement around music content."
+      "tagline": "Engineering and telecom infrastructure",
+      "description": "Corporate website for Ozuna Engineering, an Angolan company working in telecom infrastructure, renewable energy, automation and construction, with 150+ completed projects.",
+      "role": "Companies seeking engineering and telecom infrastructure partners.",
+      "impact": "A corporate presence presenting 10+ years of engineering work and turning visitors into project requests."
     },
     "elizandra": {
       "tagline": "Personal portfolio and brand",

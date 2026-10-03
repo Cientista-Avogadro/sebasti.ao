@@ -27,8 +27,9 @@ export const projects: Project[] = [
     impactKey: "rokiz.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Offline",
-    link: "#", 
+    status: "Live",
+    link: "https://rokizforum.netlify.app/",
+    image: "/projects/rokiz-forum.png", 
     github: "#", 
     featured: false 
   },
@@ -109,8 +110,9 @@ export const projects: Project[] = [
     impactKey: "ozuna.impact", 
     focus: [],
     tech: ["React", "Next.js", "TailwindCSS", "Vercel"], 
-    status: "Offline",
-    link: "#", 
+    status: "Live",
+    link: "https://ozuna-site.netlify.app/",
+    image: "/projects/ozuna.png", 
     github: "#", 
     featured: false 
   },
@@ -167,6 +169,19 @@ export const projects: Project[] = [
     link: "#", 
     github: "#", 
     featured: false 
+  },
+  { 
+    name: "Kibera", 
+    taglineKey: "kibera.tagline", 
+    descriptionKey: "kibera.description", 
+    roleKey: "kibera.role", 
+    impactKey: "kibera.impact", 
+    focus: [],
+    tech: ["Next.js", "PayloadCMS", "TypeScript"], 
+    status: "Live", 
+    link: "https://kibera.devtest.co.ao", 
+    github: "#", 
+    featured: true
   },
   { 
     name: "DealBusinessHub", 
